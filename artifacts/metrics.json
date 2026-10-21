@@ -1,19 +1,19 @@
 {
   "precision": 1.0,
-  "coverage": 0.4,
-  "n_publicadas": 12,
+  "coverage": 0.5,
+  "n_publicadas": 15,
   "n_total": 30,
-  "n_hits": 12,
+  "n_hits": 15,
   "bootstrap": {
     "p_lo": 1.0,
     "p_hi": 1.0,
-    "c_lo": 0.26666666666666666,
-    "c_hi": 0.5666666666666667
+    "c_lo": 0.3333333333333333,
+    "c_hi": 0.6666666666666666
   },
-  "fora_recall_holdout": 0.5,
+  "fora_recall_holdout": 1.0,
   "fora_gold_holdout": 2,
-  "fora_hit_holdout": 1,
-  "tau": 0.84,
+  "fora_hit_holdout": 2,
+  "tau": 0.74,
   "folds": [
     {
       "precision": 1.0,
@@ -21,7 +21,7 @@
       "n_publicadas": 0,
       "n_total": 14,
       "fold": 0,
-      "tau": 0.8159
+      "tau": 0.8628
     },
     {
       "precision": 1.0,
@@ -29,7 +29,7 @@
       "n_publicadas": 0,
       "n_total": 14,
       "fold": 1,
-      "tau": 0.75
+      "tau": 0.8356
     },
     {
       "precision": 1.0,
@@ -37,7 +37,7 @@
       "n_publicadas": 0,
       "n_total": 14,
       "fold": 2,
-      "tau": 0.55
+      "tau": 0.516
     },
     {
       "precision": 1.0,
@@ -45,7 +45,7 @@
       "n_publicadas": 0,
       "n_total": 14,
       "fold": 3,
-      "tau": 0.5705
+      "tau": 0.5689
     },
     {
       "precision": 1.0,
@@ -53,21 +53,21 @@
       "n_publicadas": 0,
       "n_total": 14,
       "fold": 4,
-      "tau": 0.99
+      "tau": 0.55
     }
   ],
   "oof_precision_at_tau": 1.0,
-  "oof_coverage_at_tau": 0.4,
+  "oof_coverage_at_tau": 0.5,
   "holdout_n": 30,
   "holdout_threshold": {
-    "tau": 0.84,
+    "tau": 0.74,
     "precision": 1.0,
-    "coverage": 0.4,
-    "n_pub": 12,
+    "coverage": 0.5,
+    "n_pub": 15,
     "target": 0.97,
-    "tau_raw": 0.84
+    "tau_raw": 0.5366
   },
   "embeddings_loaded": true,
-  "oof_top_signal_accuracy": 0.5857142857142857,
+  "oof_top_signal_accuracy": 0.6285714285714286,
   "train_protocol": "fit70_hold30_tau_on_holdout"
 }

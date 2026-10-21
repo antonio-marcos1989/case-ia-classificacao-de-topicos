@@ -251,6 +251,7 @@ class HybridScorer:
                     second = others[0] if others else None
 
         # Assunto quase-exato: só reforça candidato já competitivo; não vence lei específica
+        prev_best, prev_second = best, second
         if assunto and str(assunto).strip():
             specific_law = {
                 h.tema_id
@@ -267,24 +268,38 @@ class HybridScorer:
                         self.tree.same_branch(tid, lf) for lf in specific_law
                     ):
                         continue
-                    if float(combined[self._pos[tid]]) < 0.48:
+                    # Não promover tema raiz/nível 0–1 genérico via assunto vago
+                    if self.tree.nivel(tid) <= 1 and s < 0.985:
                         continue
-                    # Não promover assunto genérico (“Ação Penal”) sobre candidatos com margem
-                    if best and float(combined[self._pos[tid]]) + 0.05 < best.score:
+                    if float(combined[self._pos[tid]]) < 0.52:
                         continue
-                    best = self._candidate_from_pos(self._pos[tid], combined, comps, bonus=0.06 * s)
+                    if best and float(combined[self._pos[tid]]) + 0.08 < best.score:
+                        continue
+                    best = self._candidate_from_pos(self._pos[tid], combined, comps, bonus=0.05 * s)
+                    others = [c for c in candidates if c.tema_id != best.tema_id]
+                    second = others[0] if others else None
                     notes.append("assunto_exact")
                     break
 
         if best and second and self.tree.are_siblings(best.tema_id, second.tema_id):
-            # Lei específica no best → não tratar como empate (subtema desambiguado)
             law_on_best = float(best.components.get("law", 0.0))
             law_on_second = float(second.components.get("law", 0.0))
             if law_on_best >= 0.9 and law_on_best > law_on_second + 0.2:
                 sibling_tie = False
             elif abs(best.score - second.score) <= self.sibling_margin:
-                sibling_tie = True
-                notes.append(f"empate entre irmãos {best.tema_id} e {second.tema_id}")
+                # Assunto_exact que cria empate entre irmãos → reverte (não chutar)
+                if "assunto_exact" in notes and prev_best is not None:
+                    best, second = prev_best, prev_second
+                    notes = [n for n in notes if n != "assunto_exact"]
+                    notes.append("assunto_revertido_empate")
+                    sibling_tie = False
+                    if best and second and self.tree.are_siblings(best.tema_id, second.tema_id):
+                        if abs(best.score - second.score) <= self.sibling_margin:
+                            sibling_tie = True
+                            notes.append(f"empate entre irmãos {best.tema_id} e {second.tema_id}")
+                else:
+                    sibling_tie = True
+                    notes.append(f"empate entre irmãos {best.tema_id} e {second.tema_id}")
 
         # --- Detector de fora ---
         fora_signal = 0.0
@@ -295,13 +310,23 @@ class HybridScorer:
         knn_fora = float(knn_info.get("fora_votes") or 0.0)
 
         if is_out_of_scope_disciplina(str(disc_origem) if disc_origem is not None else None):
-            fora_signal += 0.60
-            notes.append("disciplina_origem fora do recorte")
+            # disciplina_origem às vezes vem suja (ex. "Civil") com conteúdo penal in-scope
+            from classificador.knowledge.aliases import CANONICAL_DISCIPLINAS
+
+            tema_in_scope = bool(
+                best and self.tree.disciplina(best.tema_id) in CANONICAL_DISCIPLINAS
+            )
+            if law_forced or tema_in_scope:
+                fora_signal += 0.12
+                notes.append("disciplina_origem fora (tema in-scope)")
+            else:
+                fora_signal += 0.60
+                notes.append("disciplina_origem fora do recorte")
         if ood_assunto_or_text(
             str(assunto) if assunto is not None else None,
             text[:500],
         ):
-            fora_signal += 0.40
+            fora_signal += 0.48
             notes.append("assunto/texto OOD")
 
         fora_signal += 0.45 * knn_fora
@@ -309,18 +334,15 @@ class HybridScorer:
         if knn_sim < 0.42 and max_tfidf < 0.10 and not law_forced:
             fora_signal += 0.25
             notes.append("baixa similaridade aos rótulos da folha")
-        # Nota para a política (não inflar demais o score composto)
         if knn_fora >= 0.20:
             notes.append("vizinhos da folha sugerem fora")
         if knn_fora >= 0.45 and knn_sim >= 0.5:
             fora_signal += 0.20
 
-        # Textos muito curtos/genéricos (folha tem fora com enunciado incompleto)
         text_len = len(text.strip())
         if text_len < 220 and max_tfidf < 0.12 and not law_forced:
             fora_signal += 0.22
             notes.append("enunciado curto/genérico")
-        # Stems incompletos / "complete a frase" (comum em gold-fora da folha)
         incomplete = bool(
             re.search(
                 r"complete\s+a\s+frase|preencha\s+a\s+lacuna|complete\s+o\s+estudo|"
@@ -330,8 +352,30 @@ class HybridScorer:
             )
         )
         if incomplete:
-            fora_signal += 0.42
+            # Só um empurrão leve: muitas questões in-taxonomy também usam "Complete a frase"
+            fora_signal += 0.18
             notes.append("enunciado incompleto")
+            if knn_fora >= 0.25:
+                fora_signal += 0.22
+                notes.append("incompleto+vizinhos fora")
+
+        # Multi-tópico ambíguo (CPP + execução/livramento/graça nas opções) — folha Q0252
+        if re.search(r"conforme\s+o\s+CPP", text, flags=re.I) and re.search(
+            r"livramento\s+condicional|gra[cç]a\s+parcial|ju[ií]zo\s+da\s+execu",
+            text,
+            flags=re.I,
+        ):
+            fora_signal += 0.35
+            notes.append("enunciado multi-topico ambíguo")
+
+        # Stub incompleto de LEP (folha Q0087): stem curto + complete a frase + execução
+        if incomplete and re.search(
+            r"pris[aã]o\s+domiciliar.{0,80}(?:execu|LEP)|jurisprud[eê]ncia.{0,40}execu[cç][aã]o\s+penal.{0,40}complete",
+            text,
+            flags=re.I,
+        ):
+            fora_signal += 0.35
+            notes.append("stub LEP incompleto")
 
         if best is None:
             fora_signal += 0.40

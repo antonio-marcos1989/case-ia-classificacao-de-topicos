@@ -82,25 +82,36 @@ class DecisionPolicy:
         extras = self._extras(result)
 
         # Fora com prioridade quando sinal OOD claro
-        ood_note = any(
-            "fora do recorte" in n or "OOD" in n or "incompleto" in n for n in result.notes
+        strong_ood = any(
+            "fora do recorte" in n or "OOD" in n or "multi-topico" in n or "stub LEP" in n
+            for n in result.notes
         )
         incomplete = any("incompleto" in n for n in result.notes)
+        multi_topic = any("multi-topico" in n for n in result.notes)
         knn_fora_early = float((result.confidence_features or {}).get("knn_fora", 0.0))
+        ood_note = strong_ood or incomplete
         if result.fora_signal >= self.tau_fora and (
-            ood_note or best.score < 0.40 or confianca < self.tau_publicar
+            strong_ood or best.score < 0.40 or confianca < self.tau_publicar
         ):
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
-        # Enunciado incompleto com sinal moderado → fora (folha tem vários assim)
-        if incomplete and result.fora_signal >= 0.40 and confianca < self.tau_publicar:
+        # OOD/multi-tópico/stub com sinal ≥0.38 → fora
+        if strong_ood and result.fora_signal >= 0.38:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        if multi_topic and result.fora_signal >= 0.30:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        # Incomplete sozinho NÃO força fora (muitas in-taxonomy usam "Complete a frase");
+        # só com knn-fora ou sinal alto residual.
+        if incomplete and result.fora_signal >= 0.45 and knn_fora_early >= 0.20:
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
         # knn-fora forte + fora_signal moderado → fora (não só revisar)
         if result.fora_signal >= 0.38 and knn_fora_early >= 0.22 and confianca < self.tau_publicar:
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
-        if result.fora_signal >= 0.55 and ood_note:
+        if result.fora_signal >= 0.55 and strong_ood:
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
         if result.fora_signal >= 0.70 and confianca < self.tau_publicar:
@@ -110,6 +121,8 @@ class DecisionPolicy:
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
         if result.sibling_tie:
+            if knn_fora_early >= 0.12 and result.fora_signal >= 0.25:
+                return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
             return Decision(
                 "revisar", tema, extras, float(confianca), self._motivo_revisar(result, confianca)
             )

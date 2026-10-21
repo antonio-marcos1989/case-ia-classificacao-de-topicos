@@ -115,7 +115,8 @@ class LawDictionary:
             ):
                 hits = [h for h in hits if h.name != "procedimento_ordinario"]
             else:
-                hits = [h for h in hits if h.name != "jecrim"]
+                # Reunião de processos / juízo comum → ordinário (júri/JECRIM só contextuais)
+                hits = [h for h in hits if h.name not in {"jecrim", "juri"}]
             names = {h.name for h in hits}
         elif "procedimento_ordinario" in names:
             hits = [h for h in hits if h.name not in {"juri", "jecrim"}]
@@ -124,6 +125,12 @@ class LawDictionary:
         if "antiterrorismo" in names:
             hits = [h for h in hits if h.name not in {"inquerito", "jecrim"}]
             names = {h.name for h in hits}
+
+        # Arquivamento de inquérito vence "prescrição" citada só como alternativa
+        if "inquerito" in names and "prescricao" in names:
+            if re.search(r"arquiv|inqu[eé]rito\s+policial", blob, re.I):
+                hits = [h for h in hits if h.name != "prescricao"]
+                names = {h.name for h in hits}
 
         # Hit específico vence genérico do mesmo cluster
         if len(hits) > 1:

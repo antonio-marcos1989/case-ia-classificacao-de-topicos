@@ -498,14 +498,29 @@ def train_classifier(
         fallback_precision=0.95,
         exclude=hold_sib_a,
     )
-    # Não baixar τ só para inflar cobertura (piso ≈ rodada anterior).
-    # Evita tau degenerado (=1.0 com 0–1 publicadas): usa piso operacional.
+    # Não baixar τ só para inflar cobertura.
+    # Piso operacional 0.74; preferência ~0.84 da rodada anterior se precisão ≥0.97
+    # se mantém com cobertura próxima (não sacrificar precisão).
     tau_floor = 0.74
+    tau_prefer = 0.84
     tau_raw = float(thr["tau"])
     if thr.get("n_pub", 0) == 0 or tau_raw >= 0.99:
         tau_prod = tau_floor
     else:
         tau_prod = max(tau_raw, tau_floor)
+    # Se o limiar cru for < preferência, testa se τ≈0.84 ainda entrega prec≥0.97
+    # com cobertura não muito abaixo do ótimo (queda ≤0.05 abs).
+    if tau_prod < tau_prefer - 1e-9:
+        prefer_mask = (hold_probs_a >= tau_prefer) & (~hold_sib_a)
+        if prefer_mask.any():
+            prefer_prec = float(hold_correct_a[prefer_mask].mean())
+            prefer_cov = float(prefer_mask.mean())
+            if prefer_prec + 1e-12 >= 0.97 and prefer_cov + 0.05 >= float(thr.get("coverage", 0.0)):
+                tau_prod = tau_prefer
+                thr["precision"] = prefer_prec
+                thr["coverage"] = prefer_cov
+                thr["n_pub"] = int(prefer_mask.sum())
+                thr["tau_prefer_applied"] = True
     thr["tau_raw"] = tau_raw
     thr["tau"] = tau_prod
     policy_hold = DecisionPolicy(tau_publicar=tau_prod, min_raw_score=0.05)

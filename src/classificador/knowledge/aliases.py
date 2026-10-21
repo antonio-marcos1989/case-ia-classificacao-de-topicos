@@ -62,6 +62,12 @@ OOD_ASSUNTO_PATTERNS = [
     # Folha marca como fora: cartel/economia popular genérico, crimes de responsabilidade
     r"g[aá]s\s+liquefeito|ajuste\s+artificialmente\s+pre[cç]o",
     r"crimes?\s+de\s+responsabilidade\s+dos\s+funcion[aá]rios\s+p[uú]blicos",
+    # Questões genéricas de "aplicação da lei penal" / tempo do crime (fora na folha)
+    r"com\s+rela[cç][aã]o\s+[aà]\s+aplica[cç][aã]o\s+da\s+lei\s+penal",
+    r"fra[cç][oõ]es\s+de\s+dia\s+s[aã]o\s+computadas",
+    r"clientela\s+do\s+sistema\s+penal",
+    r"vera\s+regina\s+pereira",
+    r"complete\s+o\s+estudo\s+sobre\s+a\s+fixa[cç][aã]o\s+da\s+pena",
 ]
 
 

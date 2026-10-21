@@ -1,7 +1,7 @@
 precisao_prevista: 1.00   # fração das publicadas que estará certa
 precisao_intervalo: 1.00-1.00
-cobertura_prevista: 0.40  # fração das questões que você publicou
-cobertura_intervalo: 0.27-0.57
+cobertura_prevista: 0.50  # fração das questões que você publicou
+cobertura_intervalo: 0.33-0.67
 
 Método:
 - Hold-out estratificado (~30%, n=30) da folha-verdade: escolhe tau e estima
@@ -10,14 +10,14 @@ Método:
   para precisão; todas as linhas do hold-out para cobertura).
 - Acerto tolerante à árvore; empate entre irmãos → revisar.
 - Features (TF-IDF, emb, proto/kNN, lei, assunto, margem) → score composto;
-- tau_publicar=0.84 maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95);
+- tau_publicar=0.74 maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95);
   piso de tau≈0.74 para não baixar o limiar só para inflar cobertura.
 - Calibração: isotônica no score composto + LR auxiliar (margem/lei).
 - Predict offline: artifacts/ (laws, lexicon_seeds, model.joblib, embeddings); sem LLM/API.
-- Embeddings: True; sinal fit-set: 0.5857142857142857.
-- Recall fora (hold-out): 0.5; folha: 0.5.
+- Embeddings: True; sinal fit-set: 0.6285714285714286.
+- Recall fora (hold-out): 1.0; folha: 1.0.
 - Banca avalia 559 fora da folha; folha só em Q0001–Q0359 (possível shift nas recentes).
 - Sanity shift (confiança/decisão, sem rótulo nas recentes):
-  banco Q0001–Q0359: n=359 pub_rate=0.29 conf_mean=0.606 p50=0.569 (pub=103 rev=221 fora=35)
-  recentes Q0360–Q0659: n=300 pub_rate=0.28 conf_mean=0.605 p50=0.562 (pub=83 rev=205 fora=12)
-  delta conf_mean=-0.0013739916434540866 delta pub_rate=-0.010241411327762295.
+  banco Q0001–Q0359: n=359 pub_rate=0.34 conf_mean=0.641 p50=0.586 (pub=122 rev=224 fora=13)
+  recentes Q0360–Q0659: n=300 pub_rate=0.30 conf_mean=0.629 p50=0.559 (pub=89 rev=197 fora=14)
+  delta conf_mean=-0.012148949860724123 delta pub_rate=-0.04316620241411323.

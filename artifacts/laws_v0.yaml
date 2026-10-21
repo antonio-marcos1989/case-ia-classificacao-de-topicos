@@ -55,10 +55,11 @@ rules:
       - \bJECRIM\b
       - lei\s+n?[ºo°\.]*\s*9[\./\s]?099
       - exclus[aã]o\s+de\s+compet[eê]ncia\s+dos\s+juizados
-      - transa[cç][aã]o\s+penal
-      - composi[cç][aã]o\s+civil\s+dos\s+danos
-      - suspens[aã]o\s+condicional\s+do\s+processo
       - termo\s+circunstanciado
+      # transação/SCP só com âncora de juizado/9.099 (evita FP em assertivas mistas)
+      - (?:juizado|JECRIM|9[\./\s]?099).{0,120}transa[cç][aã]o\s+penal
+      - transa[cç][aã]o\s+penal.{0,80}(?:juizado|JECRIM|9[\./\s]?099)
+      - (?:juizado|JECRIM|9[\./\s]?099).{0,120}suspens[aã]o\s+condicional\s+do\s+processo
     tema_ids: [4701]
     prefer: 4701
     require_strong: true
@@ -99,8 +100,15 @@ rules:
       - den[uú]ncia\s+an[oô]nima
       - investiga[cç][aã]o\s+preliminar
       - inqu[eé]rito\s+policial\s+(?:e\s+seus\s+)?(?:prazos|natureza|caracter)
-    tema_ids: [5498]
+      - inqu[eé]rito\s+policial\s+arquivado
+    tema_ids: [5498, 5501]
     prefer: 5498
+    subtema_map:
+      - patterns:
+          - inqu[eé]rito\s+policial\s+arquivado
+          - arquivado\s+pelo\s+minist[eé]rio\s+p[uú]blico
+          - arquivamento.{0,40}inqu[eé]rito
+        tema_id: 5501
     require_strong: true
 
   - name: antiterrorismo
@@ -115,12 +123,22 @@ rules:
   - name: prescricao
     patterns:
       - prescri[cç][aã]o\s+da\s+pretens[aã]o
-      - pretens[aã]o\s+punitiva
-      - pretens[aã]o\s+execut[oó]ria
       - interrup[cç][aã]o\s+da\s+prescri[cç][aã]o
       - causas?\s+interruptivas\s+da\s+prescri
+      - pretens[aã]o\s+execut[oó]ria
+      # "pretensão punitiva" sozinho aparece em distractors de arquivamento
+      - (?:prescri|prazo\s+prescricional).{0,40}pretens[aã]o\s+punitiva
     tema_ids: [5185]
     prefer: 5185
+    require_strong: true
+
+  - name: sentenca_embargos
+    patterns:
+      - obscuridade,\s*contradi[cç][aã]o,\s*ambiguidad
+      - embargos?\s+de\s+declara[cç][aã]o
+      - pedir\s+ao\s+juiz\s+que\s+declare\s+a\s+senten[cç]a
+    tema_ids: [5572]
+    prefer: 5572
     require_strong: true
 
   - name: recursos

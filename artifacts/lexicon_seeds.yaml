@@ -98,6 +98,19 @@ seeds:
     - lei 13260
     - atos de terrorismo
     - terrorismo
+  5501:
+    - arquivamento do inquérito
+    - inquérito arquivado
+    - coisa julgada inquérito
+  5572:
+    - sentença penal
+    - embargos de declaração
+    - obscuridade contradição omissão
+    - declare a sentença
+  5473:
+    - denúncia
+    - oferecimento da denúncia
+    - peça acusatória
   5560:
     - recursos em espécies
     - recurso em sentido estrito
