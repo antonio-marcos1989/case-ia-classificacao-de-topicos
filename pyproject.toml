@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classificador-topicos"
+version = "0.1.0"
+description = "Classificação de tópicos (Penal / Processo Penal / Leg. Especial / Criminologia) — case Vício"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "joblib>=1.3",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.0",
+  "rapidfuzz>=3.6",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+embeddings = ["sentence-transformers>=3.0", "torch"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+classificador = "classificador.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

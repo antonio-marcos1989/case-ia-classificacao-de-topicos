@@ -1,0 +1,239 @@
+# Dicionário de leis/termos → tema_id (v1.3 — stem-only match; ordinário/cadeia/JECRIM).
+version: "1.3"
+rules:
+  - name: maria_da_penha
+    patterns:
+      - maria\s+da\s+penha
+      - lei\s+n?[ºo°\.]*\s*11[\./\s]?340
+      - 11[\./\s]?340/?0?6
+      - viol[eê]ncia\s+dom[eé]stica
+      - medida\s+protetiva\s+de\s+urg[eê]ncia
+    tema_ids: [4704, 6724]
+    prefer: 4704
+    avoid_tema_ids: [6724]
+    require_strong: true
+
+  - name: lep
+    patterns:
+      - lei\s+de\s+execu[cç][aã]o\s+penal
+      - \bLEP\b
+      - lei\s+n?[ºo°\.]*\s*7[\./\s]?210
+      - progress[aã]o\s+de\s+regime
+      - livramento\s+condicional.{0,40}(?:execu|LEP|lei\s+de\s+execu)
+      - remi[cç][aã]o\s+(?:de\s+)?(?:pena|pelo\s+estudo|pelo\s+trabalho)
+      - \bremi[cç][aã]o\b
+      - trabalho\s+prisional
+      - frequ[eê]ncia\s+escolar.{0,40}(?:pena|cumprimento|preso)
+      - falta\s+grave\s+(?:na\s+)?(?:execu|processo\s+de\s+execu)
+      - sa[ií]da\s+tempor[aá]ria
+      - exame\s+criminol[oó]gico
+      - pris[aã]o\s+domiciliar\s+na\s+execu
+    tema_ids: [4703, 6734]
+    prefer: 4703
+    processual_signals:
+      - agravo\s+em\s+execu
+      - ju[ií]zo\s+da\s+execu
+      - incidente\s+de\s+execu
+    processual_prefer: 6734
+    require_strong: true
+
+  - name: drogas
+    patterns:
+      - lei\s+n?[ºo°\.]*\s*11[\./\s]?343
+      - 11[\./\s]?343/?0?6
+      - tr[aá]fico\s+(?:ilic[ií]to\s+de\s+)?(?:drogas|entorpecentes)
+      - lei\s+de\s+drogas
+      - associa[cç][aã]o\s+para\s+o\s+tr[aá]fico
+    tema_ids: [4708, 6728]
+    prefer: 4708
+    avoid_tema_ids: [6728]
+    require_strong: true
+
+  - name: jecrim
+    patterns:
+      - juizados?\s+especiais?\s+criminais?
+      - \bJECRIM\b
+      - lei\s+n?[ºo°\.]*\s*9[\./\s]?099
+      - exclus[aã]o\s+de\s+compet[eê]ncia\s+dos\s+juizados
+      - termo\s+circunstanciado
+      # transação/SCP só com âncora de juizado/9.099 (evita FP em assertivas mistas)
+      - (?:juizado|JECRIM|9[\./\s]?099).{0,120}transa[cç][aã]o\s+penal
+      - transa[cç][aã]o\s+penal.{0,80}(?:juizado|JECRIM|9[\./\s]?099)
+      - (?:juizado|JECRIM|9[\./\s]?099).{0,120}suspens[aã]o\s+condicional\s+do\s+processo
+    tema_ids: [4701]
+    prefer: 4701
+    require_strong: true
+
+  - name: juri
+    patterns:
+      - tribunal\s+do\s+j[uú]ri
+      - desaforamento
+      - conselho\s+de\s+senten[cç]a
+      - plen[aá]rio\s+do\s+j[uú]ri
+      - procedimento\s+do\s+j[uú]ri
+      - artigo\s+406
+      - art\.?\s*406\b
+      - resposta\s+[aà]\s+acusa[cç][aã]o.{0,40}dez\s+dias
+    tema_ids: [5524, 5527]
+    prefer: 5524
+    subtema_map:
+      - patterns:
+          - impron[uú]ncia
+          - absolvi[cç][aã]o\s+sum[aá]ria
+          - artigo\s+409
+          - art\.?\s*409\b
+        tema_id: 5527
+    require_strong: true
+
+  - name: habeas_corpus
+    patterns:
+      - habeas\s+corpus
+      - constrangimento\s+ilegal
+    tema_ids: [5477]
+    prefer: 5477
+    require_strong: true
+
+  - name: inquerito
+    patterns:
+      - arquivamento\s+do\s+inqu[eé]rito
+      - instaura[cç][aã]o\s+(?:do\s+)?inqu[eé]rito
+      - den[uú]ncia\s+an[oô]nima
+      - investiga[cç][aã]o\s+preliminar
+      - inqu[eé]rito\s+policial\s+(?:e\s+seus\s+)?(?:prazos|natureza|caracter)
+      - inqu[eé]rito\s+policial\s+arquivado
+    tema_ids: [5498, 5501]
+    prefer: 5498
+    subtema_map:
+      - patterns:
+          - inqu[eé]rito\s+policial\s+arquivado
+          - arquivado\s+pelo\s+minist[eé]rio\s+p[uú]blico
+          - arquivamento.{0,40}inqu[eé]rito
+        tema_id: 5501
+    require_strong: true
+
+  - name: antiterrorismo
+    patterns:
+      - lei\s+(?:antiterrorismo|anti[\-\s]?terrorismo)
+      - lei\s+n?[ºo°\.]*\s*13[\./\s]?260
+      - atos?\s+de\s+terrorismo
+    tema_ids: [4706]
+    prefer: 4706
+    require_strong: true
+
+  - name: prescricao
+    patterns:
+      - prescri[cç][aã]o\s+da\s+pretens[aã]o
+      - interrup[cç][aã]o\s+da\s+prescri[cç][aã]o
+      - causas?\s+interruptivas\s+da\s+prescri
+      - pretens[aã]o\s+execut[oó]ria
+      # "pretensão punitiva" sozinho aparece em distractors de arquivamento
+      - (?:prescri|prazo\s+prescricional).{0,40}pretens[aã]o\s+punitiva
+    tema_ids: [5185]
+    prefer: 5185
+    require_strong: true
+
+  - name: sentenca_embargos
+    patterns:
+      - obscuridade,\s*contradi[cç][aã]o,\s*ambiguidad
+      - embargos?\s+de\s+declara[cç][aã]o
+      - pedir\s+ao\s+juiz\s+que\s+declare\s+a\s+senten[cç]a
+    tema_ids: [5572]
+    prefer: 5572
+    require_strong: true
+
+  - name: recursos
+    patterns:
+      - recurso\s+em\s+sentido\s+estrito
+      - \bRESE\b
+      - \bapela[cç][aã]o\b
+      - recurso\s+cab[ií]vel
+      - caber[aá].{0,60}(?:recurso|apela[cç][aã]o)
+    tema_ids: [5560, 5561, 5562]
+    prefer: 5560
+    subtema_map:
+      - patterns:
+          - \bapela[cç][aã]o\b
+          - caber[aá].{0,80}apela[cç][aã]o
+        tema_id: 5562
+      - patterns:
+          - recurso\s+em\s+sentido\s+estrito
+          - \bRESE\b
+        tema_id: 5561
+    require_strong: true
+
+  - name: prova_testemunhal
+    patterns:
+      - testemunha\s+fedat
+      - prova\s+testemunhal
+      - esp[eé]cies?\s+de\s+testemunhas?
+    tema_ids: [5550]
+    prefer: 5550
+    require_strong: true
+
+  - name: procedimento_ordinario
+    patterns:
+      - procedimento\s+ordin[aá]rio
+      - reuni[aã]o\s+de\s+processos.{0,140}(?:conex[aã]o|contin[eê]ncia)
+      - (?:conex[aã]o|contin[eê]ncia).{0,140}transa[cç][aã]o\s+penal
+      - transa[cç][aã]o\s+penal.{0,140}(?:conex[aã]o|contin[eê]ncia|ju[ií]zo\s+comum)
+      - ju[ií]zo\s+comum.{0,100}tribunal\s+do\s+j[uú]ri.{0,160}(?:transa[cç][aã]o|composi[cç][aã]o)
+    tema_ids: [5530]
+    prefer: 5530
+    require_strong: true
+
+  - name: cadeia_custodia
+    patterns:
+      - cadeia\s+de\s+cust[oó]dia
+      - pacote\s+anticrime.{0,80}cust[oó]dia
+      - lei\s+n?[ºo°\.]*\s*13[\./\s]?964.{0,100}cust[oó]dia
+    tema_ids: [5544]
+    prefer: 5544
+    require_strong: true
+
+  - name: crimes_eleitorais
+    patterns:
+      - crimes?\s+eleitorais?
+      - c[oó]digo\s+eleitoral
+    tema_ids: [4692]
+    prefer: 4692
+    require_strong: true
+
+  - name: lavagem
+    patterns:
+      - lavagem\s+de\s+(?:dinheiro|capitais)
+      - lei\s+n?[ºo°\.]*\s*9[\./\s]?613
+    tema_ids: [4702]
+    prefer: 4702
+    require_strong: true
+
+  - name: tortura
+    patterns:
+      - crime\s+de\s+tortura
+      - lei\s+n?[ºo°\.]*\s*9[\./\s]?455
+    tema_ids: [4707]
+    prefer: 4707
+    require_strong: true
+
+  - name: hediondos
+    patterns:
+      - crimes?\s+hediondos?
+      - lei\s+n?[ºo°\.]*\s*8[\./\s]?072
+    tema_ids: [4693]
+    prefer: 4693
+    require_strong: true
+
+  - name: organizacoes
+    patterns:
+      - organiza[cç][aã]o\s+criminosa
+      - lei\s+n?[ºo°\.]*\s*12[\./\s]?850
+    tema_ids: [4705]
+    prefer: 4705
+    require_strong: true
+
+  - name: interceptacao
+    patterns:
+      - intercepta[cç][aã]o\s+telef[oô]nica
+      - lei\s+n?[ºo°\.]*\s*9[\./\s]?296
+    tema_ids: [4700]
+    prefer: 4700
+    require_strong: true
