@@ -4,6 +4,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from classificador.check import publicacao_fingerprint, validate_publicacao, write_fingerprint
 from classificador.pipeline import (
     default_paths,
     load_classifier,
@@ -77,11 +78,57 @@ def cmd_predict(args: argparse.Namespace) -> int:
         write_previsao(metrics, root / "previsao.txt")
 
     counts = pub["decisao"].value_counts().to_dict()
+    digest = publicacao_fingerprint(pub)
+    write_fingerprint(artifacts / "publicacao.sha256", digest)
     print(f"wrote {publicacao_path}")
     print(f"wrote {previsao_path}")
     print("decisoes:", counts)
     print("tau:", clf.policy.tau_publicar)
     print("shift:", metrics.get("score_shift", {}).get("delta_conf_mean"), "fora_folha:", metrics.get("fora_recall_folha"))
+    print("sha256:", digest)
+    return 0
+
+
+def cmd_check(args: argparse.Namespace) -> int:
+    """Schema + temas ativos + fingerprint (Fase 6)."""
+    root = Path(args.root) if args.root else _repo_root()
+    paths = default_paths(root)
+    anexos = Path(args.anexos) if args.anexos else paths["anexos"]
+    artifacts = Path(args.artifacts) if args.artifacts else paths["artifacts"]
+    pub_path = Path(args.publicacao) if args.publicacao else root / "publicacao.csv"
+    if not pub_path.exists():
+        alt = paths["outputs"] / "publicacao.csv"
+        if alt.exists():
+            pub_path = alt
+    errors = validate_publicacao(pub_path, temas_path=anexos / "temas.csv")
+    if errors:
+        print("CHECK FAIL", file=sys.stderr)
+        for e in errors[:40]:
+            print(" -", e, file=sys.stderr)
+        if len(errors) > 40:
+            print(f" ... +{len(errors) - 40} erros", file=sys.stderr)
+        return 1
+
+    df = __import__("pandas").read_csv(pub_path, dtype=str).fillna("")
+    digest = publicacao_fingerprint(df)
+    fp_path = artifacts / "publicacao.sha256"
+    print("CHECK OK")
+    print("rows:", len(df))
+    print("sha256:", digest)
+    print("decisoes:", df["decisao"].value_counts().to_dict())
+    if fp_path.exists():
+        expected = fp_path.read_text(encoding="utf-8").strip().split()[0]
+        if expected != digest:
+            print(f"AVISO: fingerprint diverge de {fp_path}", file=sys.stderr)
+            print(f"  esperado: {expected}", file=sys.stderr)
+            print(f"  atual:    {digest}", file=sys.stderr)
+            if args.strict_hash:
+                return 2
+        else:
+            print("fingerprint: match", fp_path)
+    elif args.strict_hash:
+        print(f"CHECK FAIL: {fp_path} ausente", file=sys.stderr)
+        return 2
     return 0
 
 
@@ -105,6 +152,17 @@ def main(argv: list[str] | None = None) -> int:
     p_pred.add_argument("--also-root", action="store_true", default=True)
     p_pred.add_argument("--no-also-root", action="store_false", dest="also_root")
     p_pred.set_defaults(func=cmd_predict)
+
+    p_check = sub.add_parser("check", help="Valida schema/temas ativos/fingerprint de publicacao.csv")
+    p_check.add_argument("--anexos", default=None)
+    p_check.add_argument("--artifacts", default=None)
+    p_check.add_argument("--publicacao", default=None)
+    p_check.add_argument(
+        "--strict-hash",
+        action="store_true",
+        help="Falha se artifacts/publicacao.sha256 ausente ou divergente",
+    )
+    p_check.set_defaults(func=cmd_check)
 
     args = parser.parse_args(argv)
     return int(args.func(args))

@@ -30,22 +30,16 @@ def test_law_maria():
 
 
 def test_publicacao_schema_if_present():
+    from classificador.check import validate_publicacao
+
     path = ROOT / "publicacao.csv"
     if not path.exists():
         path = ROOT / "outputs" / "publicacao.csv"
     if not path.exists():
         return
+    errors = validate_publicacao(path, temas_path=ANEXOS / "temas.csv")
+    assert errors == [], errors[:15]
     df = pd.read_csv(path, dtype=str).fillna("")
     assert list(df.columns) == PUBLICACAO_COLUMNS
     assert len(df) == 659
     assert set(df["decisao"]) <= {"publicar", "revisar", "fora"}
-    for _, row in df.iterrows():
-        if row["decisao"] in {"publicar", "revisar"}:
-            assert row["tema_central_id"] != ""
-        if row["decisao"] == "fora":
-            assert row["tema_central_id"] == ""
-            assert row["motivo"] != ""
-        if row["decisao"] == "revisar":
-            assert row["motivo"] != ""
-        conf = float(row["confianca"])
-        assert 0.0 <= conf <= 1.0
