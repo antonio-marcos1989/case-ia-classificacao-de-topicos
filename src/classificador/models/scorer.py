@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 import numpy as np
@@ -47,13 +48,13 @@ class HybridScorer:
         embeddings: EmbeddingIndex | None = None,
         knn: FolhaKNN | None = None,
         *,
-        w_tfidf: float = 0.40,
-        w_emb: float = 0.12,
-        w_proto: float = 0.22,
-        w_law: float = 0.32,
-        w_assunto: float = 0.30,
-        w_disc: float = 0.10,
-        w_knn: float = 0.38,
+        w_tfidf: float = 0.42,
+        w_emb: float = 0.10,
+        w_proto: float = 0.26,
+        w_law: float = 0.34,
+        w_assunto: float = 0.28,
+        w_disc: float = 0.08,
+        w_knn: float = 0.40,
         sibling_margin: float = 0.04,
     ):
         self.tree = tree
@@ -109,7 +110,7 @@ class HybridScorer:
         law_boost = np.zeros(n, dtype=float)
         law_hit_name = None
         law_forced: list[int] = []
-        tfidf_top = set(self.tema_ids[i] for i in np.argsort(-tfidf)[:20])
+        tfidf_top = set(self.tema_ids[i] for i in np.argsort(-tfidf)[:25])
         law_hits = self.laws.match(text)
         for hit in law_hits:
             if hit.tema_id is None:
@@ -117,15 +118,22 @@ class HybridScorer:
             law_hit_name = hit.name
             related = {hit.tema_id, *self.tree.children.get(hit.tema_id, [])}
             in_top = hit.tema_id in tfidf_top or not related.isdisjoint(tfidf_top)
-            # Só "força" promoção se lexical também apoia; senão boost parcial
-            strong = 1.0 if in_top else 0.45
+            # Hit específico (subtema) promove mesmo com lexical fraco
+            specific = bool(getattr(hit, "specific", False))
+            hit_w = float(getattr(hit, "score", 1.0))
+            if specific:
+                strong = 1.0 * min(hit_w, 1.2)
+            elif in_top:
+                strong = 1.0
+            else:
+                strong = 0.50
             if hit.tema_id in self._pos:
                 law_boost[self._pos[hit.tema_id]] = max(law_boost[self._pos[hit.tema_id]], strong)
-                if in_top or strong >= 0.9:
+                if specific or in_top or strong >= 0.9:
                     law_forced.append(hit.tema_id)
                 for child in self.tree.children.get(hit.tema_id, []):
                     if child in self._pos:
-                        law_boost[self._pos[child]] = max(law_boost[self._pos[child]], 0.5 * strong)
+                        law_boost[self._pos[child]] = max(law_boost[self._pos[child]], 0.45 * strong)
 
         assunto_boost = np.zeros(n, dtype=float)
         for tid, s in self.lexical.assunto_fuzzy(assunto, top_k=8):
@@ -202,12 +210,24 @@ class HybridScorer:
         sibling_tie = False
         notes: list[str] = []
 
-        # Promove tema de lei só se já está no top-5 combinado (evita falso positivo)
+        # Promove tema de lei: específico → top-12; genérico → top-5
         if law_forced and best:
-            top_ids = {c.tema_id for c in candidates[:5]}
-            for lf in law_forced:
-                if lf in self._pos and eligible[self._pos[lf]] and lf in top_ids:
-                    best = self._candidate_from_pos(self._pos[lf], combined, comps, bonus=0.05)
+            specific_forced = {
+                h.tema_id
+                for h in law_hits
+                if h.tema_id is not None and getattr(h, "specific", False)
+            }
+            top_n = 12 if specific_forced else 5
+            top_ids = {c.tema_id for c in candidates[:top_n]}
+            # Preferir hits específicos na ordem
+            ordered_forced = sorted(
+                law_forced,
+                key=lambda tid: (tid not in specific_forced, -float(law_boost[self._pos[tid]] if tid in self._pos else 0)),
+            )
+            for lf in ordered_forced:
+                if lf in self._pos and eligible[self._pos[lf]] and (lf in top_ids or lf in specific_forced):
+                    bonus = 0.10 if lf in specific_forced else 0.05
+                    best = self._candidate_from_pos(self._pos[lf], combined, comps, bonus=bonus)
                     notes.append(f"lei_promovida:{law_hit_name}")
                     others = [c for c in candidates if c.tema_id != best.tema_id]
                     second = others[0] if others else None
@@ -283,6 +303,10 @@ class HybridScorer:
         if text_len < 220 and max_tfidf < 0.12 and not law_forced:
             fora_signal += 0.22
             notes.append("enunciado curto/genérico")
+        # Stems incompletos / "complete a frase" (comum em gold-fora da folha)
+        if re.search(r"complete\s+a\s+frase|preencha\s+a\s+lacuna|_{3,}", text, flags=re.I):
+            fora_signal += 0.35
+            notes.append("enunciado incompleto")
 
         if best is None:
             fora_signal += 0.40
@@ -320,23 +344,34 @@ class HybridScorer:
                 + (1.0 if margin >= 0.08 else 0.5 if margin >= 0.04 else 0.0)
             ) / 5.0
 
+        sibling_conflict = 1.0 if sibling_tie else 0.0
+        # Gap relativo (score_gap) — menos sensível à escala do combined
+        score_gap = 0.0
+        if best and second and best.score > 1e-9:
+            score_gap = margin / (abs(best.score) + 1e-9)
+
         conf_feat = {
             "raw": float(best.score if best else 0.0),
             "margin": float(margin),
+            "score_gap": float(score_gap),
             "knn_agree": float(knn_info.get("agree") or 0.0),
             "knn_fora": float(knn_fora),
             "law": float(best.components.get("law", 0) if best else 0.0),
             "agree_signals": float(agree_signals),
             "fora_signal": float(min(1.0, fora_signal)),
+            "sibling_conflict": float(sibling_conflict),
         }
-        # Score de publicação enfatiza margem (melhor separação no hold-out)
+        # Score de publicação: margem + lei + gap; penaliza knn-fora e conflito entre irmãos
         conf_feat["score"] = (
-            0.25 * conf_feat["raw"]
-            + 1.10 * conf_feat["margin"]
-            + 0.25 * conf_feat["knn_agree"]
-            + 0.30 * conf_feat["law"]
-            + 0.20 * conf_feat["agree_signals"]
-            - 0.45 * conf_feat["fora_signal"]
+            0.22 * conf_feat["raw"]
+            + 1.25 * conf_feat["margin"]
+            + 0.35 * conf_feat["score_gap"]
+            + 0.28 * conf_feat["knn_agree"]
+            + 0.38 * conf_feat["law"]
+            + 0.22 * conf_feat["agree_signals"]
+            - 0.40 * conf_feat["fora_signal"]
+            - 0.25 * conf_feat["knn_fora"]
+            - 0.35 * conf_feat["sibling_conflict"]
         )
 
         return ScoreResult(

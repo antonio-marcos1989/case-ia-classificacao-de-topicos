@@ -98,21 +98,34 @@ class FolhaKNN:
         }
 
     def theme_prototypes(self, emb: EmbeddingIndex) -> dict[int, np.ndarray]:
-        """Protótipos por tema + suave no pai (nível 1)."""
+        """Protótipos ponderados por tema + suave no pai (nível 1).
+
+        Temas raros pesam um pouco mais (IDF-like) para não serem dominados por
+        classes frequentes na folha.
+        """
         buckets: dict[int, list[np.ndarray]] = defaultdict(list)
+        counts: dict[int, int] = defaultdict(int)
         for qid, tema, is_fora in zip(self.ids, self.labels, self.fora):
             if is_fora or tema is None:
                 continue
             tid = int(tema)
             vec = emb.questao_emb[emb._q_pos[qid]]
             buckets[tid].append(vec)
+            counts[tid] += 1
             parent = self.tree.parent(tid)
             if parent is not None and self.tree.nivel(parent) == 1:
                 buckets[parent].append(vec)
+                counts[parent] += 1
 
+        n_lab = max(sum(1 for f in self.fora if not f), 1)
         out = {}
         for tid, vecs in buckets.items():
-            m = np.mean(np.stack(vecs, axis=0), axis=0)
+            stack = np.stack(vecs, axis=0)
+            # Soft IDF: temas raros → peso ligeiramente maior no mean
+            idf = float(np.log(1.0 + n_lab / max(counts.get(tid, 1), 1)))
+            w = np.full(len(vecs), idf, dtype=np.float32)
+            w = w / (w.sum() + 1e-12)
+            m = (stack * w[:, None]).sum(axis=0)
             n = np.linalg.norm(m) + 1e-12
             out[tid] = (m / n).astype(np.float32)
         return out

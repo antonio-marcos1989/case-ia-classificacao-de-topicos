@@ -1,660 +1,660 @@
 id,decisao,tema_central_id,extras_ids,confianca,motivo
-Q0001,revisar,5527,5561,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; assunto_exact; sugestão 5527; alt 5561
-Q0002,revisar,4384,,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 4384; alt 4385
-Q0003,revisar,5561,5560,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5560
-Q0004,revisar,5480,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5480; alt 5492
-Q0005,revisar,5199,4703,0.6364,vizinhos da folha sugerem fora
-Q0006,revisar,5160,,0.4534,confiança 0.45 abaixo do limiar 0.75; assunto_exact; sugestão 5160; alt 5203
-Q0007,revisar,5064,,0.4615,empate entre irmãos 5064 e 5065; assunto_exact; sugestão 5064; alt 5065
-Q0008,revisar,4703,5199,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lep; sugestão 4703; alt 5199
-Q0009,revisar,5070,5069,0.2857,vizinhos da folha sugerem fora
-Q0010,revisar,5070,5100,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5100
-Q0011,revisar,4702,,0.9269,vizinhos da folha sugerem fora
-Q0012,revisar,5561,,0.6364,vizinhos da folha sugerem fora
-Q0013,revisar,5503,5477,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; assunto_exact; sugestão 5503; alt 5477
-Q0014,revisar,5477,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:habeas_corpus; sugestão 5477; alt 5492
-Q0015,revisar,5498,5501,0.75,vizinhos da folha sugerem fora
-Q0016,fora,,,0.0,disciplina_origem fora do recorte
-Q0017,revisar,5488,5527,0.1765,vizinhos da folha sugerem fora
-Q0018,revisar,5480,5492,0.4045,confiança 0.40 abaixo do limiar 0.75; assunto_exact; sugestão 5480; alt 5492
-Q0019,revisar,5498,5475,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5475
-Q0020,revisar,4701,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:jecrim; sugestão 4701; alt 5492
-Q0021,revisar,5503,5492,0.1765,vizinhos da folha sugerem fora
-Q0022,revisar,5092,5070,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5092; alt 5070
-Q0023,revisar,5527,5524,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:prescricao; assunto_exact; sugestão 5527; alt 5524
-Q0024,revisar,4371,4385,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 4371; alt 4385
-Q0025,revisar,5087,5092,0.6306,confiança 0.63 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5087; alt 5092
-Q0026,revisar,4704,5472,0.2857,confiança 0.29 abaixo do limiar 0.75; lei:maria_da_penha; sugestão 4704; alt 5472
-Q0027,revisar,5492,,0.4038,confiança 0.40 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0028,revisar,5487,,0.6364,vizinhos da folha sugerem fora
-Q0029,revisar,4684,4701,0.0961,vizinhos da folha sugerem fora
-Q0030,revisar,5477,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:habeas_corpus; sugestão 5477; alt 5100
-Q0031,revisar,4385,,0.6364,vizinhos da folha sugerem fora
-Q0032,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5498
-Q0033,revisar,5527,5492,0.2857,vizinhos da folha sugerem fora
-Q0034,revisar,5477,5498,0.7761,lei_promovida:inquerito; assunto_exact; sugestão 5477; alt 5498
-Q0035,revisar,4706,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 4706; alt 5498
-Q0036,revisar,5498,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0037,revisar,5088,5087,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5088; alt 5087
-Q0038,revisar,5498,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0039,revisar,4687,,0.0644,confiança 0.06 abaixo do limiar 0.75; sugestão 4687; alt 4701
-Q0040,revisar,5524,5527,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 5527
-Q0041,revisar,5184,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5184; alt 5203
-Q0042,revisar,5202,5227,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5202; alt 5227
-Q0043,revisar,5199,5202,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5199; alt 5202
-Q0044,revisar,5548,5488,0.1765,vizinhos da folha sugerem fora
-Q0045,revisar,5091,5087,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5091; alt 5087
-Q0046,revisar,5580,5582,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5580; alt 5582
-Q0047,revisar,5087,,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; sugestão 5087; alt 5100
-Q0048,revisar,5199,5203,0.4615,vizinhos da folha sugerem fora
-Q0049,revisar,5152,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5152; alt 5149
-Q0050,publicar,4708,,0.6364,
-Q0051,revisar,5070,5066,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5066
-Q0052,revisar,4703,,0.75,vizinhos da folha sugerem fora
-Q0053,publicar,4701,5540,1.0,
-Q0054,revisar,5174,5165,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5174; alt 5165
-Q0055,revisar,5492,5527,0.6202,confiança 0.62 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0056,revisar,5069,,0.4615,empate entre irmãos 5069 e 5070; assunto_exact; sugestão 5069; alt 5070
-Q0057,revisar,5175,5176,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5175; alt 5176
-Q0058,revisar,4384,,0.2861,empate entre irmãos 4384 e 4389; assunto_exact; sugestão 4384; alt 4389
-Q0059,revisar,4384,,0.6364,vizinhos da folha sugerem fora
-Q0060,revisar,5081,5087,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5081; alt 5087
-Q0061,publicar,4703,,1.0,
-Q0062,revisar,4703,4701,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4703; alt 4701
-Q0063,revisar,5501,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei:maria_da_penha; sugestão 5501; alt 5492
-Q0064,revisar,5203,5092,0.1765,vizinhos da folha sugerem fora
-Q0065,revisar,5203,5100,0.1765,vizinhos da folha sugerem fora
-Q0066,revisar,4371,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4371; alt 4372
-Q0067,revisar,5091,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5091; alt 5087
-Q0068,revisar,5117,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5117; alt 5116
-Q0069,revisar,5203,5173,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5203; alt 5173
-Q0070,revisar,4708,,0.6364,vizinhos da folha sugerem fora
-Q0071,revisar,5202,5117,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5202; alt 5117
-Q0072,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5498
-Q0073,revisar,5087,5066,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5066
-Q0074,revisar,4701,,0.0706,empate entre irmãos 4703 e 4701; sugestão 4701; alt 4703
-Q0075,revisar,5203,,0.2857,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0076,revisar,4371,4368,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4371; alt 4368
-Q0077,revisar,5183,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; lei:crimes_eleitorais; sugestão 5183; alt 5073
-Q0078,revisar,4701,,0.0,empate entre irmãos 4701 e 4708; sugestão 4701; alt 4703
-Q0079,revisar,5580,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5580; alt 5581
-Q0080,revisar,4370,4368,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4370; alt 4368
-Q0081,revisar,4371,4372,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4371; alt 4372
-Q0082,revisar,5091,,0.2055,empate entre irmãos 5091 e 5100; sugestão 5091; alt 5100
-Q0083,revisar,5070,5072,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5072
-Q0084,revisar,4704,,0.6364,vizinhos da folha sugerem fora
-Q0085,revisar,5070,5066,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5066
-Q0086,publicar,5092,,0.6364,
-Q0087,revisar,4703,,0.8036,vizinhos da folha sugerem fora
-Q0088,revisar,4389,4390,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4389; alt 4390
-Q0089,revisar,5203,,0.2857,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0090,revisar,5524,4701,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 4701
-Q0091,revisar,4703,5199,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lep; sugestão 4703; alt 5199
-Q0092,revisar,5492,5527,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5527
-Q0093,revisar,5070,5152,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5152
-Q0094,revisar,5524,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 5527
-Q0095,revisar,5070,,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5152
-Q0096,revisar,5480,5527,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:juri; sugestão 5480; alt 5527
-Q0097,revisar,4708,,0.6364,vizinhos da folha sugerem fora
-Q0098,revisar,5527,5466,0.2882,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5527; alt 5466
-Q0099,publicar,5100,,0.6364,
-Q0100,revisar,5102,5103,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5102; alt 5103
-Q0101,revisar,4704,,0.6364,vizinhos da folha sugerem fora
-Q0102,revisar,5466,5527,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5466; alt 5527
-Q0103,revisar,5478,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5478; alt 5466
-Q0104,revisar,5498,5501,0.8453,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0105,revisar,4385,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; lei:jecrim; sugestão 4385; alt 4388
-Q0106,revisar,5165,,0.6364,vizinhos da folha sugerem fora
-Q0107,revisar,5117,,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5117; alt 5203
-Q0108,revisar,5561,5185,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5185
-Q0109,revisar,4708,,0.9861,vizinhos da folha sugerem fora
-Q0110,revisar,5480,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5480; alt 5478
-Q0111,revisar,4384,4371,0.4615,vizinhos da folha sugerem fora
-Q0112,revisar,5492,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:organizacoes; sugestão 5492; alt 5466
-Q0113,revisar,5498,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0114,revisar,5501,5498,0.4615,vizinhos da folha sugerem fora
-Q0115,revisar,4388,,0.6364,vizinhos da folha sugerem fora
-Q0116,publicar,4708,,0.9616,
-Q0117,revisar,4384,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4384; alt 4371
-Q0118,revisar,5477,,0.6364,vizinhos da folha sugerem fora
-Q0119,revisar,5488,5506,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5488; alt 5506
-Q0120,revisar,5582,5595,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5582; alt 5595
-Q0121,revisar,5498,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0122,revisar,4703,,0.75,vizinhos da folha sugerem fora
-Q0123,revisar,4368,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 4368; alt 4370
-Q0124,revisar,4384,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4384; alt 4388
-Q0125,revisar,4708,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:organizacoes; sugestão 4708; alt 4703
-Q0126,revisar,5117,5203,0.4167,confiança 0.42 abaixo do limiar 0.75; assunto_exact; sugestão 5117; alt 5203
-Q0127,revisar,4708,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:drogas; sugestão 4708; alt 5492
-Q0128,revisar,5492,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5466
-Q0129,revisar,5492,5527,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0130,revisar,5205,5070,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5205; alt 5070
-Q0131,revisar,5203,5074,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5074
-Q0132,revisar,5492,5487,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5492; alt 5487
-Q0133,revisar,5524,5527,0.75,lei_promovida:juri; assunto_exact; sugestão 5524; alt 5527
-Q0134,revisar,5087,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5088
-Q0135,revisar,5203,5158,0.2831,confiança 0.28 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5158
-Q0136,revisar,4704,,0.6364,vizinhos da folha sugerem fora
-Q0137,revisar,5498,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0138,revisar,5203,5199,0.6364,vizinhos da folha sugerem fora
-Q0139,revisar,5211,5212,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5212
-Q0140,revisar,5070,5203,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5203
-Q0141,revisar,4385,4388,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4385; alt 4388
-Q0142,fora,,,0.0,disciplina_origem fora do recorte
-Q0143,revisar,5506,5580,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5506; alt 5580
-Q0144,publicar,5524,5561,0.75,
-Q0145,publicar,4702,,0.6364,
-Q0146,revisar,5527,5492,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:interceptacao; sugestão 5527; alt 5492
-Q0147,revisar,5498,5501,0.75,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0148,revisar,5203,5199,0.6364,vizinhos da folha sugerem fora
-Q0149,revisar,5498,5501,0.9345,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0150,revisar,4708,,1.0,vizinhos da folha sugerem fora
-Q0151,revisar,5492,,0.6364,vizinhos da folha sugerem fora
-Q0152,revisar,5472,5470,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5472; alt 5470
-Q0153,revisar,5178,,0.4166,confiança 0.42 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5177
-Q0154,revisar,5117,5092,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5117; alt 5092
-Q0155,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0156,revisar,5203,5198,0.1765,vizinhos da folha sugerem fora
-Q0157,revisar,5498,5501,0.6364,vizinhos da folha sugerem fora
-Q0158,revisar,4703,,0.0,vizinhos da folha sugerem fora
-Q0159,revisar,5070,5072,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5072
-Q0160,revisar,5203,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5199
-Q0161,revisar,5501,4708,0.6364,vizinhos da folha sugerem fora
-Q0162,revisar,4371,,0.1765,empate entre irmãos 4371 e 4368; sugestão 4371; alt 4368
-Q0163,revisar,4701,,0.0,empate entre irmãos 4701 e 4708; sugestão 4701; alt 4708
-Q0164,revisar,4703,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei:lep; sugestão 4703; alt 4701
-Q0165,revisar,5492,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:organizacoes; sugestão 5492; alt 5466
-Q0166,revisar,6734,,0.6364,vizinhos da folha sugerem fora
-Q0167,revisar,5524,5527,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 5527
-Q0168,revisar,5087,5152,0.1507,confiança 0.15 abaixo do limiar 0.75; sugestão 5087; alt 5152
-Q0169,revisar,5492,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5490
-Q0170,revisar,5185,,0.6364,vizinhos da folha sugerem fora
-Q0171,revisar,5492,5466,0.4211,vizinhos da folha sugerem fora
-Q0172,revisar,5185,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:prescricao; sugestão 5185; alt 5527
-Q0173,publicar,4703,,0.9787,
-Q0174,revisar,5066,5070,0.306,confiança 0.31 abaixo do limiar 0.75; assunto_exact; sugestão 5066; alt 5070
-Q0175,revisar,5092,,0.6364,empate entre irmãos 5092 e 5091; assunto_exact; sugestão 5092; alt 5091
-Q0176,revisar,5066,5070,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5066; alt 5070
-Q0177,revisar,5492,5487,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5492; alt 5487
-Q0178,revisar,5183,5203,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5183; alt 5203
-Q0179,revisar,4368,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4368; alt 4369
-Q0180,revisar,5498,5554,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5554
-Q0181,revisar,4703,,0.0,empate entre irmãos 4706 e 4703; sugestão 4703; alt 4706
-Q0182,revisar,5070,5069,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5069
-Q0183,publicar,5561,,0.6364,
-Q0184,revisar,4708,,0.6364,vizinhos da folha sugerem fora
-Q0185,revisar,5202,,0.1765,empate entre irmãos 5199 e 5185; sugestão 5202; alt 5203
-Q0186,revisar,5202,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5202; alt 5204
-Q0187,revisar,5087,5100,0.6364,vizinhos da folha sugerem fora
-Q0188,revisar,5211,5073,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5073
-Q0189,revisar,5472,,0.4615,empate entre irmãos 5472 e 5470; sugestão 5472; alt 5470
-Q0190,revisar,4701,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:jecrim; sugestão 4701; alt 5540
-Q0191,revisar,5561,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5560
-Q0192,revisar,5091,4703,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lep; sugestão 5091; alt 4703
-Q0193,revisar,5501,5502,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:organizacoes; sugestão 5501; alt 5502
-Q0194,revisar,5087,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5218
-Q0195,revisar,4371,4372,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4371; alt 4372
-Q0196,revisar,4385,4388,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 4385; alt 4388
-Q0197,revisar,5501,5498,0.75,lei_promovida:inquerito; assunto_exact; sugestão 5501; alt 5498
-Q0198,revisar,5073,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5073; alt 5132
-Q0199,revisar,5218,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5218; alt 5219
-Q0200,revisar,4705,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:organizacoes; sugestão 4705; alt 5466
-Q0201,revisar,5102,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5102; alt 5103
-Q0202,revisar,5224,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5224; alt 5152
-Q0203,publicar,4702,,0.75,
-Q0204,revisar,5506,5505,0.2857,vizinhos da folha sugerem fora
-Q0205,revisar,5527,5492,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5527; alt 5492
-Q0206,revisar,5561,,0.6364,vizinhos da folha sugerem fora
-Q0207,revisar,5203,5202,0.1765,vizinhos da folha sugerem fora
-Q0208,revisar,5072,,0.6364,vizinhos da folha sugerem fora
-Q0209,revisar,5501,5499,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5499
-Q0210,revisar,5066,5070,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5066; alt 5070
-Q0211,revisar,5492,,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5492; alt 5488
-Q0212,revisar,4700,5488,0.6364,vizinhos da folha sugerem fora
-Q0213,revisar,4708,,0.6364,vizinhos da folha sugerem fora
-Q0214,revisar,5494,,0.4615,empate entre irmãos 5494 e 5492; assunto_exact; sugestão 5494; alt 5492
-Q0215,revisar,5199,5202,0.1765,vizinhos da folha sugerem fora
-Q0216,publicar,4701,,0.75,
-Q0217,revisar,4384,,0.4615,vizinhos da folha sugerem fora
-Q0218,fora,,,0.0,disciplina_origem fora do recorte; vizinhos da folha sugerem fora
-Q0219,revisar,5203,5073,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5073
-Q0220,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; assunto_exact; sugestão 5501; alt 5498
-Q0221,revisar,5201,5203,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5201; alt 5203
-Q0222,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0223,revisar,5084,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5084; alt 5203
-Q0224,revisar,5202,5070,0.4267,vizinhos da folha sugerem fora
-Q0225,revisar,5492,5527,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5527
-Q0226,revisar,5527,5466,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5527; alt 5466
-Q0227,revisar,5103,5102,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5103; alt 5102
-Q0228,revisar,5477,6734,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:habeas_corpus; sugestão 5477; alt 6734
-Q0229,revisar,5498,5501,0.6364,vizinhos da folha sugerem fora
-Q0230,revisar,5211,5073,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5073
-Q0231,revisar,5224,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5224; alt 5202
-Q0232,revisar,5087,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5087; alt 5091
-Q0233,revisar,5178,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5203
-Q0234,revisar,4381,,0.2857,empate entre irmãos 4381 e 4382; sugestão 4381; alt 4382
-Q0235,revisar,5562,5492,0.1765,vizinhos da folha sugerem fora
-Q0236,revisar,5498,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0237,revisar,5178,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5202
-Q0238,revisar,5466,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5466; alt 5478
-Q0239,revisar,5198,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5198; alt 5202
-Q0240,revisar,5498,,0.6364,vizinhos da folha sugerem fora
-Q0241,revisar,5218,5224,0.3008,confiança 0.30 abaixo do limiar 0.75; assunto_exact; sugestão 5218; alt 5224
-Q0242,revisar,5477,5580,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5477; alt 5580
-Q0243,revisar,5178,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5185
-Q0244,revisar,5087,5091,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5091
-Q0245,revisar,5185,5189,0.75,lei_promovida:prescricao; assunto_exact; sugestão 5185; alt 5189
-Q0246,revisar,5527,5524,0.75,lei_promovida:juri; assunto_exact; sugestão 5527; alt 5524
-Q0247,revisar,5502,,0.6364,vizinhos da folha sugerem fora
-Q0248,revisar,5087,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5088
-Q0249,revisar,5492,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5480
-Q0250,revisar,5199,5202,0.6364,vizinhos da folha sugerem fora
-Q0251,revisar,5198,,0.3333,empate entre irmãos 5198 e 5193; assunto_exact; sugestão 5198; alt 5193
-Q0252,revisar,6734,,0.6975,vizinhos da folha sugerem fora
-Q0253,revisar,4371,,0.6364,vizinhos da folha sugerem fora
-Q0254,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5501; alt 5498
-Q0255,revisar,5211,5217,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5217
-Q0256,revisar,5218,5192,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5218; alt 5192
-Q0257,revisar,5227,5224,0.459,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5227; alt 5224
-Q0258,revisar,5524,5527,0.75,lei_promovida:juri; assunto_exact; sugestão 5524; alt 5527
-Q0259,revisar,5073,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5073; alt 5202
-Q0260,revisar,4368,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4368; alt 4370
-Q0261,revisar,5064,,0.1765,empate entre irmãos 5064 e 5065; assunto_exact; sugestão 5064; alt 5065
-Q0262,publicar,4703,,1.0,
-Q0263,revisar,5492,5527,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5527
-Q0264,revisar,5103,5224,0.2323,vizinhos da folha sugerem fora
-Q0265,revisar,5185,5202,0.3775,confiança 0.38 abaixo do limiar 0.75; assunto_exact; sugestão 5185; alt 5202
-Q0266,revisar,5524,5527,0.75,lei_promovida:juri; assunto_exact; sugestão 5524; alt 5527
-Q0267,revisar,4708,,0.6364,vizinhos da folha sugerem fora
-Q0268,revisar,5117,5087,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5117; alt 5087
-Q0269,revisar,5173,5171,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5173; alt 5171
-Q0270,revisar,5092,,0.3499,empate entre irmãos 5092 e 5093; sugestão 5092; alt 5093
-Q0271,revisar,5527,5492,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5527; alt 5492
-Q0272,revisar,4703,,0.8392,vizinhos da folha sugerem fora
-Q0273,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; sugestão 5203; alt 5202
-Q0274,revisar,5203,5158,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5158
-Q0275,revisar,4701,5487,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:jecrim; sugestão 4701; alt 5487
-Q0276,revisar,5554,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5554; alt 5501
-Q0277,fora,,,0.1765,disciplina_origem fora do recorte
-Q0278,revisar,5492,,0.2857,vizinhos da folha sugerem fora
-Q0279,revisar,5185,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:prescricao; sugestão 5185; alt 5188
-Q0280,revisar,5487,5492,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5487; alt 5492
-Q0281,revisar,5492,5580,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5580
-Q0282,revisar,5492,5472,0.2916,confiança 0.29 abaixo do limiar 0.75; lei:maria_da_penha; sugestão 5492; alt 5472
-Q0283,revisar,5492,5527,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5527
-Q0284,publicar,5527,,0.6364,
-Q0285,revisar,5202,,0.1765,empate entre irmãos 5211 e 5199; sugestão 5202; alt 5203
-Q0286,revisar,5202,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5202; alt 5069
-Q0287,revisar,5230,5214,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5230; alt 5214
-Q0288,revisar,5068,,0.4615,empate entre irmãos 5068 e 5070; assunto_exact; sugestão 5068; alt 5070
-Q0289,revisar,4704,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 4704; alt 5501
-Q0290,publicar,4701,,0.7932,
-Q0291,revisar,5501,5498,0.6364,vizinhos da folha sugerem fora
-Q0292,revisar,4375,4376,0.6364,vizinhos da folha sugerem fora
-Q0293,revisar,5185,5189,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:prescricao; sugestão 5185; alt 5189
-Q0294,revisar,5217,5211,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5217; alt 5211
-Q0295,revisar,5487,5488,0.4615,vizinhos da folha sugerem fora
-Q0296,revisar,5492,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5466
-Q0297,revisar,4689,,0.032,empate entre irmãos 4701 e 4703; sugestão 4689; alt 4701
-Q0298,revisar,4701,4703,0.1434,vizinhos da folha sugerem fora
-Q0299,revisar,4384,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4384; alt 4371
-Q0300,revisar,5084,5087,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5084; alt 5087
-Q0301,revisar,5197,5073,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5197; alt 5073
-Q0302,revisar,5224,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5224; alt 5214
-Q0303,revisar,5203,5183,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5183
-Q0304,publicar,4701,5524,0.7851,
-Q0305,revisar,5470,,0.4203,empate entre irmãos 5470 e 5471; sugestão 5470; alt 5471
-Q0306,revisar,4708,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:drogas; sugestão 4708; alt 5088
-Q0307,revisar,4707,,0.1765,empate entre irmãos 4707 e 4701; lei:tortura; sugestão 4707; alt 4701
-Q0308,revisar,5501,5498,0.75,lei_promovida:prescricao; assunto_exact; sugestão 5501; alt 5498
-Q0309,fora,,,0.0,disciplina_origem fora do recorte; vizinhos da folha sugerem fora
-Q0310,revisar,5506,5590,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5506; alt 5590
-Q0311,revisar,5488,,0.6364,vizinhos da folha sugerem fora
-Q0312,revisar,4384,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 4384; alt 4371
-Q0313,revisar,5199,5203,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5199; alt 5203
-Q0314,publicar,5477,,1.0,
-Q0315,revisar,5185,,0.3158,vizinhos da folha sugerem fora
-Q0316,revisar,5224,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5224; alt 5070
-Q0317,revisar,5070,,0.2857,vizinhos da folha sugerem fora
-Q0318,revisar,5072,5152,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5072; alt 5152
-Q0319,revisar,5073,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5073; alt 5132
-Q0320,revisar,5501,4708,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:drogas; sugestão 5501; alt 4708
-Q0321,revisar,5073,4708,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:drogas; sugestão 5073; alt 4708
-Q0322,revisar,5561,,0.7203,vizinhos da folha sugerem fora
-Q0323,revisar,5595,5580,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5595; alt 5580
-Q0324,revisar,4703,,0.6364,vizinhos da folha sugerem fora
-Q0325,revisar,4701,5473,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:jecrim; sugestão 4701; alt 5473
-Q0326,publicar,4708,,1.0,
-Q0327,revisar,4703,5203,0.6364,vizinhos da folha sugerem fora
-Q0328,revisar,4382,4385,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4382; alt 4385
-Q0329,revisar,5492,5466,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; lei:organizacoes; sugestão 5492; alt 5466
-Q0330,revisar,5501,5498,0.6364,vizinhos da folha sugerem fora
-Q0331,publicar,5477,,1.0,
-Q0332,revisar,4701,,0.6364,vizinhos da folha sugerem fora
-Q0333,revisar,5178,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5203
-Q0334,revisar,4385,,0.1765,empate entre irmãos 4385 e 4371; sugestão 4385; alt 4371
-Q0335,revisar,5224,5211,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5224; alt 5211
-Q0336,revisar,5159,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5159; alt 5157
-Q0337,revisar,4701,,0.1765,empate entre irmãos 4701 e 4684; sugestão 4701; alt 4684
-Q0338,revisar,5590,5492,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5590; alt 5492
-Q0339,revisar,5492,5527,0.6364,vizinhos da folha sugerem fora
-Q0340,revisar,5073,,0.6364,empate entre irmãos 5073 e 5076; assunto_exact; sugestão 5073; alt 5076
-Q0341,revisar,5070,5071,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5071
-Q0342,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5498
-Q0343,revisar,5472,5466,0.3439,confiança 0.34 abaixo do limiar 0.75; assunto_exact; sugestão 5472; alt 5466
-Q0344,revisar,5064,,0.4196,confiança 0.42 abaixo do limiar 0.75; assunto_exact; sugestão 5064; alt 5065
-Q0345,revisar,5103,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5103; alt 5102
-Q0346,revisar,5524,5527,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 5527
-Q0347,revisar,4703,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lep; sugestão 4703; alt 5152
-Q0348,revisar,5185,,0.6364,vizinhos da folha sugerem fora
-Q0349,revisar,5070,5066,0.4167,confiança 0.42 abaixo do limiar 0.75; assunto_exact; sugestão 5070; alt 5066
-Q0350,revisar,4702,5203,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lavagem; sugestão 4702; alt 5203
-Q0351,revisar,5073,,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5073; alt 5117
-Q0352,revisar,5492,5595,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5492; alt 5595
-Q0353,revisar,5527,5466,0.3333,vizinhos da folha sugerem fora
-Q0354,revisar,5218,5224,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5218; alt 5224
-Q0355,revisar,4708,,0.6364,empate entre irmãos 4708 e 4701; lei_promovida:jecrim; sugestão 4708; alt 4701
-Q0356,revisar,5066,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5066; alt 5070
-Q0357,revisar,5178,,0.3877,confiança 0.39 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5177
-Q0358,revisar,5133,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5133; alt 5203
-Q0359,revisar,4701,,0.6364,vizinhos da folha sugerem fora
-Q0360,revisar,4388,4368,0.1431,confiança 0.14 abaixo do limiar 0.75; sugestão 4388; alt 4368
-Q0361,revisar,5152,5213,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5152; alt 5213
-Q0362,revisar,5557,5492,0.1765,confiança 0.18 abaixo do limiar 0.75; lei:organizacoes; sugestão 5557; alt 5492
-Q0363,revisar,5087,5091,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5091
-Q0364,revisar,5202,5203,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5202; alt 5203
-Q0365,revisar,5203,,0.2857,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0366,revisar,5203,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5203; alt 5202
-Q0367,revisar,5492,5527,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0368,revisar,5498,5501,1.0,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0369,publicar,4702,6723,0.75,
-Q0370,revisar,5523,,0.4615,vizinhos da folha sugerem fora
-Q0371,revisar,5488,5473,0.1765,vizinhos da folha sugerem fora
-Q0372,revisar,5555,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5555; alt 5595
-Q0373,revisar,5182,5180,0.4511,confiança 0.45 abaixo do limiar 0.75; sugestão 5182; alt 5180
-Q0374,revisar,5147,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5147; alt 5091
-Q0375,publicar,5224,,0.6364,
-Q0376,revisar,5222,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5222; alt 5202
-Q0377,publicar,5477,,1.0,
-Q0378,revisar,5206,5203,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5206; alt 5203
-Q0379,publicar,4704,,0.8799,
-Q0380,revisar,5492,5478,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5478
-Q0381,revisar,5502,,0.6364,vizinhos da folha sugerem fora
-Q0382,revisar,5202,,0.1765,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0383,revisar,4702,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:organizacoes; assunto_exact; sugestão 4702; alt 6723
-Q0384,revisar,5561,5477,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5477
-Q0385,revisar,5492,5557,0.2884,confiança 0.29 abaixo do limiar 0.75; lei:organizacoes; sugestão 5492; alt 5557
-Q0386,revisar,4388,4385,0.1765,vizinhos da folha sugerem fora
-Q0387,revisar,5590,5554,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5590; alt 5554
-Q0388,revisar,5527,5492,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:hediondos; sugestão 5527; alt 5492
-Q0389,revisar,5202,,0.2857,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0390,revisar,4376,,0.2857,vizinhos da folha sugerem fora
-Q0391,revisar,5502,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5502; alt 5466
-Q0392,revisar,4703,5208,0.6364,vizinhos da folha sugerem fora
-Q0393,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0394,revisar,5524,,0.4615,empate entre irmãos 5524 e 5480; assunto_exact; sugestão 5524; alt 5480
-Q0395,revisar,5477,,0.6364,empate entre irmãos 5477 e 5478; lei_promovida:prescricao; sugestão 5477; alt 5478
-Q0396,revisar,5095,5091,0.2857,vizinhos da folha sugerem fora
-Q0397,revisar,5203,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5203; alt 5202
-Q0398,revisar,5178,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5178; alt 5203
-Q0399,revisar,5087,5095,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5095
-Q0400,revisar,5211,5217,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5217
-Q0401,revisar,5185,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:prescricao; sugestão 5185; alt 5189
-Q0402,revisar,5091,5183,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5091; alt 5183
-Q0403,revisar,5182,,0.1765,empate entre irmãos 5182 e 5181; sugestão 5182; alt 5181
-Q0404,revisar,5119,,0.3804,empate entre irmãos 5119 e 5117; assunto_exact; sugestão 5119; alt 5117
-Q0405,revisar,5492,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5492; alt 5501
-Q0406,revisar,5091,,0.4615,empate entre irmãos 5091 e 5095; assunto_exact; sugestão 5091; alt 5095
-Q0407,revisar,5492,5527,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5527
-Q0408,revisar,5495,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5495; alt 5492
-Q0409,revisar,5215,,0.4615,empate entre irmãos 5215 e 5217; sugestão 5215; alt 5217
-Q0410,revisar,5213,5211,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5213; alt 5211
-Q0411,revisar,5094,5203,0.3808,confiança 0.38 abaixo do limiar 0.75; assunto_exact; sugestão 5094; alt 5203
-Q0412,revisar,5095,5091,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5095; alt 5091
-Q0413,revisar,5100,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5100; alt 5087
-Q0414,revisar,5202,,0.2857,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0415,revisar,5203,5183,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto/texto OOD; sugestão 5203; alt 5183
-Q0416,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0417,revisar,4376,,0.1765,vizinhos da folha sugerem fora
-Q0418,revisar,4704,4703,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lep; assunto_exact; sugestão 4704; alt 4703
-Q0419,revisar,4388,,0.3186,confiança 0.32 abaixo do limiar 0.75; sugestão 4388; alt 4385
-Q0420,revisar,4704,,0.73,confiança 0.73 abaixo do limiar 0.75; lei_promovida:maria_da_penha; assunto_exact; sugestão 4704; alt 5492
-Q0421,revisar,5501,5492,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5501; alt 5492
-Q0422,revisar,5182,5180,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5182; alt 5180
-Q0423,revisar,5203,5091,0.1765,vizinhos da folha sugerem fora
-Q0424,fora,,,0.6364,disciplina_origem fora do recorte; assunto/texto OOD
-Q0425,revisar,5572,5527,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5572; alt 5527
-Q0426,revisar,5192,,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5192; alt 5203
-Q0427,revisar,5492,5527,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0428,revisar,5469,5466,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5469; alt 5466
-Q0429,revisar,5072,,0.6364,vizinhos da folha sugerem fora
-Q0430,revisar,4704,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; assunto_exact; sugestão 4704; alt 5498
-Q0431,revisar,5466,5472,0.4297,vizinhos da folha sugerem fora
-Q0432,revisar,5492,5466,0.6364,confiança 0.64 abaixo do limiar 0.75; lei:prescricao; sugestão 5492; alt 5466
-Q0433,revisar,5071,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5071; alt 5073
-Q0434,revisar,5498,5501,1.0,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0435,revisar,4376,,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 4376; alt 4368
-Q0436,publicar,4704,,1.0,
-Q0437,revisar,5181,5180,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5181; alt 5180
-Q0438,revisar,5087,5100,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5087; alt 5100
-Q0439,revisar,5089,5087,0.3543,confiança 0.35 abaixo do limiar 0.75; assunto_exact; sugestão 5089; alt 5087
-Q0440,revisar,5501,,0.8773,empate entre irmãos 5501 e 5500; lei_promovida:inquerito; assunto_exact; sugestão 5501; alt 5500
-Q0441,revisar,4701,5477,0.75,lei_promovida:habeas_corpus; sugestão 4701; alt 5477
-Q0442,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5501; alt 5498
-Q0443,revisar,5216,5203,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5216; alt 5203
-Q0444,revisar,5545,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5545; alt 5527
-Q0445,revisar,5478,5562,0.1765,confiança 0.18 abaixo do limiar 0.75; lei:organizacoes; sugestão 5478; alt 5562
-Q0446,revisar,5498,5501,0.6364,vizinhos da folha sugerem fora
-Q0447,revisar,5185,5189,0.6364,vizinhos da folha sugerem fora
-Q0448,revisar,5488,5478,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5488; alt 5478
-Q0449,revisar,5231,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5231; alt 5203
-Q0450,revisar,5560,5571,0.4383,confiança 0.44 abaixo do limiar 0.75; sugestão 5560; alt 5571
-Q0451,publicar,5498,5501,1.0,
-Q0452,revisar,5501,5498,1.0,lei_promovida:inquerito; assunto_exact; sugestão 5501; alt 5498
-Q0453,publicar,4704,,1.0,
-Q0454,revisar,5183,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5183; alt 5202
-Q0455,revisar,5561,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5492
-Q0456,revisar,5203,5091,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5203; alt 5091
-Q0457,publicar,5477,,1.0,
-Q0458,revisar,5073,5224,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5073; alt 5224
-Q0459,revisar,5091,5165,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5091; alt 5165
-Q0460,revisar,5145,5144,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5145; alt 5144
-Q0461,revisar,5562,,0.6364,vizinhos da folha sugerem fora
-Q0462,revisar,5072,,0.4615,empate entre irmãos 5072 e 5073; assunto_exact; sugestão 5072; alt 5073
-Q0463,revisar,5087,5091,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; sugestão 5087; alt 5091
-Q0464,revisar,5092,,0.1765,empate entre irmãos 5092 e 5100; sugestão 5092; alt 5100
-Q0465,revisar,5535,5501,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5535; alt 5501
-Q0466,revisar,5222,,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5222; alt 5224
-Q0467,fora,,,0.6364,disciplina_origem fora do recorte; assunto/texto OOD
-Q0468,revisar,5184,5203,0.1765,vizinhos da folha sugerem fora
-Q0469,revisar,4708,4376,0.6364,vizinhos da folha sugerem fora
-Q0470,revisar,4703,,0.6364,vizinhos da folha sugerem fora
-Q0471,revisar,5089,5203,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5089; alt 5203
-Q0472,revisar,5117,5116,0.4615,vizinhos da folha sugerem fora
-Q0473,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5501; alt 5498
-Q0474,revisar,4388,,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 4388; alt 4368
-Q0475,revisar,5072,5100,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5072; alt 5100
-Q0476,publicar,5524,5527,0.75,
-Q0477,revisar,5475,,0.1714,vizinhos da folha sugerem fora
-Q0478,revisar,5480,5481,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5480; alt 5481
-Q0479,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0480,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; sugestão 5203; alt 5202
-Q0481,revisar,5203,5227,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5227
-Q0482,revisar,5508,,0.6364,empate entre irmãos 5508 e 5506; assunto_exact; sugestão 5508; alt 5506
-Q0483,publicar,5178,,0.6364,
-Q0484,revisar,4702,5202,0.6364,vizinhos da folha sugerem fora
-Q0485,revisar,5180,5181,0.4615,vizinhos da folha sugerem fora
-Q0486,revisar,5492,5564,0.4132,confiança 0.41 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5564
-Q0487,revisar,5159,5087,0.4615,confiança 0.46 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5159; alt 5087
-Q0488,revisar,5090,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5090; alt 5087
-Q0489,revisar,5185,5203,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5185; alt 5203
-Q0490,revisar,5211,5217,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5211; alt 5217
-Q0491,revisar,5160,,0.1765,empate entre irmãos 5160 e 5165; assunto_exact; sugestão 5160; alt 5165
-Q0492,revisar,5087,5183,0.3333,confiança 0.33 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5087; alt 5183
-Q0493,revisar,5502,5470,0.286,vizinhos da folha sugerem fora
-Q0494,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5498
-Q0495,revisar,5498,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0496,revisar,5089,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5089; alt 5203
-Q0497,revisar,5561,5477,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; assunto_exact; sugestão 5561; alt 5477
-Q0498,revisar,4704,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:maria_da_penha; assunto_exact; sugestão 4704; alt 5492
-Q0499,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; sugestão 5203; alt 5202
-Q0500,revisar,5087,5091,0.1765,vizinhos da folha sugerem fora
-Q0501,revisar,4704,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; assunto_exact; sugestão 4704; alt 5501
-Q0502,revisar,5099,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5099; alt 5100
-Q0503,revisar,4388,4378,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 4388; alt 4378
-Q0504,revisar,5222,5073,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5222; alt 5073
-Q0505,revisar,5087,5088,0.4615,vizinhos da folha sugerem fora
-Q0506,revisar,5183,5203,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5183; alt 5203
-Q0507,revisar,5203,5224,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5203; alt 5224
-Q0508,revisar,4700,,0.75,vizinhos da folha sugerem fora
-Q0509,revisar,5501,5498,0.8481,vizinhos da folha sugerem fora
-Q0510,revisar,5590,5527,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5590; alt 5527
-Q0511,revisar,5492,5550,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5492; alt 5550
-Q0512,revisar,4702,5492,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lavagem; sugestão 4702; alt 5492
-Q0513,revisar,5100,,0.3202,empate entre irmãos 5100 e 5091; sugestão 5100; alt 5091
-Q0514,revisar,5492,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5492; alt 5501
-Q0515,publicar,4704,,0.9741,
-Q0516,revisar,4702,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:lavagem; sugestão 4702; alt 5100
-Q0517,revisar,5466,,0.3862,vizinhos da folha sugerem fora
-Q0518,revisar,4701,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:jecrim; sugestão 4701; alt 5089
-Q0519,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5501; alt 5498
-Q0520,revisar,5100,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5100; alt 5203
-Q0521,revisar,4376,,0.1765,vizinhos da folha sugerem fora
-Q0522,revisar,5492,5527,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0523,revisar,5473,5502,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5473; alt 5502
-Q0524,revisar,5185,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5185; alt 5203
-Q0525,revisar,4708,5202,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:drogas; sugestão 4708; alt 5202
-Q0526,revisar,4388,,0.3645,vizinhos da folha sugerem fora
-Q0527,fora,,,0.4615,disciplina_origem fora do recorte; assunto/texto OOD
-Q0528,revisar,5182,,0.1765,empate entre irmãos 5182 e 5181; sugestão 5182; alt 5181
-Q0529,revisar,5089,,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5089; alt 5203
-Q0530,revisar,5590,5492,0.5703,confiança 0.57 abaixo do limiar 0.75; sugestão 5590; alt 5492
-Q0531,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5501; alt 5498
-Q0532,revisar,5121,5159,0.349,confiança 0.35 abaixo do limiar 0.75; assunto_exact; sugestão 5121; alt 5159
-Q0533,revisar,5135,5134,0.6364,vizinhos da folha sugerem fora
-Q0534,revisar,4376,4378,0.2857,vizinhos da folha sugerem fora
-Q0535,publicar,4704,,1.0,
-Q0536,revisar,5544,5492,0.1765,vizinhos da folha sugerem fora
-Q0537,revisar,5492,5480,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5480
-Q0538,revisar,5230,5152,0.1765,vizinhos da folha sugerem fora
-Q0539,revisar,5165,5087,0.1765,vizinhos da folha sugerem fora
-Q0540,revisar,5073,5224,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5073; alt 5224
-Q0541,revisar,5096,,0.4615,vizinhos da folha sugerem fora
-Q0542,revisar,5519,5492,0.4615,vizinhos da folha sugerem fora
-Q0543,revisar,5562,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5562; alt 5492
-Q0544,revisar,5480,5492,0.4806,confiança 0.48 abaixo do limiar 0.75; assunto_exact; sugestão 5480; alt 5492
-Q0545,revisar,4388,4376,0.2985,confiança 0.30 abaixo do limiar 0.75; sugestão 4388; alt 4376
-Q0546,revisar,5087,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5087; alt 5088
-Q0547,revisar,5203,,0.2857,empate entre irmãos 5203 e 5202; assunto_exact; sugestão 5203; alt 5202
-Q0548,revisar,5492,5527,0.2895,confiança 0.29 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0549,revisar,4703,,0.6364,vizinhos da folha sugerem fora
-Q0550,revisar,5164,,0.2857,empate entre irmãos 5164 e 5165; assunto_exact; sugestão 5164; alt 5165
-Q0551,revisar,5466,5469,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5466; alt 5469
-Q0552,revisar,5492,5478,0.2083,confiança 0.21 abaixo do limiar 0.75; sugestão 5492; alt 5478
-Q0553,revisar,5492,5527,0.1765,vizinhos da folha sugerem fora
-Q0554,revisar,5132,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5132; alt 5203
-Q0555,revisar,4703,5208,0.6364,vizinhos da folha sugerem fora
-Q0556,revisar,4388,,0.6364,vizinhos da folha sugerem fora
-Q0557,revisar,4701,5501,0.75,vizinhos da folha sugerem fora
-Q0558,revisar,5492,5527,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5492; alt 5527
-Q0559,revisar,5092,5093,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; sugestão 5092; alt 5093
-Q0560,revisar,5488,4705,0.6364,vizinhos da folha sugerem fora
-Q0561,revisar,5117,5116,0.2857,confiança 0.29 abaixo do limiar 0.75; sugestão 5117; alt 5116
-Q0562,revisar,5501,5478,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5501; alt 5478
-Q0563,revisar,4388,,0.3333,vizinhos da folha sugerem fora
-Q0564,revisar,4388,4385,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4388; alt 4385
-Q0565,revisar,5501,5498,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5501; alt 5498
-Q0566,revisar,5087,5073,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5087; alt 5073
-Q0567,revisar,4703,,0.6364,vizinhos da folha sugerem fora
-Q0568,revisar,5227,5202,0.1765,vizinhos da folha sugerem fora
-Q0569,revisar,4388,,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 4388; alt 4384
-Q0570,revisar,5561,5477,0.6364,vizinhos da folha sugerem fora
-Q0571,revisar,5492,5550,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5492; alt 5550
-Q0572,revisar,5203,5202,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5203; alt 5202
-Q0573,revisar,5159,5203,0.3333,confiança 0.33 abaixo do limiar 0.75; assunto_exact; sugestão 5159; alt 5203
-Q0574,revisar,5203,5202,0.2857,confiança 0.29 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5202
-Q0575,revisar,4702,,0.6364,vizinhos da folha sugerem fora
-Q0576,revisar,5087,5088,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5088
-Q0577,publicar,4704,,0.8588,
-Q0578,publicar,4702,6723,0.75,
-Q0579,revisar,5492,5547,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5547
-Q0580,revisar,5202,,0.1765,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0581,revisar,5492,5473,0.4615,vizinhos da folha sugerem fora
-Q0582,revisar,5103,5072,0.1765,vizinhos da folha sugerem fora
-Q0583,revisar,5185,5202,0.3333,vizinhos da folha sugerem fora
-Q0584,revisar,5524,,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:juri; sugestão 5524; alt 5527
-Q0585,revisar,5178,5203,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5178; alt 5203
-Q0586,revisar,5492,5523,0.2857,vizinhos da folha sugerem fora
-Q0587,revisar,5185,5202,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5185; alt 5202
-Q0588,revisar,4388,4371,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 4388; alt 4371
-Q0589,revisar,5492,5478,0.3246,vizinhos da folha sugerem fora
-Q0590,revisar,5230,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5230; alt 5232
-Q0591,revisar,5561,5477,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5477
-Q0592,revisar,5088,5087,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5088; alt 5087
-Q0593,revisar,5158,5087,0.4535,confiança 0.45 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5158; alt 5087
-Q0594,revisar,5089,5087,0.4013,vizinhos da folha sugerem fora
-Q0595,revisar,5498,5501,1.0,lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
-Q0596,revisar,5181,5180,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5181; alt 5180
-Q0597,revisar,5492,5527,0.4615,vizinhos da folha sugerem fora
-Q0598,revisar,4371,,0.1765,empate entre irmãos 4371 e 4385; sugestão 4371; alt 4385
-Q0599,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0600,publicar,5185,,0.75,
-Q0601,publicar,4701,,1.0,
-Q0602,revisar,5492,5466,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5492; alt 5466
-Q0603,publicar,5092,,0.6364,
-Q0604,revisar,5087,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5087; alt 5088
-Q0605,revisar,5535,,0.2857,empate entre irmãos 5535 e 5531; assunto_exact; sugestão 5535; alt 5531
-Q0606,revisar,5202,,0.1765,empate entre irmãos 5202 e 5203; lei:juri; sugestão 5202; alt 5203
-Q0607,revisar,4388,,0.3532,vizinhos da folha sugerem fora
-Q0608,revisar,5180,5181,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5180; alt 5181
-Q0609,revisar,5203,,0.1765,empate entre irmãos 5203 e 5202; sugestão 5203; alt 5202
-Q0610,revisar,5492,5501,0.4615,confiança 0.46 abaixo do limiar 0.75; lei:interceptacao; sugestão 5492; alt 5501
-Q0611,revisar,5183,5087,0.1765,vizinhos da folha sugerem fora
-Q0612,revisar,5087,5121,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5087; alt 5121
-Q0613,revisar,5087,5100,0.4615,vizinhos da folha sugerem fora
-Q0614,revisar,5117,5180,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5117; alt 5180
-Q0615,revisar,5498,5501,0.6364,vizinhos da folha sugerem fora
-Q0616,revisar,5202,,0.1765,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0617,revisar,5498,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5498; alt 5492
-Q0618,revisar,5224,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5224; alt 5152
-Q0619,revisar,5561,5540,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:recursos; sugestão 5561; alt 5540
-Q0620,revisar,5147,,0.6364,vizinhos da folha sugerem fora
-Q0621,revisar,5202,,0.3333,empate entre irmãos 5202 e 5203; sugestão 5202; alt 5203
-Q0622,revisar,5182,5180,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 5182; alt 5180
-Q0623,revisar,5544,,0.1765,empate entre irmãos 5544 e 5545; sugestão 5544; alt 5545
-Q0624,publicar,4704,,1.0,
-Q0625,revisar,5092,5081,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5092; alt 5081
-Q0626,revisar,5492,5508,0.1765,confiança 0.18 abaixo do limiar 0.75; assunto_exact; sugestão 5492; alt 5508
-Q0627,revisar,5126,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5126; alt 5091
-Q0628,revisar,5498,5501,0.6364,confiança 0.64 abaixo do limiar 0.75; lei_promovida:inquerito; sugestão 5498; alt 5501
-Q0629,revisar,4371,,0.3333,vizinhos da folha sugerem fora
-Q0630,revisar,5084,,0.3333,confiança 0.33 abaixo do limiar 0.75; sugestão 5084; alt 5087
-Q0631,revisar,5087,5088,0.3333,vizinhos da folha sugerem fora
-Q0632,revisar,5092,5087,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; sugestão 5092; alt 5087
-Q0633,revisar,5087,,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; assunto_exact; sugestão 5087; alt 5091
-Q0634,publicar,5498,5501,0.75,
-Q0635,revisar,5203,,0.4615,confiança 0.46 abaixo do limiar 0.75; assunto_exact; sugestão 5203; alt 5202
-Q0636,revisar,5087,5091,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5087; alt 5091
-Q0637,revisar,5087,5088,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5087; alt 5088
-Q0638,revisar,5089,,0.4615,empate entre irmãos 5089 e 5091; knn_folha; assunto_exact; sugestão 5089; alt 5091
-Q0639,revisar,4707,,0.6364,vizinhos da folha sugerem fora
-Q0640,revisar,5227,,0.6364,confiança 0.64 abaixo do limiar 0.75; assunto_exact; sugestão 5227; alt 5073
-Q0641,revisar,5095,5183,0.1765,vizinhos da folha sugerem fora
-Q0642,revisar,4704,,0.75,vizinhos da folha sugerem fora
-Q0643,revisar,4388,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 4388; alt 4375
-Q0644,revisar,5087,5183,0.6364,confiança 0.64 abaixo do limiar 0.75; knn_folha; sugestão 5087; alt 5183
-Q0645,revisar,5226,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5226; alt 5203
-Q0646,revisar,4388,,0.4615,confiança 0.46 abaixo do limiar 0.75; sugestão 4388; alt 4375
-Q0647,revisar,5488,,0.6364,confiança 0.64 abaixo do limiar 0.75; sugestão 5488; alt 5513
-Q0648,revisar,5492,5501,0.1765,vizinhos da folha sugerem fora
-Q0649,fora,,,0.6364,disciplina_origem fora do recorte; assunto/texto OOD
-Q0650,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0651,publicar,4704,,0.75,
-Q0652,revisar,5538,5562,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 5538; alt 5562
-Q0653,revisar,4704,,0.6364,vizinhos da folha sugerem fora
-Q0654,fora,,,0.0,disciplina_origem fora do recorte; assunto/texto OOD
-Q0655,revisar,4385,4371,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4385; alt 4371
-Q0656,publicar,4704,,1.0,
-Q0657,revisar,6716,5203,0.2857,vizinhos da folha sugerem fora
-Q0658,revisar,4388,4381,0.1765,confiança 0.18 abaixo do limiar 0.75; sugestão 4388; alt 4381
-Q0659,publicar,4702,,0.7504,
+Q0001,publicar,5527,,0.7679,
+Q0002,revisar,4384,4387,0.3438,confiança 0.34 abaixo do limiar 0.74; assunto_exact; sugestão 4384; alt 4387
+Q0003,revisar,5562,,0.716,confiança 0.72 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5562; alt 5560
+Q0004,publicar,5480,,0.7234,
+Q0005,revisar,5199,4703,0.4271,vizinhos da folha sugerem fora
+Q0006,revisar,5160,,0.615,confiança 0.62 abaixo do limiar 0.74; assunto_exact; sugestão 5160; alt 5199
+Q0007,revisar,5064,,0.3225,empate entre irmãos 5064 e 5065; assunto_exact; sugestão 5064; alt 5065
+Q0008,revisar,4703,5199,0.5781,confiança 0.58 abaixo do limiar 0.74; lei_promovida:lep; sugestão 4703; alt 5199
+Q0009,revisar,5066,5165,0.3832,vizinhos da folha sugerem fora
+Q0010,revisar,5087,,0.2998,empate entre irmãos 5087 e 5066; assunto_exact; sugestão 5087; alt 5066
+Q0011,revisar,4702,,0.7671,vizinhos da folha sugerem fora
+Q0012,revisar,5562,,0.7497,vizinhos da folha sugerem fora
+Q0013,revisar,5503,5498,0.6215,confiança 0.62 abaixo do limiar 0.74; lei_promovida:inquerito; assunto_exact; sugestão 5503; alt 5498
+Q0014,publicar,5477,,0.7446,
+Q0015,publicar,5498,,0.7558,
+Q0016,fora,,,0.393,disciplina_origem fora do recorte
+Q0017,revisar,5466,,0.4389,vizinhos da folha sugerem fora
+Q0018,revisar,5480,,0.5403,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5480; alt 6733
+Q0019,revisar,5498,5466,0.5807,confiança 0.58 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 5498; alt 5466
+Q0020,revisar,5466,,0.5787,confiança 0.58 abaixo do limiar 0.74; assunto_exact; lei:jecrim; sugestão 5466; alt 5524
+Q0021,revisar,5480,5503,0.3525,vizinhos da folha sugerem fora
+Q0022,revisar,5092,,0.5646,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5092; alt 5095
+Q0023,publicar,5527,5524,0.7353,
+Q0024,revisar,4371,,0.5435,confiança 0.54 abaixo do limiar 0.74; sugestão 4371; alt 4368
+Q0025,revisar,5087,,0.5324,confiança 0.53 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5087; alt 5093
+Q0026,revisar,4704,5466,0.6153,confiança 0.62 abaixo do limiar 0.74; lei_promovida:maria_da_penha; sugestão 4704; alt 5466
+Q0027,revisar,5466,,0.5704,confiança 0.57 abaixo do limiar 0.74; sugestão 5466; alt 5492
+Q0028,revisar,5487,,0.5396,vizinhos da folha sugerem fora
+Q0029,revisar,4684,,0.4185,vizinhos da folha sugerem fora
+Q0030,publicar,5477,,0.7518,
+Q0031,revisar,4385,,0.7067,vizinhos da folha sugerem fora
+Q0032,revisar,5498,5501,0.579,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0033,revisar,5530,5519,0.4119,vizinhos da folha sugerem fora
+Q0034,publicar,5477,5498,0.7279,
+Q0035,revisar,4706,5498,0.4345,confiança 0.43 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 4706; alt 5498
+Q0036,revisar,5498,4704,0.5902,confiança 0.59 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 5498; alt 4704
+Q0037,revisar,5087,,0.5363,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5132
+Q0038,revisar,5498,5562,0.6042,confiança 0.60 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5498; alt 5562
+Q0039,revisar,4687,,0.5112,confiança 0.51 abaixo do limiar 0.74; sugestão 4687; alt 4703
+Q0040,publicar,5562,,0.7419,
+Q0041,revisar,5184,,0.6174,confiança 0.62 abaixo do limiar 0.74; assunto_exact; sugestão 5184; alt 5185
+Q0042,revisar,5227,5066,0.374,confiança 0.37 abaixo do limiar 0.74; assunto_exact; sugestão 5227; alt 5066
+Q0043,revisar,5199,,0.5366,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5199; alt 5202
+Q0044,revisar,5548,5466,0.445,vizinhos da folha sugerem fora
+Q0045,revisar,5087,5091,0.5537,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5091
+Q0046,revisar,5580,,0.5605,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5580; alt 5582
+Q0047,publicar,5087,,0.6961,
+Q0048,revisar,5199,,0.5416,vizinhos da folha sugerem fora
+Q0049,revisar,5152,,0.527,confiança 0.53 abaixo do limiar 0.74; sugestão 5152; alt 5149
+Q0050,publicar,4708,,0.7592,
+Q0051,revisar,5066,,0.5509,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5071
+Q0052,publicar,4703,,0.7563,
+Q0053,publicar,4701,,0.7524,
+Q0054,revisar,5165,,0.5561,confiança 0.56 abaixo do limiar 0.74; sugestão 5165; alt 5142
+Q0055,revisar,5487,,0.2668,empate entre irmãos 5487 e 5590; sugestão 5487; alt 5590
+Q0056,revisar,5069,5066,0.4361,confiança 0.44 abaixo do limiar 0.74; assunto_exact; sugestão 5069; alt 5066
+Q0057,publicar,5175,,0.6895,
+Q0058,revisar,4389,4384,0.4111,vizinhos da folha sugerem fora
+Q0059,revisar,4384,,0.5489,vizinhos da folha sugerem fora
+Q0060,revisar,5087,5093,0.4836,confiança 0.48 abaixo do limiar 0.74; sugestão 5087; alt 5093
+Q0061,publicar,4703,,0.8008,
+Q0062,revisar,4703,,0.5451,confiança 0.55 abaixo do limiar 0.74; sugestão 4703; alt 4701
+Q0063,revisar,5498,5501,0.4658,confiança 0.47 abaixo do limiar 0.74; lei_promovida:maria_da_penha; sugestão 5498; alt 5501
+Q0064,revisar,5185,5087,0.4034,vizinhos da folha sugerem fora
+Q0065,revisar,5185,5161,0.3548,vizinhos da folha sugerem fora
+Q0066,publicar,4371,,0.704,
+Q0067,revisar,5091,,0.3796,confiança 0.38 abaixo do limiar 0.74; assunto_exact; sugestão 5091; alt 5087
+Q0068,revisar,5117,,0.5343,confiança 0.53 abaixo do limiar 0.74; sugestão 5117; alt 5116
+Q0069,revisar,5173,,0.5828,confiança 0.58 abaixo do limiar 0.74; sugestão 5173; alt 5183
+Q0070,publicar,4708,,0.7407,
+Q0071,revisar,5087,,0.5627,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5117
+Q0072,revisar,5498,,0.557,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0073,revisar,5087,,0.2907,empate entre irmãos 5087 e 5066; assunto_exact; sugestão 5087; alt 5066
+Q0074,revisar,4701,,0.2633,empate entre irmãos 4703 e 4701; sugestão 4701; alt 4703
+Q0075,revisar,5191,,0.6045,confiança 0.60 abaixo do limiar 0.74; assunto_exact; sugestão 5191; alt 5185
+Q0076,revisar,4368,,0.309,empate entre irmãos 4368 e 4371; sugestão 4368; alt 4371
+Q0077,revisar,5183,,0.5367,confiança 0.54 abaixo do limiar 0.74; assunto_exact; lei:crimes_eleitorais; sugestão 5183; alt 5073
+Q0078,revisar,4701,4691,0.2705,confiança 0.27 abaixo do limiar 0.74; sugestão 4701; alt 4691
+Q0079,publicar,5580,,0.6215,
+Q0080,revisar,4370,4368,0.5082,confiança 0.51 abaixo do limiar 0.74; assunto_exact; sugestão 4370; alt 4368
+Q0081,publicar,4371,,0.6912,
+Q0082,revisar,5091,,0.5651,confiança 0.57 abaixo do limiar 0.74; sugestão 5091; alt 5100
+Q0083,revisar,5066,5072,0.3913,confiança 0.39 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5072
+Q0084,revisar,4704,,0.7672,vizinhos da folha sugerem fora
+Q0085,revisar,5066,5091,0.3692,confiança 0.37 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5091
+Q0086,revisar,5092,,0.4445,confiança 0.44 abaixo do limiar 0.74; assunto_exact; sugestão 5092; alt 5087
+Q0087,revisar,4703,,0.7651,vizinhos da folha sugerem fora
+Q0088,revisar,4389,,0.5866,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 4389; alt 4390
+Q0089,revisar,5185,5211,0.2899,confiança 0.29 abaixo do limiar 0.74; assunto_exact; sugestão 5185; alt 5211
+Q0090,revisar,5524,4701,0.5954,confiança 0.60 abaixo do limiar 0.74; lei_promovida:juri; sugestão 5524; alt 4701
+Q0091,revisar,4703,5199,0.6022,confiança 0.60 abaixo do limiar 0.74; lei_promovida:lep; sugestão 4703; alt 5199
+Q0092,revisar,5480,,0.2895,empate entre irmãos 5480 e 5487; assunto_exact; sugestão 5480; alt 5487
+Q0093,revisar,5066,5066,0.3991,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5066
+Q0094,publicar,5524,,0.7445,
+Q0095,revisar,5087,,0.545,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5197
+Q0096,revisar,5480,,0.5712,confiança 0.57 abaixo do limiar 0.74; lei_promovida:juri; sugestão 5480; alt 5524
+Q0097,revisar,4708,5498,0.7211,vizinhos da folha sugerem fora
+Q0098,revisar,5466,5548,0.4213,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5548
+Q0099,revisar,5100,,0.5373,confiança 0.54 abaixo do limiar 0.74; sugestão 5100; alt 5087
+Q0100,revisar,5102,,0.554,confiança 0.55 abaixo do limiar 0.74; sugestão 5102; alt 5103
+Q0101,revisar,4704,,0.7664,vizinhos da folha sugerem fora
+Q0102,revisar,5466,,0.525,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 6734
+Q0103,revisar,5478,,0.5435,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5478; alt 5466
+Q0104,publicar,5498,,0.747,
+Q0105,revisar,4385,,0.5816,confiança 0.58 abaixo do limiar 0.74; lei_promovida:jecrim; sugestão 4385; alt 4701
+Q0106,revisar,5165,,0.5392,vizinhos da folha sugerem fora
+Q0107,revisar,5117,5221,0.3554,confiança 0.36 abaixo do limiar 0.74; sugestão 5117; alt 5221
+Q0108,revisar,5562,5185,0.74,confiança 0.74 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5562; alt 5185
+Q0109,revisar,4708,,0.7584,vizinhos da folha sugerem fora
+Q0110,publicar,5480,,0.7084,
+Q0111,revisar,4371,4384,0.4576,vizinhos da folha sugerem fora
+Q0112,revisar,5466,,0.5658,confiança 0.57 abaixo do limiar 0.74; assunto_exact; lei:organizacoes; sugestão 5466; alt 6734
+Q0113,publicar,5498,,0.7558,
+Q0114,revisar,5498,,0.5369,vizinhos da folha sugerem fora
+Q0115,revisar,4388,,0.5432,vizinhos da folha sugerem fora
+Q0116,publicar,4708,,0.7558,
+Q0117,revisar,4384,,0.5562,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 4384; alt 4371
+Q0118,revisar,5477,,0.7483,vizinhos da folha sugerem fora
+Q0119,revisar,5488,5473,0.3583,confiança 0.36 abaixo do limiar 0.74; sugestão 5488; alt 5473
+Q0120,revisar,5582,5595,0.4388,confiança 0.44 abaixo do limiar 0.74; assunto_exact; sugestão 5582; alt 5595
+Q0121,revisar,5498,,0.4489,empate entre irmãos 5498 e 5466; lei_promovida:inquerito; sugestão 5498; alt 5466
+Q0122,revisar,4703,,0.7592,vizinhos da folha sugerem fora
+Q0123,revisar,4368,,0.5313,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 4368; alt 4370
+Q0124,publicar,4384,,0.7058,
+Q0125,publicar,4708,,0.736,
+Q0126,revisar,5063,5117,0.4835,confiança 0.48 abaixo do limiar 0.74; assunto_exact; sugestão 5063; alt 5117
+Q0127,publicar,4708,,0.7552,
+Q0128,publicar,5466,,0.6779,
+Q0129,revisar,5487,,0.5185,confiança 0.52 abaixo do limiar 0.74; sugestão 5487; alt 5535
+Q0130,revisar,5205,5066,0.5802,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5205; alt 5066
+Q0131,revisar,5074,,0.6167,confiança 0.62 abaixo do limiar 0.74; assunto_exact; sugestão 5074; alt 5218
+Q0132,revisar,5487,,0.5475,confiança 0.55 abaixo do limiar 0.74; sugestão 5487; alt 5492
+Q0133,publicar,5524,5527,0.7533,
+Q0134,revisar,5087,,0.5568,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5091
+Q0135,revisar,5211,,0.2822,empate entre irmãos 5211 e 5185; assunto_exact; sugestão 5211; alt 5185
+Q0136,revisar,4704,,0.6314,vizinhos da folha sugerem fora
+Q0137,revisar,5498,,0.7238,confiança 0.72 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 5498; alt 5501
+Q0138,revisar,5199,,0.5085,vizinhos da folha sugerem fora
+Q0139,publicar,5211,,0.6944,
+Q0140,revisar,5550,5066,0.6343,confiança 0.63 abaixo do limiar 0.74; lei_promovida:prova_testemunhal; sugestão 5550; alt 5066
+Q0141,revisar,4385,,0.5648,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 4385; alt 4388
+Q0142,fora,,,0.3626,disciplina_origem fora do recorte
+Q0143,revisar,5580,,0.5342,confiança 0.53 abaixo do limiar 0.74; sugestão 5580; alt 5506
+Q0144,revisar,5562,5524,0.6406,confiança 0.64 abaixo do limiar 0.74; lei_promovida:recursos; assunto_exact; sugestão 5562; alt 5524
+Q0145,revisar,4702,4708,0.6372,confiança 0.64 abaixo do limiar 0.74; lei_promovida:lavagem; sugestão 4702; alt 4708
+Q0146,revisar,4700,5466,0.6141,confiança 0.61 abaixo do limiar 0.74; lei_promovida:interceptacao; sugestão 4700; alt 5466
+Q0147,publicar,5498,,0.7444,
+Q0148,revisar,5199,,0.5386,vizinhos da folha sugerem fora
+Q0149,publicar,5498,,0.7682,
+Q0150,revisar,4708,,0.8074,vizinhos da folha sugerem fora
+Q0151,revisar,5466,,0.5191,vizinhos da folha sugerem fora
+Q0152,revisar,5466,,0.5612,confiança 0.56 abaixo do limiar 0.74; sugestão 5466; alt 5472
+Q0153,revisar,5066,,0.2874,empate entre irmãos 5066 e 5211; assunto_exact; sugestão 5066; alt 5211
+Q0154,revisar,5092,5211,0.3904,confiança 0.39 abaixo do limiar 0.74; sugestão 5092; alt 5211
+Q0155,revisar,5087,,0.2568,empate entre irmãos 5087 e 5211; assunto_exact; sugestão 5087; alt 5211
+Q0156,revisar,5198,5207,0.412,vizinhos da folha sugerem fora
+Q0157,revisar,5498,,0.5994,vizinhos da folha sugerem fora
+Q0158,publicar,4707,,0.6321,
+Q0159,revisar,5072,,0.5254,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5072; alt 5150
+Q0160,revisar,5203,5199,0.5303,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5203; alt 5199
+Q0161,revisar,4708,5498,0.6103,vizinhos da folha sugerem fora
+Q0162,revisar,4368,,0.4392,confiança 0.44 abaixo do limiar 0.74; sugestão 4368; alt 4371
+Q0163,revisar,4708,,0.4586,vizinhos da folha sugerem fora
+Q0164,publicar,4703,,0.6675,
+Q0165,revisar,5466,,0.567,confiança 0.57 abaixo do limiar 0.74; assunto_exact; lei:organizacoes; sugestão 5466; alt 5590
+Q0166,revisar,6734,,0.5989,vizinhos da folha sugerem fora
+Q0167,publicar,5524,,0.7427,
+Q0168,revisar,5087,,0.5568,confiança 0.56 abaixo do limiar 0.74; sugestão 5087; alt 5225
+Q0169,revisar,5492,5490,0.5309,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5492; alt 5490
+Q0170,revisar,5185,,0.7337,vizinhos da folha sugerem fora
+Q0171,revisar,6734,,0.2912,empate entre irmãos 6734 e 5466; assunto_exact; sugestão 6734; alt 5466
+Q0172,revisar,5185,5466,0.6064,confiança 0.61 abaixo do limiar 0.74; lei_promovida:prescricao; sugestão 5185; alt 5466
+Q0173,publicar,4703,,0.7471,
+Q0174,revisar,5066,,0.3017,empate entre irmãos 5066 e 5087; assunto_exact; sugestão 5066; alt 5087
+Q0175,revisar,5092,5091,0.4587,vizinhos da folha sugerem fora
+Q0176,revisar,5066,,0.545,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5081
+Q0177,revisar,5487,,0.5129,confiança 0.51 abaixo do limiar 0.74; sugestão 5487; alt 5548
+Q0178,revisar,5183,,0.4546,confiança 0.45 abaixo do limiar 0.74; sugestão 5183; alt 5085
+Q0179,publicar,4368,,0.6943,
+Q0180,revisar,5498,5554,0.7267,confiança 0.73 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 5498; alt 5554
+Q0181,revisar,4706,4703,0.4052,vizinhos da folha sugerem fora
+Q0182,revisar,5066,5139,0.4041,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5139
+Q0183,publicar,5561,,0.778,
+Q0184,publicar,4708,,0.7104,
+Q0185,revisar,5560,,0.7156,vizinhos da folha sugerem fora
+Q0186,revisar,5202,,0.5649,confiança 0.56 abaixo do limiar 0.74; sugestão 5202; alt 5204
+Q0187,revisar,5087,,0.5431,vizinhos da folha sugerem fora
+Q0188,revisar,5211,,0.5187,confiança 0.52 abaixo do limiar 0.74; assunto_exact; sugestão 5211; alt 5217
+Q0189,revisar,5466,,0.5598,confiança 0.56 abaixo do limiar 0.74; sugestão 5466; alt 5472
+Q0190,publicar,4701,,0.7362,
+Q0191,publicar,5562,,0.733,
+Q0192,revisar,5091,5087,0.4594,confiança 0.46 abaixo do limiar 0.74; lei_promovida:lep; sugestão 5091; alt 5087
+Q0193,revisar,5498,5501,0.3888,confiança 0.39 abaixo do limiar 0.74; assunto_exact; lei:organizacoes; sugestão 5498; alt 5501
+Q0194,revisar,5087,,0.5431,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5218
+Q0195,publicar,4371,,0.7038,
+Q0196,revisar,4385,,0.5447,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 4385; alt 4388
+Q0197,publicar,5498,5501,0.7539,
+Q0198,revisar,5073,,0.4744,confiança 0.47 abaixo do limiar 0.74; assunto_exact; sugestão 5073; alt 5211
+Q0199,revisar,5218,,0.5264,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5218; alt 5211
+Q0200,revisar,4705,5466,0.6519,confiança 0.65 abaixo do limiar 0.74; lei_promovida:organizacoes; sugestão 4705; alt 5466
+Q0201,revisar,5102,,0.5479,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5102; alt 5224
+Q0202,revisar,5224,,0.5541,confiança 0.55 abaixo do limiar 0.74; sugestão 5224; alt 5087
+Q0203,publicar,4702,,0.7852,
+Q0204,revisar,5505,5506,0.4367,vizinhos da folha sugerem fora
+Q0205,publicar,5562,,0.7418,
+Q0206,revisar,5561,,0.7766,vizinhos da folha sugerem fora
+Q0207,revisar,5199,,0.5428,vizinhos da folha sugerem fora
+Q0208,revisar,5072,,0.3693,vizinhos da folha sugerem fora
+Q0209,revisar,5498,5501,0.3862,confiança 0.39 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0210,revisar,5066,,0.5871,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5067
+Q0211,revisar,5492,5487,0.3839,confiança 0.38 abaixo do limiar 0.74; sugestão 5492; alt 5487
+Q0212,revisar,4700,,0.6408,vizinhos da folha sugerem fora
+Q0213,publicar,4708,,0.7578,
+Q0214,revisar,5560,5494,0.5705,confiança 0.57 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5560; alt 5494
+Q0215,revisar,5199,,0.5483,vizinhos da folha sugerem fora
+Q0216,revisar,4701,5466,0.7348,confiança 0.73 abaixo do limiar 0.74; lei_promovida:jecrim; sugestão 4701; alt 5466
+Q0217,revisar,4384,,0.5223,vizinhos da folha sugerem fora
+Q0218,fora,,,0.3926,disciplina_origem fora do recorte; vizinhos da folha sugerem fora
+Q0219,revisar,5074,,0.5994,confiança 0.60 abaixo do limiar 0.74; assunto_exact; sugestão 5074; alt 5203
+Q0220,revisar,5498,5501,0.6058,confiança 0.61 abaixo do limiar 0.74; lei_promovida:inquerito; assunto_exact; sugestão 5498; alt 5501
+Q0221,revisar,5201,,0.607,confiança 0.61 abaixo do limiar 0.74; sugestão 5201; alt 5203
+Q0222,revisar,5063,5211,0.4603,confiança 0.46 abaixo do limiar 0.74; assunto_exact; sugestão 5063; alt 5211
+Q0223,revisar,5084,,0.596,confiança 0.60 abaixo do limiar 0.74; assunto_exact; sugestão 5084; alt 5227
+Q0224,revisar,5199,5066,0.3726,vizinhos da folha sugerem fora
+Q0225,publicar,5562,,0.7624,
+Q0226,revisar,5466,,0.5667,confiança 0.57 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5544
+Q0227,revisar,5102,5103,0.4117,confiança 0.41 abaixo do limiar 0.74; sugestão 5102; alt 5103
+Q0228,revisar,5477,6734,0.6091,confiança 0.61 abaixo do limiar 0.74; lei_promovida:habeas_corpus; sugestão 5477; alt 6734
+Q0229,revisar,5498,,0.742,vizinhos da folha sugerem fora
+Q0230,revisar,5071,,0.3302,empate entre irmãos 5071 e 5211; assunto_exact; sugestão 5071; alt 5211
+Q0231,revisar,5224,,0.5757,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5224; alt 5227
+Q0232,revisar,5087,,0.5329,confiança 0.53 abaixo do limiar 0.74; sugestão 5087; alt 5082
+Q0233,revisar,5178,,0.6181,confiança 0.62 abaixo do limiar 0.74; assunto_exact; sugestão 5178; alt 5185
+Q0234,revisar,4371,,0.5199,confiança 0.52 abaixo do limiar 0.74; sugestão 4371; alt 4381
+Q0235,revisar,5560,5480,0.5689,vizinhos da folha sugerem fora
+Q0236,publicar,5498,,0.7436,
+Q0237,revisar,5178,,0.6049,confiança 0.60 abaixo do limiar 0.74; assunto_exact; sugestão 5178; alt 5185
+Q0238,revisar,5466,,0.5697,confiança 0.57 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5524
+Q0239,revisar,5198,5185,0.4212,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5198; alt 5185
+Q0240,revisar,5498,,0.541,vizinhos da folha sugerem fora
+Q0241,revisar,5218,,0.3768,confiança 0.38 abaixo do limiar 0.74; assunto_exact; sugestão 5218; alt 5224
+Q0242,revisar,5498,5477,0.5884,confiança 0.59 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 5498; alt 5477
+Q0243,revisar,5178,,0.4563,confiança 0.46 abaixo do limiar 0.74; assunto_exact; sugestão 5178; alt 5185
+Q0244,revisar,5087,,0.5269,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5091
+Q0245,publicar,5185,,0.7543,
+Q0246,revisar,5527,5524,0.5713,confiança 0.57 abaixo do limiar 0.74; lei_promovida:juri; assunto_exact; sugestão 5527; alt 5524
+Q0247,revisar,5502,,0.4957,vizinhos da folha sugerem fora
+Q0248,revisar,5087,,0.6725,confiança 0.67 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5088
+Q0249,revisar,5492,,0.5375,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5492; alt 5480
+Q0250,revisar,5199,,0.5468,vizinhos da folha sugerem fora
+Q0251,revisar,5198,5191,0.4608,confiança 0.46 abaixo do limiar 0.74; assunto_exact; sugestão 5198; alt 5191
+Q0252,revisar,6734,,0.7427,vizinhos da folha sugerem fora
+Q0253,revisar,4371,,0.4132,vizinhos da folha sugerem fora
+Q0254,publicar,5498,,0.7433,
+Q0255,publicar,5211,,0.6779,
+Q0256,revisar,5218,5224,0.4087,confiança 0.41 abaixo do limiar 0.74; assunto_exact; sugestão 5218; alt 5224
+Q0257,revisar,5227,,0.6143,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 5227; alt 5224
+Q0258,publicar,5524,,0.7147,
+Q0259,revisar,5228,,0.299,empate entre irmãos 5228 e 5199; assunto_exact; sugestão 5228; alt 5199
+Q0260,revisar,4368,,0.5432,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 4368; alt 4376
+Q0261,revisar,5063,,0.5022,confiança 0.50 abaixo do limiar 0.74; assunto_exact; sugestão 5063; alt 5087
+Q0262,publicar,4703,,0.8256,
+Q0263,revisar,5492,,0.5575,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5492; alt 5527
+Q0264,revisar,5103,5102,0.4176,vizinhos da folha sugerem fora
+Q0265,revisar,5185,,0.5579,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5185; alt 5191
+Q0266,publicar,5524,,0.7442,
+Q0267,revisar,4708,,0.7208,vizinhos da folha sugerem fora
+Q0268,revisar,5087,5117,0.3817,confiança 0.38 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5117
+Q0269,revisar,5173,,0.4484,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5173; alt 5063
+Q0270,revisar,5092,5093,0.4096,vizinhos da folha sugerem fora
+Q0271,revisar,5560,,0.2923,empate entre irmãos 5560 e 5466; assunto_exact; sugestão 5560; alt 5466
+Q0272,revisar,4703,,0.7542,vizinhos da folha sugerem fora
+Q0273,revisar,5096,,0.4311,confiança 0.43 abaixo do limiar 0.74; sugestão 5096; alt 5185
+Q0274,revisar,5160,5157,0.3944,confiança 0.39 abaixo do limiar 0.74; assunto_exact; sugestão 5160; alt 5157
+Q0275,publicar,4701,5487,0.7171,
+Q0276,revisar,5554,5498,0.5363,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5554; alt 5498
+Q0277,fora,,,0.5056,disciplina_origem fora do recorte
+Q0278,revisar,5530,5466,0.4037,vizinhos da folha sugerem fora
+Q0279,publicar,5185,,0.7412,
+Q0280,revisar,5487,5466,0.5346,confiança 0.53 abaixo do limiar 0.74; sugestão 5487; alt 5466
+Q0281,revisar,5492,,0.5384,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5492; alt 5580
+Q0282,revisar,5466,,0.5493,confiança 0.55 abaixo do limiar 0.74; lei_promovida:maria_da_penha; sugestão 5466; alt 4704
+Q0283,publicar,5560,,0.7208,
+Q0284,publicar,5527,,0.7465,
+Q0285,revisar,5211,,0.4967,confiança 0.50 abaixo do limiar 0.74; sugestão 5211; alt 5185
+Q0286,revisar,5069,,0.3482,empate entre irmãos 5069 e 5068; assunto_exact; sugestão 5069; alt 5068
+Q0287,revisar,5230,5214,0.4238,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5230; alt 5214
+Q0288,revisar,5066,5068,0.4487,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5068
+Q0289,revisar,4704,5498,0.6465,confiança 0.65 abaixo do limiar 0.74; lei_promovida:inquerito; sugestão 4704; alt 5498
+Q0290,publicar,4701,5466,0.729,
+Q0291,revisar,5498,,0.5905,vizinhos da folha sugerem fora
+Q0292,revisar,4374,4375,0.4525,vizinhos da folha sugerem fora
+Q0293,publicar,5185,,0.747,
+Q0294,revisar,5211,5214,0.5352,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5211; alt 5214
+Q0295,revisar,5562,5487,0.6097,vizinhos da folha sugerem fora
+Q0296,revisar,5466,,0.584,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5572
+Q0297,revisar,4689,,0.4475,vizinhos da folha sugerem fora
+Q0298,revisar,4694,,0.3153,empate entre irmãos 4701 e 4694; sugestão 4694; alt 4701
+Q0299,revisar,4384,,0.5335,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 4384; alt 4371
+Q0300,revisar,5084,5087,0.4279,confiança 0.43 abaixo do limiar 0.74; sugestão 5084; alt 5087
+Q0301,revisar,5197,,0.4757,confiança 0.48 abaixo do limiar 0.74; sugestão 5197; alt 5073
+Q0302,revisar,5224,,0.5384,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5224; alt 5214
+Q0303,revisar,5185,5063,0.3715,confiança 0.37 abaixo do limiar 0.74; assunto_exact; sugestão 5185; alt 5063
+Q0304,publicar,4701,,0.7377,
+Q0305,revisar,5466,,0.566,vizinhos da folha sugerem fora
+Q0306,revisar,4708,,0.6029,confiança 0.60 abaixo do limiar 0.74; lei_promovida:drogas; sugestão 4708; alt 5066
+Q0307,publicar,4707,,0.7498,
+Q0308,revisar,5498,5501,0.5741,confiança 0.57 abaixo do limiar 0.74; lei_promovida:prescricao; assunto_exact; sugestão 5498; alt 5501
+Q0309,fora,,,0.2437,disciplina_origem fora do recorte; vizinhos da folha sugerem fora
+Q0310,revisar,5590,,0.5385,confiança 0.54 abaixo do limiar 0.74; sugestão 5590; alt 5506
+Q0311,revisar,5488,,0.5272,vizinhos da folha sugerem fora
+Q0312,revisar,4384,,0.6136,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 4384; alt 4371
+Q0313,revisar,5199,,0.5134,confiança 0.51 abaixo do limiar 0.74; assunto_exact; sugestão 5199; alt 6727
+Q0314,publicar,5477,,0.9124,
+Q0315,revisar,5185,,0.5402,vizinhos da folha sugerem fora
+Q0316,revisar,5224,,0.5501,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5224; alt 5066
+Q0317,revisar,5198,5070,0.4265,vizinhos da folha sugerem fora
+Q0318,revisar,5178,5072,0.4273,confiança 0.43 abaixo do limiar 0.74; sugestão 5178; alt 5072
+Q0319,revisar,5073,,0.5456,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5073; alt 5071
+Q0320,revisar,4708,5498,0.6101,confiança 0.61 abaixo do limiar 0.74; lei_promovida:prova_testemunhal; sugestão 4708; alt 5498
+Q0321,revisar,4708,5071,0.6051,confiança 0.61 abaixo do limiar 0.74; lei_promovida:drogas; sugestão 4708; alt 5071
+Q0322,revisar,5562,,0.7349,vizinhos da folha sugerem fora
+Q0323,revisar,5595,5580,0.4522,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5595; alt 5580
+Q0324,revisar,4703,,0.5978,vizinhos da folha sugerem fora
+Q0325,revisar,5466,5473,0.4141,confiança 0.41 abaixo do limiar 0.74; lei_promovida:jecrim; sugestão 5466; alt 5473
+Q0326,publicar,4708,,0.7741,
+Q0327,revisar,4703,,0.5836,vizinhos da folha sugerem fora
+Q0328,revisar,4374,,0.5006,confiança 0.50 abaixo do limiar 0.74; sugestão 4374; alt 4385
+Q0329,revisar,5466,,0.5381,confiança 0.54 abaixo do limiar 0.74; assunto_exact; lei:organizacoes; sugestão 5466; alt 5548
+Q0330,revisar,5498,5501,0.7383,vizinhos da folha sugerem fora
+Q0331,publicar,5477,,0.8082,
+Q0332,revisar,5466,4701,0.3997,vizinhos da folha sugerem fora
+Q0333,revisar,5178,,0.4525,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5178; alt 5185
+Q0334,revisar,4385,4371,0.3877,confiança 0.39 abaixo do limiar 0.74; sugestão 4385; alt 4371
+Q0335,revisar,5211,,0.5373,confiança 0.54 abaixo do limiar 0.74; sugestão 5211; alt 5175
+Q0336,publicar,5159,,0.6801,
+Q0337,revisar,4684,,0.3385,empate entre irmãos 4701 e 4684; sugestão 4684; alt 4701
+Q0338,revisar,5590,,0.5448,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5590; alt 5580
+Q0339,revisar,5466,5560,0.4224,vizinhos da folha sugerem fora
+Q0340,revisar,5066,,0.3,empate entre irmãos 5066 e 5071; assunto_exact; sugestão 5066; alt 5071
+Q0341,revisar,5071,5066,0.3976,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5071; alt 5066
+Q0342,revisar,5498,5501,0.5111,confiança 0.51 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0343,revisar,5466,,0.5881,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5472
+Q0344,revisar,5063,5064,0.5917,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5063; alt 5064
+Q0345,publicar,5103,,0.6647,
+Q0346,revisar,5524,,0.4754,empate entre irmãos 5524 e 5560; lei_promovida:recursos; sugestão 5524; alt 5560
+Q0347,publicar,4703,,0.7325,
+Q0348,revisar,5185,,0.7383,vizinhos da folha sugerem fora
+Q0349,revisar,5066,,0.5865,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5066; alt 5185
+Q0350,revisar,4702,,0.6261,confiança 0.63 abaixo do limiar 0.74; lei_promovida:lavagem; sugestão 4702; alt 5211
+Q0351,revisar,5221,5073,0.3382,confiança 0.34 abaixo do limiar 0.74; sugestão 5221; alt 5073
+Q0352,revisar,5466,,0.3114,empate entre irmãos 5466 e 5560; sugestão 5466; alt 5560
+Q0353,revisar,5466,,0.6114,vizinhos da folha sugerem fora
+Q0354,revisar,5218,5224,0.4389,confiança 0.44 abaixo do limiar 0.74; assunto_exact; sugestão 5218; alt 5224
+Q0355,revisar,4708,4701,0.5855,confiança 0.59 abaixo do limiar 0.74; lei_promovida:jecrim; sugestão 4708; alt 4701
+Q0356,publicar,5066,,0.697,
+Q0357,revisar,5175,5089,0.3974,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5175; alt 5089
+Q0358,revisar,5087,,0.5077,confiança 0.51 abaixo do limiar 0.74; sugestão 5087; alt 5203
+Q0359,revisar,4701,5466,0.5935,vizinhos da folha sugerem fora
+Q0360,revisar,4384,,0.2638,empate entre irmãos 4384 e 4389; sugestão 4384; alt 4389
+Q0361,revisar,5211,,0.2496,empate entre irmãos 5211 e 5185; assunto_exact; sugestão 5211; alt 5185
+Q0362,revisar,5557,,0.6022,confiança 0.60 abaixo do limiar 0.74; lei:organizacoes; sugestão 5557; alt 5492
+Q0363,revisar,5087,5091,0.4528,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5091
+Q0364,revisar,5211,,0.5302,confiança 0.53 abaixo do limiar 0.74; sugestão 5211; alt 5222
+Q0365,revisar,5191,,0.3524,empate entre irmãos 5191 e 5185; assunto_exact; sugestão 5191; alt 5185
+Q0366,revisar,5203,,0.533,confiança 0.53 abaixo do limiar 0.74; sugestão 5203; alt 5202
+Q0367,revisar,5530,,0.608,confiança 0.61 abaixo do limiar 0.74; sugestão 5530; alt 5536
+Q0368,publicar,5498,,0.7621,
+Q0369,publicar,4702,,0.7845,
+Q0370,revisar,5523,,0.6213,vizinhos da folha sugerem fora
+Q0371,revisar,5488,,0.359,vizinhos da folha sugerem fora
+Q0372,revisar,5555,,0.693,confiança 0.69 abaixo do limiar 0.74; sugestão 5555; alt 5595
+Q0373,revisar,5182,5180,0.5021,confiança 0.50 abaixo do limiar 0.74; sugestão 5182; alt 5180
+Q0374,revisar,5147,,0.62,confiança 0.62 abaixo do limiar 0.74; sugestão 5147; alt 5087
+Q0375,revisar,5224,,0.5552,confiança 0.56 abaixo do limiar 0.74; sugestão 5224; alt 5214
+Q0376,revisar,5222,,0.5823,confiança 0.58 abaixo do limiar 0.74; sugestão 5222; alt 5225
+Q0377,publicar,5477,,0.8628,
+Q0378,revisar,5185,5206,0.3587,confiança 0.36 abaixo do limiar 0.74; sugestão 5185; alt 5206
+Q0379,publicar,4704,,0.88,
+Q0380,revisar,5537,,0.6089,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 5537; alt 5572
+Q0381,revisar,5502,5466,0.6095,vizinhos da folha sugerem fora
+Q0382,revisar,5211,5224,0.3685,confiança 0.37 abaixo do limiar 0.74; sugestão 5211; alt 5224
+Q0383,publicar,4702,,0.7853,
+Q0384,revisar,5561,5477,0.646,confiança 0.65 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5561; alt 5477
+Q0385,revisar,5557,5560,0.4436,confiança 0.44 abaixo do limiar 0.74; lei:organizacoes; sugestão 5557; alt 5560
+Q0386,revisar,4384,4388,0.3712,vizinhos da folha sugerem fora
+Q0387,revisar,5590,,0.5682,confiança 0.57 abaixo do limiar 0.74; sugestão 5590; alt 5554
+Q0388,publicar,4693,,0.7394,
+Q0389,revisar,5185,,0.5241,confiança 0.52 abaixo do limiar 0.74; sugestão 5185; alt 5199
+Q0390,revisar,4388,4376,0.4109,vizinhos da folha sugerem fora
+Q0391,revisar,5466,5502,0.5729,confiança 0.57 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5502
+Q0392,revisar,4703,5208,0.5788,vizinhos da folha sugerem fora
+Q0393,fora,,,0.2341,disciplina_origem fora do recorte; assunto/texto OOD
+Q0394,revisar,5480,,0.5675,confiança 0.57 abaixo do limiar 0.74; assunto_exact; sugestão 5480; alt 5524
+Q0395,revisar,4701,5478,0.5647,confiança 0.56 abaixo do limiar 0.74; lei_promovida:prescricao; sugestão 4701; alt 5478
+Q0396,revisar,5095,,0.5139,vizinhos da folha sugerem fora
+Q0397,revisar,5063,,0.4916,confiança 0.49 abaixo do limiar 0.74; sugestão 5063; alt 5165
+Q0398,revisar,5178,,0.6153,confiança 0.62 abaixo do limiar 0.74; assunto_exact; sugestão 5178; alt 5203
+Q0399,revisar,5087,5095,0.4561,confiança 0.46 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5095
+Q0400,publicar,5211,,0.6496,
+Q0401,publicar,5185,,0.7144,
+Q0402,revisar,6716,,0.5011,confiança 0.50 abaixo do limiar 0.74; sugestão 6716; alt 5087
+Q0403,revisar,5180,5182,0.387,confiança 0.39 abaixo do limiar 0.74; sugestão 5180; alt 5182
+Q0404,revisar,5117,5087,0.4158,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5117; alt 5087
+Q0405,revisar,5560,,0.6818,confiança 0.68 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5560; alt 5492
+Q0406,revisar,5095,5091,0.5097,confiança 0.51 abaixo do limiar 0.74; assunto_exact; sugestão 5095; alt 5091
+Q0407,revisar,5537,5572,0.429,confiança 0.43 abaixo do limiar 0.74; assunto_exact; sugestão 5537; alt 5572
+Q0408,publicar,5495,,0.7438,
+Q0409,revisar,5215,5211,0.4491,confiança 0.45 abaixo do limiar 0.74; sugestão 5215; alt 5211
+Q0410,revisar,5211,5213,0.397,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5211; alt 5213
+Q0411,revisar,5094,5185,0.4758,confiança 0.48 abaixo do limiar 0.74; assunto_exact; sugestão 5094; alt 5185
+Q0412,revisar,5095,5087,0.4929,confiança 0.49 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5095; alt 5087
+Q0413,revisar,5100,5087,0.4465,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5100; alt 5087
+Q0414,revisar,5185,5165,0.381,confiança 0.38 abaixo do limiar 0.74; sugestão 5185; alt 5165
+Q0415,revisar,5185,5224,0.3653,confiança 0.37 abaixo do limiar 0.74; assunto/texto OOD; sugestão 5185; alt 5224
+Q0416,fora,,,0.2301,disciplina_origem fora do recorte; assunto/texto OOD
+Q0417,revisar,4384,4388,0.3958,vizinhos da folha sugerem fora
+Q0418,revisar,4704,,0.4695,empate entre irmãos 4704 e 4703; lei_promovida:lep; assunto_exact; sugestão 4704; alt 4703
+Q0419,revisar,4385,4388,0.2958,confiança 0.30 abaixo do limiar 0.74; sugestão 4385; alt 4388
+Q0420,publicar,4704,,0.8438,
+Q0421,revisar,5473,5501,0.4612,confiança 0.46 abaixo do limiar 0.74; sugestão 5473; alt 5501
+Q0422,revisar,5087,,0.5268,confiança 0.53 abaixo do limiar 0.74; sugestão 5087; alt 5120
+Q0423,revisar,5185,,0.5446,vizinhos da folha sugerem fora
+Q0424,fora,,,0.6994,disciplina_origem fora do recorte; assunto/texto OOD
+Q0425,revisar,5572,5537,0.5062,confiança 0.51 abaixo do limiar 0.74; assunto_exact; sugestão 5572; alt 5537
+Q0426,revisar,5185,5192,0.3497,confiança 0.35 abaixo do limiar 0.74; sugestão 5185; alt 5192
+Q0427,revisar,5466,,0.5661,confiança 0.57 abaixo do limiar 0.74; sugestão 5466; alt 5478
+Q0428,revisar,5466,,0.5901,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5466; alt 5469
+Q0429,revisar,5072,,0.5306,vizinhos da folha sugerem fora
+Q0430,revisar,4704,5498,0.7045,confiança 0.70 abaixo do limiar 0.74; lei_promovida:inquerito; assunto_exact; sugestão 4704; alt 5498
+Q0431,revisar,5466,,0.5774,vizinhos da folha sugerem fora
+Q0432,revisar,5466,,0.5781,confiança 0.58 abaixo do limiar 0.74; lei_promovida:prescricao; sugestão 5466; alt 5185
+Q0433,revisar,5071,,0.5927,confiança 0.59 abaixo do limiar 0.74; sugestão 5071; alt 5211
+Q0434,publicar,5498,,0.7659,
+Q0435,revisar,4376,4376,0.418,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 4376; alt 4376
+Q0436,publicar,4704,,0.9442,
+Q0437,revisar,5180,5181,0.4105,confiança 0.41 abaixo do limiar 0.74; sugestão 5180; alt 5181
+Q0438,revisar,5087,,0.559,confiança 0.56 abaixo do limiar 0.74; sugestão 5087; alt 5211
+Q0439,revisar,5087,,0.5592,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5089
+Q0440,revisar,5498,5501,0.7384,vizinhos da folha sugerem fora
+Q0441,revisar,4701,5477,0.5888,confiança 0.59 abaixo do limiar 0.74; lei_promovida:habeas_corpus; sugestão 4701; alt 5477
+Q0442,publicar,5498,5063,0.7111,
+Q0443,revisar,5216,,0.6009,confiança 0.60 abaixo do limiar 0.74; sugestão 5216; alt 5203
+Q0444,publicar,5545,,0.6392,
+Q0445,revisar,5466,,0.2739,empate entre irmãos 5466 e 5560; lei:organizacoes; sugestão 5466; alt 5560
+Q0446,publicar,5498,,0.7377,
+Q0447,publicar,5185,,0.7504,
+Q0448,revisar,5572,,0.5707,confiança 0.57 abaixo do limiar 0.74; sugestão 5572; alt 5575
+Q0449,publicar,5231,,0.7487,
+Q0450,revisar,5560,,0.5325,confiança 0.53 abaixo do limiar 0.74; sugestão 5560; alt 5571
+Q0451,publicar,5498,,0.8021,
+Q0452,publicar,5498,5501,0.7485,
+Q0453,publicar,4704,,0.917,
+Q0454,revisar,5181,5180,0.4416,confiança 0.44 abaixo do limiar 0.74; sugestão 5181; alt 5180
+Q0455,revisar,5561,5537,0.6578,confiança 0.66 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5561; alt 5537
+Q0456,revisar,5211,5087,0.4447,confiança 0.44 abaixo do limiar 0.74; sugestão 5211; alt 5087
+Q0457,publicar,5477,,0.9355,
+Q0458,revisar,5073,5224,0.4458,confiança 0.45 abaixo do limiar 0.74; sugestão 5073; alt 5224
+Q0459,revisar,5185,,0.5178,confiança 0.52 abaixo do limiar 0.74; sugestão 5185; alt 5206
+Q0460,revisar,5145,5144,0.5089,confiança 0.51 abaixo do limiar 0.74; sugestão 5145; alt 5144
+Q0461,publicar,5562,,0.8438,
+Q0462,revisar,5071,5072,0.5661,confiança 0.57 abaixo do limiar 0.74; assunto_exact; sugestão 5071; alt 5072
+Q0463,publicar,5087,,0.7009,
+Q0464,revisar,5087,,0.513,vizinhos da folha sugerem fora
+Q0465,revisar,5498,,0.264,empate entre irmãos 5498 e 5530; assunto_exact; sugestão 5498; alt 5530
+Q0466,revisar,5222,,0.5866,confiança 0.59 abaixo do limiar 0.74; sugestão 5222; alt 5225
+Q0467,fora,,,0.7078,disciplina_origem fora do recorte; assunto/texto OOD
+Q0468,revisar,5184,,0.6142,vizinhos da folha sugerem fora
+Q0469,revisar,4708,,0.5859,vizinhos da folha sugerem fora
+Q0470,revisar,4703,,0.7328,vizinhos da folha sugerem fora
+Q0471,revisar,5089,5199,0.4232,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5089; alt 5199
+Q0472,revisar,5117,5116,0.4217,vizinhos da folha sugerem fora
+Q0473,publicar,5498,,0.7376,
+Q0474,revisar,4388,4368,0.3894,confiança 0.39 abaixo do limiar 0.74; sugestão 4388; alt 4368
+Q0475,revisar,5227,5072,0.4369,confiança 0.44 abaixo do limiar 0.74; sugestão 5227; alt 5072
+Q0476,publicar,5524,,0.765,
+Q0477,revisar,5475,5572,0.3537,vizinhos da folha sugerem fora
+Q0478,revisar,5480,,0.5883,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5480; alt 5485
+Q0479,fora,,,0.3598,disciplina_origem fora do recorte; assunto/texto OOD
+Q0480,revisar,5199,,0.4459,vizinhos da folha sugerem fora
+Q0481,revisar,5227,,0.6145,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 5227; alt 5172
+Q0482,revisar,5507,,0.3523,empate entre irmãos 5507 e 5506; assunto_exact; sugestão 5507; alt 5506
+Q0483,revisar,5087,,0.5143,confiança 0.51 abaixo do limiar 0.74; knn_folha; sugestão 5087; alt 5178
+Q0484,revisar,4702,,0.7746,vizinhos da folha sugerem fora
+Q0485,revisar,5180,5181,0.4366,vizinhos da folha sugerem fora
+Q0486,revisar,5564,5480,0.4229,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5564; alt 5480
+Q0487,revisar,5159,5087,0.49,confiança 0.49 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5159; alt 5087
+Q0488,publicar,5090,,0.6741,
+Q0489,revisar,5185,,0.584,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5185; alt 5071
+Q0490,revisar,5211,,0.5768,confiança 0.58 abaixo do limiar 0.74; assunto_exact; sugestão 5211; alt 5217
+Q0491,revisar,5160,5165,0.4407,confiança 0.44 abaixo do limiar 0.74; assunto_exact; sugestão 5160; alt 5165
+Q0492,revisar,5159,5087,0.4918,confiança 0.49 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5159; alt 5087
+Q0493,revisar,5466,,0.5518,vizinhos da folha sugerem fora
+Q0494,revisar,5498,5501,0.5542,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0495,publicar,5498,,0.7554,
+Q0496,revisar,5089,5089,0.4667,confiança 0.47 abaixo do limiar 0.74; assunto_exact; sugestão 5089; alt 5089
+Q0497,publicar,5561,5477,0.7908,
+Q0498,revisar,5478,5562,0.3848,confiança 0.38 abaixo do limiar 0.74; lei:maria_da_penha; sugestão 5478; alt 5562
+Q0499,revisar,5185,,0.2706,empate entre irmãos 5185 e 5211; sugestão 5185; alt 5211
+Q0500,revisar,5087,,0.5574,vizinhos da folha sugerem fora
+Q0501,publicar,4704,,0.78,
+Q0502,revisar,5099,,0.6072,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 5099; alt 5163
+Q0503,revisar,4378,4388,0.4515,confiança 0.45 abaixo do limiar 0.74; sugestão 4378; alt 4388
+Q0504,revisar,5222,5185,0.4311,confiança 0.43 abaixo do limiar 0.74; sugestão 5222; alt 5185
+Q0505,revisar,5087,,0.5248,vizinhos da folha sugerem fora
+Q0506,revisar,5180,5211,0.4239,confiança 0.42 abaixo do limiar 0.74; sugestão 5180; alt 5211
+Q0507,revisar,5224,5211,0.3932,confiança 0.39 abaixo do limiar 0.74; sugestão 5224; alt 5211
+Q0508,revisar,4700,,0.7982,vizinhos da folha sugerem fora
+Q0509,revisar,5498,5501,0.74,vizinhos da folha sugerem fora
+Q0510,revisar,5590,,0.5363,confiança 0.54 abaixo do limiar 0.74; sugestão 5590; alt 5595
+Q0511,revisar,5466,,0.5594,confiança 0.56 abaixo do limiar 0.74; sugestão 5466; alt 5590
+Q0512,revisar,4702,5466,0.6245,confiança 0.62 abaixo do limiar 0.74; lei_promovida:lavagem; sugestão 4702; alt 5466
+Q0513,revisar,5087,,0.5336,confiança 0.53 abaixo do limiar 0.74; sugestão 5087; alt 6717
+Q0514,revisar,5492,,0.5314,confiança 0.53 abaixo do limiar 0.74; sugestão 5492; alt 5466
+Q0515,publicar,4704,,0.8864,
+Q0516,publicar,4702,,0.7669,
+Q0517,revisar,5466,,0.7234,vizinhos da folha sugerem fora
+Q0518,publicar,4701,,0.7304,
+Q0519,revisar,5498,5501,0.5317,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5498; alt 5501
+Q0520,revisar,5100,,0.5428,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5100; alt 5203
+Q0521,revisar,4376,4384,0.4219,vizinhos da folha sugerem fora
+Q0522,revisar,5560,5478,0.3652,confiança 0.37 abaixo do limiar 0.74; sugestão 5560; alt 5478
+Q0523,revisar,5473,,0.5454,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5473; alt 5502
+Q0524,publicar,5185,,0.7196,
+Q0525,publicar,4708,,0.7441,
+Q0526,revisar,4388,4385,0.4137,vizinhos da folha sugerem fora
+Q0527,fora,,,0.4413,disciplina_origem fora do recorte; assunto/texto OOD
+Q0528,revisar,5180,5182,0.3982,confiança 0.40 abaixo do limiar 0.74; sugestão 5180; alt 5182
+Q0529,revisar,5089,,0.5782,confiança 0.58 abaixo do limiar 0.74; sugestão 5089; alt 5087
+Q0530,revisar,5590,,0.5243,confiança 0.52 abaixo do limiar 0.74; sugestão 5590; alt 5498
+Q0531,revisar,5498,,0.4302,empate entre irmãos 5498 e 5466; lei_promovida:inquerito; sugestão 5498; alt 5466
+Q0532,revisar,5159,,0.5928,confiança 0.59 abaixo do limiar 0.74; assunto_exact; sugestão 5159; alt 5157
+Q0533,revisar,5135,5134,0.604,vizinhos da folha sugerem fora
+Q0534,revisar,4376,4378,0.4115,vizinhos da folha sugerem fora
+Q0535,publicar,4704,,0.901,
+Q0536,revisar,5590,5544,0.3611,vizinhos da folha sugerem fora
+Q0537,revisar,5480,,0.5454,confiança 0.55 abaixo do limiar 0.74; assunto_exact; sugestão 5480; alt 5484
+Q0538,revisar,4703,,0.5638,vizinhos da folha sugerem fora
+Q0539,revisar,5165,5087,0.4126,vizinhos da folha sugerem fora
+Q0540,revisar,5224,5225,0.4277,confiança 0.43 abaixo do limiar 0.74; sugestão 5224; alt 5225
+Q0541,revisar,5096,,0.6041,vizinhos da folha sugerem fora
+Q0542,revisar,5519,,0.6178,vizinhos da folha sugerem fora
+Q0543,publicar,5562,,0.8236,
+Q0544,publicar,5480,,0.7168,
+Q0545,revisar,4389,4376,0.3858,confiança 0.39 abaixo do limiar 0.74; sugestão 4389; alt 4376
+Q0546,publicar,5087,,0.7234,
+Q0547,revisar,5185,5191,0.4569,vizinhos da folha sugerem fora
+Q0548,revisar,5560,,0.559,confiança 0.56 abaixo do limiar 0.74; sugestão 5560; alt 5562
+Q0549,revisar,4703,,0.7599,vizinhos da folha sugerem fora
+Q0550,revisar,5165,,0.5497,vizinhos da folha sugerem fora
+Q0551,publicar,5466,,0.7232,
+Q0552,revisar,5478,,0.5366,confiança 0.54 abaixo do limiar 0.74; sugestão 5478; alt 5510
+Q0553,revisar,5530,,0.7731,vizinhos da folha sugerem fora
+Q0554,revisar,5132,,0.5983,confiança 0.60 abaixo do limiar 0.74; sugestão 5132; alt 5211
+Q0555,revisar,4703,5208,0.6386,vizinhos da folha sugerem fora
+Q0556,revisar,4388,,0.5767,vizinhos da folha sugerem fora
+Q0557,revisar,4701,5498,0.7143,vizinhos da folha sugerem fora
+Q0558,revisar,5478,5562,0.3934,confiança 0.39 abaixo do limiar 0.74; sugestão 5478; alt 5562
+Q0559,revisar,5092,5087,0.5624,confiança 0.56 abaixo do limiar 0.74; knn_folha; sugestão 5092; alt 5087
+Q0560,revisar,4705,,0.4694,empate entre irmãos 4705 e 4693; lei_promovida:organizacoes; sugestão 4705; alt 4693
+Q0561,revisar,5117,5116,0.4079,confiança 0.41 abaixo do limiar 0.74; sugestão 5117; alt 5116
+Q0562,revisar,5466,,0.5464,confiança 0.55 abaixo do limiar 0.74; sugestão 5466; alt 6734
+Q0563,revisar,4388,4371,0.414,vizinhos da folha sugerem fora
+Q0564,revisar,4385,,0.5559,confiança 0.56 abaixo do limiar 0.74; sugestão 4385; alt 4384
+Q0565,revisar,5498,,0.4925,empate entre irmãos 5498 e 5466; lei_promovida:inquerito; sugestão 5498; alt 5466
+Q0566,revisar,5087,,0.5274,confiança 0.53 abaixo do limiar 0.74; sugestão 5087; alt 5092
+Q0567,revisar,4703,,0.5789,vizinhos da folha sugerem fora
+Q0568,revisar,5225,,0.3284,empate entre irmãos 5225 e 5227; assunto_exact; sugestão 5225; alt 5227
+Q0569,revisar,4384,4388,0.4013,confiança 0.40 abaixo do limiar 0.74; sugestão 4384; alt 4388
+Q0570,revisar,5562,5477,0.5962,vizinhos da folha sugerem fora
+Q0571,revisar,5550,5492,0.4788,confiança 0.48 abaixo do limiar 0.74; sugestão 5550; alt 5492
+Q0572,revisar,5203,5072,0.38,confiança 0.38 abaixo do limiar 0.74; sugestão 5203; alt 5072
+Q0573,revisar,5159,,0.5968,confiança 0.60 abaixo do limiar 0.74; assunto_exact; sugestão 5159; alt 5087
+Q0574,revisar,5199,5224,0.3826,confiança 0.38 abaixo do limiar 0.74; assunto_exact; sugestão 5199; alt 5224
+Q0575,revisar,4702,,0.7729,vizinhos da folha sugerem fora
+Q0576,revisar,5087,,0.5331,confiança 0.53 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5185
+Q0577,publicar,4704,,0.8505,
+Q0578,publicar,4702,,0.7841,
+Q0579,revisar,5478,5547,0.4488,confiança 0.45 abaixo do limiar 0.74; assunto_exact; sugestão 5478; alt 5547
+Q0580,revisar,5185,,0.55,confiança 0.55 abaixo do limiar 0.74; sugestão 5185; alt 5199
+Q0581,revisar,5473,5492,0.3864,vizinhos da folha sugerem fora
+Q0582,revisar,5185,,0.4455,vizinhos da folha sugerem fora
+Q0583,revisar,5185,,0.5466,vizinhos da folha sugerem fora
+Q0584,revisar,5524,5185,0.575,confiança 0.57 abaixo do limiar 0.74; lei_promovida:juri; sugestão 5524; alt 5185
+Q0585,revisar,5211,5225,0.4331,confiança 0.43 abaixo do limiar 0.74; sugestão 5211; alt 5225
+Q0586,revisar,5523,5519,0.4102,vizinhos da folha sugerem fora
+Q0587,publicar,5185,,0.7154,
+Q0588,revisar,4371,4388,0.5467,confiança 0.55 abaixo do limiar 0.74; sugestão 4371; alt 4388
+Q0589,revisar,5478,5519,0.4335,vizinhos da folha sugerem fora
+Q0590,revisar,5230,,0.6099,confiança 0.61 abaixo do limiar 0.74; assunto_exact; sugestão 5230; alt 5232
+Q0591,revisar,5562,5498,0.6008,confiança 0.60 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5562; alt 5498
+Q0592,revisar,5087,5088,0.5593,confiança 0.56 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5088
+Q0593,revisar,5087,,0.5178,confiança 0.52 abaixo do limiar 0.74; knn_folha; sugestão 5087; alt 5199
+Q0594,revisar,5087,,0.5382,vizinhos da folha sugerem fora
+Q0595,publicar,5498,,0.7738,
+Q0596,revisar,5180,5181,0.4472,confiança 0.45 abaixo do limiar 0.74; sugestão 5180; alt 5181
+Q0597,revisar,5560,5589,0.3807,vizinhos da folha sugerem fora
+Q0598,revisar,4368,,0.2721,empate entre irmãos 4371 e 4368; sugestão 4368; alt 4371
+Q0599,fora,,,0.2488,disciplina_origem fora do recorte; assunto/texto OOD
+Q0600,publicar,5185,,0.7297,
+Q0601,publicar,4701,,0.7408,
+Q0602,revisar,5466,,0.5765,confiança 0.58 abaixo do limiar 0.74; sugestão 5466; alt 5492
+Q0603,revisar,5092,5087,0.5569,confiança 0.56 abaixo do limiar 0.74; knn_folha; sugestão 5092; alt 5087
+Q0604,publicar,5087,,0.7081,
+Q0605,revisar,5535,5530,0.4165,confiança 0.42 abaixo do limiar 0.74; assunto_exact; sugestão 5535; alt 5530
+Q0606,publicar,5524,,0.6959,
+Q0607,revisar,4368,4388,0.3829,vizinhos da folha sugerem fora
+Q0608,revisar,5180,5181,0.5726,confiança 0.57 abaixo do limiar 0.74; sugestão 5180; alt 5181
+Q0609,revisar,5185,,0.2589,empate entre irmãos 5185 e 5087; sugestão 5185; alt 5087
+Q0610,revisar,5498,,0.5435,confiança 0.54 abaixo do limiar 0.74; lei:interceptacao; sugestão 5498; alt 5478
+Q0611,revisar,5087,,0.555,vizinhos da folha sugerem fora
+Q0612,revisar,5087,,0.5422,confiança 0.54 abaixo do limiar 0.74; sugestão 5087; alt 5063
+Q0613,revisar,5087,,0.7006,vizinhos da folha sugerem fora
+Q0614,revisar,5087,,0.5568,confiança 0.56 abaixo do limiar 0.74; sugestão 5087; alt 5117
+Q0615,revisar,5498,,0.7473,vizinhos da folha sugerem fora
+Q0616,revisar,5211,5224,0.3826,confiança 0.38 abaixo do limiar 0.74; sugestão 5211; alt 5224
+Q0617,publicar,5498,,0.6788,
+Q0618,revisar,5224,,0.5699,confiança 0.57 abaixo do limiar 0.74; sugestão 5224; alt 5225
+Q0619,revisar,5561,,0.681,confiança 0.68 abaixo do limiar 0.74; lei_promovida:recursos; sugestão 5561; alt 5540
+Q0620,revisar,5147,,0.6185,vizinhos da folha sugerem fora
+Q0621,revisar,5185,,0.5197,confiança 0.52 abaixo do limiar 0.74; sugestão 5185; alt 5211
+Q0622,revisar,5182,5180,0.4494,confiança 0.45 abaixo do limiar 0.74; sugestão 5182; alt 5180
+Q0623,revisar,5498,5544,0.4248,confiança 0.42 abaixo do limiar 0.74; sugestão 5498; alt 5544
+Q0624,publicar,4704,,0.889,
+Q0625,revisar,5092,5093,0.5653,confiança 0.57 abaixo do limiar 0.74; sugestão 5092; alt 5093
+Q0626,revisar,5590,,0.2688,empate entre irmãos 5505 e 5466; assunto_exact; sugestão 5590; alt 5466
+Q0627,publicar,5126,,0.6207,
+Q0628,publicar,5498,,0.7403,
+Q0629,revisar,4371,,0.5509,vizinhos da folha sugerem fora
+Q0630,revisar,5087,5084,0.3677,confiança 0.37 abaixo do limiar 0.74; sugestão 5087; alt 5084
+Q0631,revisar,5087,,0.548,vizinhos da folha sugerem fora
+Q0632,revisar,5087,5092,0.5405,confiança 0.54 abaixo do limiar 0.74; knn_folha; sugestão 5087; alt 5092
+Q0633,revisar,5087,,0.5641,confiança 0.56 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5087; alt 5166
+Q0634,publicar,5498,,0.76,
+Q0635,revisar,5203,5185,0.4046,confiança 0.40 abaixo do limiar 0.74; assunto_exact; sugestão 5203; alt 5185
+Q0636,revisar,5087,,0.561,confiança 0.56 abaixo do limiar 0.74; sugestão 5087; alt 5224
+Q0637,revisar,5087,,0.5435,confiança 0.54 abaixo do limiar 0.74; assunto_exact; sugestão 5087; alt 5091
+Q0638,revisar,5087,,0.3913,confiança 0.39 abaixo do limiar 0.74; knn_folha; assunto_exact; sugestão 5087; alt 5091
+Q0639,revisar,4707,,0.7973,vizinhos da folha sugerem fora
+Q0640,publicar,5227,,0.6234,
+Q0641,revisar,5097,5066,0.44,vizinhos da folha sugerem fora
+Q0642,publicar,4704,,0.7939,
+Q0643,revisar,4388,,0.5395,confiança 0.54 abaixo do limiar 0.74; sugestão 4388; alt 4368
+Q0644,publicar,5087,,0.7192,
+Q0645,revisar,5226,,0.6072,confiança 0.61 abaixo do limiar 0.74; sugestão 5226; alt 5211
+Q0646,revisar,4388,4374,0.3906,confiança 0.39 abaixo do limiar 0.74; sugestão 4388; alt 4374
+Q0647,revisar,5488,,0.5728,confiança 0.57 abaixo do limiar 0.74; sugestão 5488; alt 5466
+Q0648,revisar,5498,,0.5663,vizinhos da folha sugerem fora
+Q0649,fora,,,0.5449,disciplina_origem fora do recorte; assunto/texto OOD
+Q0650,fora,,,0.3591,disciplina_origem fora do recorte; assunto/texto OOD
+Q0651,publicar,4704,,0.8666,
+Q0652,revisar,5538,5502,0.4217,confiança 0.42 abaixo do limiar 0.74; sugestão 5538; alt 5502
+Q0653,revisar,4704,,0.7581,vizinhos da folha sugerem fora
+Q0654,fora,,,0.2322,disciplina_origem fora do recorte; assunto/texto OOD
+Q0655,revisar,4385,4371,0.4127,confiança 0.41 abaixo do limiar 0.74; sugestão 4385; alt 4371
+Q0656,publicar,4704,,0.9456,
+Q0657,revisar,6716,,0.622,vizinhos da folha sugerem fora
+Q0658,revisar,4374,,0.4915,confiança 0.49 abaixo do limiar 0.74; sugestão 4374; alt 4375
+Q0659,publicar,4702,,0.7853,

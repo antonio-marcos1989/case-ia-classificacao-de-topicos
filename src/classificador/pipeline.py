@@ -162,20 +162,62 @@ def _candidate_matrix(tree: ThemeTree, result: ScoreResult) -> tuple[list[Candid
 
 
 def apply_reranker(tree: ThemeTree, result: ScoreResult, reranker: CandidateReranker | None) -> ScoreResult:
+    """Blend leve do reranker com o score híbrido (não substitui — preserva margem/ranking)."""
     if reranker is None or reranker.model is None or not result.candidates:
         return result
     cands, X = _candidate_matrix(tree, result)
     if len(cands) == 0:
         return result
     probs = reranker.predict_proba(X)
-    order = np.argsort(-probs)
-    ranked = []
+    # Normaliza scores híbridos no top-N para [0,1]
+    hybrid = np.asarray([c.score for c in cands], dtype=float)
+    hmin, hmax = float(hybrid.min()), float(hybrid.max())
+    if hmax - hmin > 1e-9:
+        hybrid_n = (hybrid - hmin) / (hmax - hmin)
+    else:
+        hybrid_n = np.ones_like(hybrid) * 0.5
+
+    # 70% híbrido + 30% LR — o reranker sozinho regredia top-1 no hold-out
+    blended = 0.70 * hybrid_n + 0.30 * probs
+    order = np.argsort(-blended)
+
+    hybrid_best = result.best.tema_id if result.best else None
+    rr_best_tid = cands[int(order[0])].tema_id
+    # Só promove o vencedor do blend se concorda com híbrido / mesmo ramo / lei no cand
+    promote = True
+    if hybrid_best is not None and rr_best_tid != hybrid_best:
+        same = tree.same_branch(rr_best_tid, hybrid_best) or tree.are_siblings(rr_best_tid, hybrid_best)
+        rr_law = float(cands[int(order[0])].components.get("law", 0.0))
+        # Gap pequeno no blend → troca ok; gap grande sem apoio → mantém híbrido
+        gap = float(blended[int(order[0])] - blended[int(order[1])]) if len(order) > 1 else 1.0
+        if not same and rr_law < 0.7 and gap < 0.08:
+            promote = False
+
+    if not promote:
+        # Mantém ordenação híbrida; anexa sinal de rerank como feature
+        notes = list(result.notes)
+        notes.append("rerank_conservado")
+        cf = dict(result.confidence_features)
+        cf["rerank"] = float(probs[0]) if len(probs) else 0.0
+        return ScoreResult(
+            candidates=result.candidates,
+            best=result.best,
+            second=result.second,
+            sibling_tie=result.sibling_tie,
+            fora_signal=result.fora_signal,
+            law_hit=result.law_hit,
+            notes=notes,
+            confidence_features=cf,
+        )
+
+    ranked: list[Candidate] = []
     for idx in order:
         c = cands[int(idx)]
         ranked.append(
             Candidate(
                 tema_id=c.tema_id,
-                score=float(probs[int(idx)]),
+                # Mantém escala próxima ao híbrido original (melhor margem p/ calibrador)
+                score=float(0.65 * c.score + 0.35 * blended[int(idx)]),
                 components={**c.components, "rerank": float(probs[int(idx)])},
             )
         )
@@ -187,18 +229,25 @@ def apply_reranker(tree: ThemeTree, result: ScoreResult, reranker: CandidateRera
         if abs(best.score - second.score) <= 0.05:
             sibling_tie = True
             notes.append(f"empate entre irmãos {best.tema_id} e {second.tema_id}")
-    # rebuild confidence features with rerank score as raw
-    margin = (best.score - second.score) if best and second else best.score if best else 0.0
+    margin = (best.score - second.score) if best and second else (best.score if best else 0.0)
+    score_gap = float(margin / (abs(best.score) + 1e-9)) if best else 0.0
     cf = dict(result.confidence_features)
     cf["raw"] = float(best.score if best else 0.0)
     cf["margin"] = float(max(0.0, margin))
+    cf["score_gap"] = score_gap
+    cf["sibling_conflict"] = 1.0 if sibling_tie else float(cf.get("sibling_conflict", 0.0))
+    if best:
+        cf["law"] = float(best.components.get("law", cf.get("law", 0.0)))
     cf["score"] = (
-        0.45 * cf["raw"]
-        + 0.20 * cf["margin"]
-        + 0.20 * cf.get("knn_agree", 0.0)
-        + 0.15 * cf.get("law", 0.0)
-        + 0.20 * cf.get("agree_signals", 0.0)
-        - 0.30 * cf.get("fora_signal", 0.0)
+        0.22 * cf["raw"]
+        + 1.25 * cf.get("margin", 0.0)
+        + 0.35 * cf.get("score_gap", 0.0)
+        + 0.28 * cf.get("knn_agree", 0.0)
+        + 0.38 * cf.get("law", 0.0)
+        + 0.22 * cf.get("agree_signals", 0.0)
+        - 0.40 * cf.get("fora_signal", 0.0)
+        - 0.25 * cf.get("knn_fora", 0.0)
+        - 0.35 * cf.get("sibling_conflict", 0.0)
     )
     return ScoreResult(
         candidates=ranked,

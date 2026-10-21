@@ -13,6 +13,7 @@ class LawHit:
     tema_id: int | None
     score: float
     reason: str
+    specific: bool = False
 
 
 @dataclass
@@ -27,11 +28,13 @@ class LawDictionary:
             if not any(re.search(p, text, flags=re.I) for p in rule.get("patterns", [])):
                 continue
             tema_id = rule.get("prefer")
+            specific = False
 
             # Subtema específico (ex.: apelação → 5562)
             for sm in rule.get("subtema_map") or []:
                 if any(re.search(p, text, flags=re.I) for p in sm.get("patterns", [])):
                     tema_id = sm.get("tema_id", tema_id)
+                    specific = True
                     break
 
             # Desambiguação processual (LEP → PP)
@@ -39,10 +42,10 @@ class LawDictionary:
             if proc_signals and rule.get("processual_prefer"):
                 if any(re.search(p, text, flags=re.I) for p in proc_signals):
                     tema_id = rule["processual_prefer"]
+                    specific = True
 
             avoid = set(int(x) for x in (rule.get("avoid_tema_ids") or []))
             if tema_id is not None and int(tema_id) in avoid:
-                # cai para o primeiro tema_ids não evitado
                 for cand in rule.get("tema_ids") or []:
                     if int(cand) not in avoid:
                         tema_id = int(cand)
@@ -54,15 +57,38 @@ class LawDictionary:
                 LawHit(
                     name=rule["name"],
                     tema_id=int(tema_id),
-                    score=1.0,
+                    score=1.15 if specific else 1.0,
                     reason=f"lei/termo:{rule['name']}",
+                    specific=specific,
                 )
             )
+
+        # Resolução de conflitos entre regras sobrepostas
+        names = {h.name for h in hits}
+        if "recursos" in names and "jecrim" in names:
+            rec = next(h for h in hits if h.name == "recursos")
+            if rec.specific or re.search(r"\bapela[cç][aã]o\b|\bRESE\b|recurso\s+em\s+sentido", text, re.I):
+                hits = [h for h in hits if h.name != "jecrim"]
+                names = {h.name for h in hits}
+
+        if "prova_testemunhal" in names:
+            hits = [h for h in hits if h.name not in {"juri", "inquerito"}]
+            names = {h.name for h in hits}
+
+        if "procedimento_ordinario" in names:
+            # Conexão/continência + transação: tema é procedimento ordinário, não júri/JECRIM
+            hits = [h for h in hits if h.name not in {"juri", "jecrim"}]
+            names = {h.name for h in hits}
+
         return hits
 
     def best_tema(self, text: str) -> LawHit | None:
         hits = self.match(text)
-        return hits[0] if hits else None
+        if not hits:
+            return None
+        # Prefere hit específico (subtema) e depois score
+        hits = sorted(hits, key=lambda h: (h.specific, h.score), reverse=True)
+        return hits[0]
 
 
 def load_law_dictionary(path: str | Path | None = None) -> LawDictionary:

@@ -1,5 +1,5 @@
-# Dicionário de leis/termos → tema_id (v1.1 — padrões mais precisos).
-version: "1.1"
+# Dicionário de leis/termos → tema_id (v1.2 — ranking: apelação/RESE, LEP remição).
+version: "1.2"
 rules:
   - name: maria_da_penha
     patterns:
@@ -20,11 +20,15 @@ rules:
       - lei\s+n?[ºo°\.]*\s*7[\./\s]?210
       - progress[aã]o\s+de\s+regime
       - livramento\s+condicional
-      - remi[cç][aã]o\s+(?:de\s+)?(?:pena|pelo\s+estudo|pelo\s+trabalho)
+      - remi[cç][aã]o\s+(?:de\s+)?(?:pena|pelo\s+estudo|pelo\s+trabalho)?
+      - \bremi[cç][aã]o\b
+      - trabalho\s+prisional
+      - frequ[eê]ncia\s+escolar.{0,40}(?:pena|cumprimento|preso)
       - falta\s+grave\s+na\s+execu
       - sa[ií]da\s+tempor[aá]ria
       - exame\s+criminol[oó]gico
       - pris[aã]o\s+domiciliar\s+na\s+execu
+      - regime\s+fechado.{0,80}condenad
     tema_ids: [4703, 6734]
     prefer: 4703
     processual_signals:
@@ -106,19 +110,38 @@ rules:
     patterns:
       - recurso\s+em\s+sentido\s+estrito
       - \bRESE\b
-      - apela[cç][aã]o\s+(?:criminal|penal)
-      - caber[aá]\s+(?:recurso\s+em\s+sentido\s+estrito|apela[cç][aã]o)
+      - \bapela[cç][aã]o\b
+      - recurso\s+cab[ií]vel
+      - caber[aá].{0,60}(?:recurso|apela[cç][aã]o)
     tema_ids: [5560, 5561, 5562]
     prefer: 5560
     subtema_map:
       - patterns:
-          - apela[cç][aã]o\s+(?:criminal|penal)
-          - caber[aá]\s+apela[cç][aã]o
+          - \bapela[cç][aã]o\b
+          - caber[aá].{0,80}apela[cç][aã]o
         tema_id: 5562
       - patterns:
           - recurso\s+em\s+sentido\s+estrito
           - \bRESE\b
         tema_id: 5561
+    require_strong: true
+
+  - name: prova_testemunhal
+    patterns:
+      - testemunha\s+fedat
+      - prova\s+testemunhal
+      - esp[eé]cies?\s+de\s+testemunhas?
+    tema_ids: [5550]
+    prefer: 5550
+    require_strong: true
+
+  - name: procedimento_ordinario
+    patterns:
+      - procedimento\s+ordin[aá]rio
+      - reuni[aã]o\s+de\s+processos.{0,80}(?:conex[aã]o|contin[eê]ncia)
+      - transa[cç][aã]o\s+penal.{0,100}(?:conex[aã]o|contin[eê]ncia|ju[ií]zo\s+comum)
+    tema_ids: [5530]
+    prefer: 5530
     require_strong: true
 
   - name: crimes_eleitorais

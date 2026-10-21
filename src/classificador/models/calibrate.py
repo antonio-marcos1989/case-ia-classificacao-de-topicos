@@ -25,15 +25,25 @@ FEATURE_ORDER = [
 class Calibrator:
     kind: str
     model: object
+    secondary: object | None = None
+    blend: float = 0.0  # peso do secondary (LR) no blend
 
     def predict_proba(self, scores: np.ndarray) -> np.ndarray:
-        """Aceita vetor 1D (score) ou 2D (features; usa col 0)."""
+        """Aceita vetor 1D (score) ou 2D (features; col0 = score composto)."""
         X = np.asarray(scores, dtype=float)
         if X.ndim == 1:
-            return np.clip(self.model.predict(X), 0.0, 1.0)
+            base = np.clip(self.model.predict(X), 0.0, 1.0)
+            return base
         if self.kind == "lr":
             return self.model.predict_proba(X)[:, 1]
-        return np.clip(self.model.predict(X[:, 0]), 0.0, 1.0)
+        base = np.clip(self.model.predict(X[:, 0]), 0.0, 1.0)
+        if self.secondary is not None and self.blend > 0:
+            # Features LR: margin, law, knn_agree, score_gap-ish, 1-fora, agree
+            # X layout from features_from_result:
+            # 0 score, 1 raw, 2 margin, 3 knn, 4 law, 5 agree, 6 fora, 7 tfidf, 8 emb, 9 proto, 10 assunto
+            lr_p = self.secondary.predict_proba(X)[:, 1]
+            return np.clip((1.0 - self.blend) * base + self.blend * lr_p, 0.0, 1.0)
+        return base
 
 
 def fit_calibrator(scores: np.ndarray, labels: np.ndarray) -> Calibrator:
@@ -54,7 +64,7 @@ def fit_calibrator(scores: np.ndarray, labels: np.ndarray) -> Calibrator:
 
 
 def fit_feature_calibrator(X: np.ndarray, labels: np.ndarray) -> Calibrator:
-    """Isotônica no score composto (col 0) — melhor separação que LR balanceada em n pequeno."""
+    """Isotônica no score composto + LR auxiliar (margem/lei) para romper platôs."""
     X = np.asarray(X, dtype=float)
     y = np.asarray(labels, dtype=float)
     scores = X[:, 0] if X.ndim == 2 else np.asarray(X, dtype=float)
@@ -68,7 +78,25 @@ def fit_feature_calibrator(X: np.ndarray, labels: np.ndarray) -> Calibrator:
 
         return Calibrator(kind="iso", model=_Const())
     iso.fit(scores, y)
-    return Calibrator(kind="iso", model=iso)
+
+    secondary = None
+    blend = 0.0
+    if X.ndim == 2 and X.shape[1] >= 7 and len(y) >= 12 and len(np.unique(y)) >= 2:
+        # LR em features de separação (não usa só o score — evita platô da isotônica)
+        try:
+            lr = LogisticRegression(
+                max_iter=2000,
+                class_weight="balanced",
+                C=0.55,
+                solver="lbfgs",
+            )
+            lr.fit(X, y.astype(int))
+            secondary = lr
+            blend = 0.35
+        except Exception:
+            secondary = None
+            blend = 0.0
+    return Calibrator(kind="iso", model=iso, secondary=secondary, blend=blend)
 
 
 def features_from_result(result) -> np.ndarray:

@@ -48,6 +48,7 @@ seeds:
     - transação penal
     - composição civil
     - suspensão condicional do processo
+    - termo circunstanciado
   # Júri
   5524:
     - tribunal do júri
@@ -56,11 +57,27 @@ seeds:
     - impronúncia
     - desaforamento
     - plenário
+    - conselho de sentença
   5527:
     - impronúncia
     - desclassificação
     - absolvição sumária
     - pronúncia
+  # Procedimento ordinário
+  5530:
+    - procedimento ordinário
+    - conexão e continência
+    - reunião de processos
+    - juízo comum
+  # Provas
+  5550:
+    - prova testemunhal
+    - testemunha fedatária
+    - testemunha de ouvir dizer
+    - espécies de testemunhas
+  5543:
+    - provas em espécies
+    - meios de prova
   # HC / Inquérito / Recursos
   5477:
     - habeas corpus
@@ -68,15 +85,22 @@ seeds:
   5498:
     - inquérito policial
     - arquivamento
+    - denúncia anônima
+    - investigação preliminar
   5560:
     - recursos em espécies
     - recurso em sentido estrito
     - apelação
+    - recurso cabível
   5562:
+    - apelação
     - apelação criminal
+    - apelação no prazo
+    - rejeitar a denúncia apelação
   5561:
     - recurso em sentido estrito
     - RESE
+    - denegação de recurso
   # Prescrição / Teoria da pena / Crime
   5185:
     - prescrição

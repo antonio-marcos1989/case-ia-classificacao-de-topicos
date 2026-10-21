@@ -106,13 +106,21 @@ class DecisionPolicy:
         law = float(cf.get("law", 0.0))
         knn = float(cf.get("knn_agree", 0.0))
         agree = float(cf.get("agree_signals", 0.0))
-        # knn_agree is stored; fora_votes travels in fora_signal / notes
         knn_fora = float(cf.get("knn_fora", 0.0))
-        # Bloqueia publish se vizinhos da folha votam fora (protege precisão vs rótulos fora)
-        knn_fora_block = knn_fora >= 0.12
+        score_gap = float(cf.get("score_gap", 0.0))
+        # knn-fora bloqueia publicar. Override só quando vizinhos votam fora com força
+        # (falso alarme) e lei+margem são claros — evita publicar gold-fora com kf~0.12.
+        law_overrides_fora = (
+            law >= 0.7
+            and margin >= 0.20
+            and result.fora_signal < 0.35
+            and knn_fora >= 0.25
+        )
+        knn_fora_block = knn_fora >= 0.12 and not law_overrides_fora
         strong = result.fora_signal < 0.25 and not knn_fora_block and (
-            (margin >= 0.25 and law >= 0.7 and knn >= 0.25)
-            or (margin >= 0.18 and knn >= 0.50)
+            (margin >= 0.22 and law >= 0.7 and knn >= 0.20)
+            or (margin >= 0.16 and knn >= 0.45)
+            or (margin >= 0.20 and score_gap >= 0.12 and agree >= 0.35)
         )
         near_tau = confianca >= (self.tau_publicar - 0.12)
         pass_tau = confianca >= self.tau_publicar
@@ -127,7 +135,7 @@ class DecisionPolicy:
             )
 
         if best.score >= self.min_raw_score and result.fora_signal < 0.50:
-            if pass_tau and margin >= 0.05 and (law >= 0.7 or knn >= 0.40 or margin >= 0.10):
+            if pass_tau and margin >= 0.04 and (law >= 0.7 or knn >= 0.35 or margin >= 0.08 or score_gap >= 0.10):
                 return Decision("publicar", tema, extras, float(confianca), "")
             if strong and near_tau:
                 return Decision("publicar", tema, extras, float(confianca), "")
