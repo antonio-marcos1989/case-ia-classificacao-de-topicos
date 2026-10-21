@@ -1,13 +1,19 @@
 precisao_prevista: 1.00   # fração das publicadas que estará certa
-precisao_intervalo: 0.95-1.00
-cobertura_prevista: 0.13  # fração das questões que você publicou
-cobertura_intervalo: 0.07-0.71
+precisao_intervalo: 1.00-1.00
+cobertura_prevista: 0.03  # fração das questões que você publicou
+cobertura_intervalo: 0.00-0.10
 
 Método:
-- Hold-out estratificado (~30%, n=30) da folha-verdade escolhe tau; o restante treina
-  léxico/kNN/reranker/calibrador (CV interno). Acerto tolerante à árvore; irmãos → revisar.
-- Features (TF-IDF, emb, lei, assunto, margem, kNN, rerank) → LogisticRegression = P(acerto).
-- tau_publicar=0.7471 maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95).
-- Predict offline: artifacts/ (laws_v0.yaml, model.joblib, embeddings *.npy); sem LLM/API.
-- Embeddings: True; acurácia sinal (fit-set): 0.5.
+- Hold-out estratificado (~30%, n=30) da folha-verdade: escolhe tau e estima
+  precisão/cobertura. O restante (fit-set) treina léxico/kNN/reranker/calibrador.
+- Intervalos = percentis 2.5–97.5 de bootstrap (1000) sobre o hold-out (publicadas
+  para precisão; todas as linhas do hold-out para cobertura).
+- Acerto tolerante à árvore; empate entre irmãos → revisar.
+- Features (TF-IDF, emb, proto/kNN, lei, assunto, margem) → score composto;
+- tau_publicar=0.75 maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95);
+  piso de tau≈0.74 para não baixar o limiar só para inflar cobertura.
+- Calibração: isotônica no score composto (ênfase em margem top1–top2).
+- Predict offline: artifacts/ (laws, lexicon_seeds, model.joblib, embeddings); sem LLM/API.
+- Embeddings: True; sinal fit-set: 0.44285714285714284.
+- Recall fora (hold-out): 0.0.
 - Banca avalia 559 fora da folha; folha só em Q0001–Q0359 (possível shift nas recentes).

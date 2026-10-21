@@ -1,0 +1,115 @@
+# Termos/aliases locais por tema_id (sem LLM). Usados no TF-IDF dos temas.
+version: 1
+seeds:
+  # Maria da Penha (Leg. Esp. preferido)
+  4704:
+    - maria da penha
+    - lei 11340
+    - violência doméstica
+    - medida protetiva
+    - violência familiar
+    - lesão corporal violência doméstica
+  6724:
+    - maria da penha
+    - violência doméstica
+  # LEP
+  4703:
+    - lei de execução penal
+    - LEP
+    - lei 7210
+    - progressão de regime
+    - livramento condicional
+    - remição
+    - regime fechado
+    - regime semiaberto
+    - regime aberto
+    - prisão domiciliar execução
+    - faltas graves
+  6734:
+    - lei de execução penal
+    - agravo em execução
+    - juízo da execução
+    - incidente de execução
+  # Drogas
+  4708:
+    - tráfico de drogas
+    - lei 11343
+    - entorpecentes
+    - associação para o tráfico
+    - porte de drogas
+  6728:
+    - tráfico de drogas
+    - entorpecentes
+  # JECRIM
+  4701:
+    - juizado especial criminal
+    - JECRIM
+    - lei 9099
+    - transação penal
+    - composição civil
+    - suspensão condicional do processo
+  # Júri
+  5524:
+    - tribunal do júri
+    - procedimento do júri
+    - pronúncia
+    - impronúncia
+    - desaforamento
+    - plenário
+  5527:
+    - impronúncia
+    - desclassificação
+    - absolvição sumária
+    - pronúncia
+  # HC / Inquérito / Recursos
+  5477:
+    - habeas corpus
+    - constrangimento ilegal
+  5498:
+    - inquérito policial
+    - arquivamento
+  5560:
+    - recursos em espécies
+    - recurso em sentido estrito
+    - apelação
+  5562:
+    - apelação criminal
+  5561:
+    - recurso em sentido estrito
+    - RESE
+  # Prescrição / Teoria da pena / Crime
+  5185:
+    - prescrição
+    - pretensão punitiva
+    - pretensão executória
+  5199:
+    - teoria da pena
+    - dosimetria
+    - pena privativa
+  5063:
+    - ação penal
+    - denúncia
+    - queixa
+  # Criminologia
+  4384:
+    - teorias legitimadoras da pena
+    - legitimação da pena
+  4371:
+    - escolas criminológicas
+    - escola clássica
+    - escola positiva
+  4385:
+    - teorias sociológicas
+    - anomia
+    - labeling
+  4389:
+    - vitimologia
+    - vítima
+  # Economia popular / abuso (úteis p/ fora vs tema)
+  4687:
+    - economia popular
+    - formação de cartel
+    - ajuste de preços
+  4692:
+    - crimes eleitorais
+    - código eleitoral

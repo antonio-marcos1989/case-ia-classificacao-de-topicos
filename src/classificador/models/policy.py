@@ -15,21 +15,63 @@ class Decision:
 
 
 class DecisionPolicy:
-    """Política publicar/revisar/fora com limiares calibrados.
-
-    Empate entre irmãos → revisar (não chutar; não subir ao pai).
-    """
+    """Política publicar/revisar/fora. Empate entre irmãos → revisar."""
 
     def __init__(
         self,
         *,
         tau_publicar: float = 0.85,
-        tau_fora: float = 0.55,
-        min_raw_score: float = 0.15,
+        tau_fora: float = 0.50,
+        min_raw_score: float = 0.12,
     ):
         self.tau_publicar = float(tau_publicar)
         self.tau_fora = float(tau_fora)
         self.min_raw_score = float(min_raw_score)
+
+    def _extras(self, result: ScoreResult) -> list[int]:
+        best = result.best
+        if not best or not result.second or result.sibling_tie:
+            return []
+        sec = result.second
+        # Só extras baratos e confiáveis: score próximo e mesma disciplina / lei
+        if sec.score < 0.78 * best.score:
+            return []
+        if sec.components.get("law", 0) >= 0.7 or sec.components.get("assunto", 0) >= 0.9:
+            return [sec.tema_id]
+        if abs(sec.score - best.score) <= 0.12 and sec.components.get("disc", 0) >= 0.5:
+            return [sec.tema_id]
+        return []
+
+    def _motivo_fora(self, result: ScoreResult) -> str:
+        preferred = [
+            n
+            for n in result.notes
+            if "fora do recorte" in n or n.startswith("assunto/texto OOD") or "fora" in n.lower()
+        ]
+        if preferred:
+            return "; ".join(preferred)[:200]
+        if result.notes:
+            return "; ".join(result.notes)[:200]
+        return "baixa aderência à taxonomia"
+
+    def _motivo_revisar(self, result: ScoreResult, confianca: float) -> str:
+        parts: list[str] = []
+        if result.sibling_tie:
+            parts.append(next((n for n in result.notes if "irmão" in n), "dúvida entre subtemas irmãos"))
+        elif confianca < self.tau_publicar:
+            parts.append(f"confiança {confianca:.2f} abaixo do limiar {self.tau_publicar:.2f}")
+        if result.best and result.best.score < self.min_raw_score:
+            parts.append("score lexical/embedding baixo")
+        # Sinais úteis para o especialista
+        for n in result.notes:
+            if n.startswith("lei") or n.startswith("knn") or n.startswith("assunto") or "OOD" in n:
+                if n not in parts:
+                    parts.append(n)
+        if result.second and result.best:
+            parts.append(f"sugestão {result.best.tema_id}; alt {result.second.tema_id}")
+        if not parts:
+            parts.append("incerteza residual")
+        return "; ".join(parts)[:200]
 
     def decide(self, result: ScoreResult, confianca: float) -> Decision:
         best = result.best
@@ -37,38 +79,59 @@ class DecisionPolicy:
             return Decision("fora", None, [], float(confianca), "sem candidato de tema")
 
         tema = best.tema_id
-        extras: list[int] = []
-        # extras leves: 2º candidato se score alto e não irmão
-        if result.second and result.second.score >= 0.7 * best.score:
-            if not result.sibling_tie:
-                extras = [result.second.tema_id]
+        extras = self._extras(result)
 
-        # Fora
+        # Fora com prioridade quando sinal OOD claro
+        ood_note = any(
+            "fora do recorte" in n or "OOD" in n for n in result.notes
+        )
         if result.fora_signal >= self.tau_fora and (
-            best.score < 0.35 or confianca < self.tau_publicar
+            ood_note or best.score < 0.40 or confianca < self.tau_publicar
         ):
-            motivo = "; ".join(result.notes) if result.notes else "baixa aderência à taxonomia"
-            return Decision("fora", None, [], float(confianca), motivo[:200])
-        if best.score < self.min_raw_score and result.fora_signal >= 0.35:
-            motivo = "; ".join(result.notes) if result.notes else "score insuficiente e sinal de fora"
-            return Decision("fora", None, [], float(confianca), motivo[:200])
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
-        # Empate entre irmãos
+        if result.fora_signal >= 0.70 and confianca < self.tau_publicar:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        if best.score < self.min_raw_score and result.fora_signal >= 0.40:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
         if result.sibling_tie:
-            motivo = result.notes[0] if result.notes else "dúvida entre subtemas irmãos"
-            return Decision("revisar", tema, extras, float(confianca), motivo[:200])
+            return Decision(
+                "revisar", tema, extras, float(confianca), self._motivo_revisar(result, confianca)
+            )
 
-        # Publicar se confiança >= tau
-        if confianca >= self.tau_publicar and best.score >= self.min_raw_score:
-            return Decision("publicar", tema, extras, float(confianca), "")
+        cf = result.confidence_features or {}
+        margin = float(cf.get("margin", 0.0))
+        law = float(cf.get("law", 0.0))
+        knn = float(cf.get("knn_agree", 0.0))
+        agree = float(cf.get("agree_signals", 0.0))
+        # knn_agree is stored; fora_votes travels in fora_signal / notes
+        knn_fora = float(cf.get("knn_fora", 0.0))
+        # Bloqueia publish se vizinhos da folha votam fora (protege precisão vs rótulos fora)
+        knn_fora_block = knn_fora >= 0.12
+        strong = result.fora_signal < 0.25 and not knn_fora_block and (
+            (margin >= 0.25 and law >= 0.7 and knn >= 0.25)
+            or (margin >= 0.18 and knn >= 0.50)
+        )
+        near_tau = confianca >= (self.tau_publicar - 0.12)
+        pass_tau = confianca >= self.tau_publicar
 
-        # Caso contrário revisar
-        if best.score < self.min_raw_score:
-            motivo = "score lexical/embedding baixo"
-        elif confianca < self.tau_publicar:
-            motivo = f"confiança {confianca:.2f} abaixo do limiar {self.tau_publicar:.2f}"
-        else:
-            motivo = "incerteza residual"
-        if result.notes:
-            motivo = motivo + "; " + "; ".join(result.notes)
-        return Decision("revisar", tema, extras, float(confianca), motivo[:200])
+        if knn_fora_block:
+            return Decision(
+                "revisar",
+                tema,
+                extras,
+                float(confianca),
+                "vizinhos da folha sugerem fora",
+            )
+
+        if best.score >= self.min_raw_score and result.fora_signal < 0.50:
+            if pass_tau and margin >= 0.05 and (law >= 0.7 or knn >= 0.40 or margin >= 0.10):
+                return Decision("publicar", tema, extras, float(confianca), "")
+            if strong and near_tau:
+                return Decision("publicar", tema, extras, float(confianca), "")
+
+        return Decision(
+            "revisar", tema, extras, float(confianca), self._motivo_revisar(result, confianca)
+        )

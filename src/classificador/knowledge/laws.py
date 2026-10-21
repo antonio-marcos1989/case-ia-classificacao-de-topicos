@@ -6,8 +6,6 @@ from pathlib import Path
 
 import yaml
 
-DEFAULT_LAW_RULES: list[dict] = []  # prefer YAML artifact
-
 
 @dataclass
 class LawHit:
@@ -29,10 +27,27 @@ class LawDictionary:
             if not any(re.search(p, text, flags=re.I) for p in rule.get("patterns", [])):
                 continue
             tema_id = rule.get("prefer")
+
+            # Subtema específico (ex.: apelação → 5562)
+            for sm in rule.get("subtema_map") or []:
+                if any(re.search(p, text, flags=re.I) for p in sm.get("patterns", [])):
+                    tema_id = sm.get("tema_id", tema_id)
+                    break
+
+            # Desambiguação processual (LEP → PP)
             proc_signals = rule.get("processual_signals") or []
             if proc_signals and rule.get("processual_prefer"):
                 if any(re.search(p, text, flags=re.I) for p in proc_signals):
                     tema_id = rule["processual_prefer"]
+
+            avoid = set(int(x) for x in (rule.get("avoid_tema_ids") or []))
+            if tema_id is not None and int(tema_id) in avoid:
+                # cai para o primeiro tema_ids não evitado
+                for cand in rule.get("tema_ids") or []:
+                    if int(cand) not in avoid:
+                        tema_id = int(cand)
+                        break
+
             if tema_id is None:
                 continue
             hits.append(
@@ -59,3 +74,17 @@ def load_law_dictionary(path: str | Path | None = None) -> LawDictionary:
     data = yaml.safe_load(p.read_text(encoding="utf-8"))
     rules = data.get("rules", data) if isinstance(data, dict) else data
     return LawDictionary(rules=list(rules or []))
+
+
+def load_lexicon_seeds(path: str | Path | None = None) -> dict[int, list[str]]:
+    if path is None:
+        return {}
+    p = Path(path)
+    if not p.exists():
+        return {}
+    data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    seeds = data.get("seeds") or {}
+    out: dict[int, list[str]] = {}
+    for k, terms in seeds.items():
+        out[int(k)] = [str(t) for t in (terms or [])]
+    return out

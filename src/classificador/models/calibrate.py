@@ -27,16 +27,12 @@ class Calibrator:
     model: object
 
     def predict_proba(self, scores: np.ndarray) -> np.ndarray:
-        """Aceita vetor 1D (score) ou 2D (features)."""
+        """Aceita vetor 1D (score) ou 2D (features; usa col 0)."""
         X = np.asarray(scores, dtype=float)
         if X.ndim == 1:
-            if self.kind == "iso":
-                return np.clip(self.model.predict(X), 0.0, 1.0)
-            # LR trained on 2D — expand single score as raw only
-            raise ValueError("Feature calibrator requires 2D input")
+            return np.clip(self.model.predict(X), 0.0, 1.0)
         if self.kind == "lr":
             return self.model.predict_proba(X)[:, 1]
-        # iso on first column
         return np.clip(self.model.predict(X[:, 0]), 0.0, 1.0)
 
 
@@ -58,27 +54,30 @@ def fit_calibrator(scores: np.ndarray, labels: np.ndarray) -> Calibrator:
 
 
 def fit_feature_calibrator(X: np.ndarray, labels: np.ndarray) -> Calibrator:
+    """Isotônica no score composto (col 0) — melhor separação que LR balanceada em n pequeno."""
     X = np.asarray(X, dtype=float)
-    y = np.asarray(labels, dtype=int)
-    if len(X) < 5 or len(np.unique(y)) < 2:
+    y = np.asarray(labels, dtype=float)
+    scores = X[:, 0] if X.ndim == 2 else np.asarray(X, dtype=float)
+    iso = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0)
+    if len(scores) < 5 or len(np.unique(y)) < 2:
         mean = float(np.mean(y)) if len(y) else 0.5
 
         class _Const:
-            def predict_proba(self, x):
-                p = np.full(len(x), mean, dtype=float)
-                return np.vstack([1 - p, p]).T
+            def predict(self, x):
+                return np.full(len(x), mean, dtype=float)
 
-        return Calibrator(kind="lr", model=_Const())
-    clf = LogisticRegression(max_iter=2000, class_weight="balanced", C=1.0)
-    clf.fit(X, y)
-    return Calibrator(kind="lr", model=clf)
+        return Calibrator(kind="iso", model=_Const())
+    iso.fit(scores, y)
+    return Calibrator(kind="iso", model=iso)
 
 
 def features_from_result(result) -> np.ndarray:
     cf = result.confidence_features
     c = result.best.components if result.best else {}
+    # col0 = score composto (margem-ênfase) para isotônica
     return np.asarray(
         [
+            cf.get("score", 0.0),
             cf.get("raw", 0.0),
             cf.get("margin", 0.0),
             cf.get("knn_agree", 0.0),
