@@ -83,11 +83,24 @@ class DecisionPolicy:
 
         # Fora com prioridade quando sinal OOD claro
         ood_note = any(
-            "fora do recorte" in n or "OOD" in n for n in result.notes
+            "fora do recorte" in n or "OOD" in n or "incompleto" in n for n in result.notes
         )
+        incomplete = any("incompleto" in n for n in result.notes)
+        knn_fora_early = float((result.confidence_features or {}).get("knn_fora", 0.0))
         if result.fora_signal >= self.tau_fora and (
             ood_note or best.score < 0.40 or confianca < self.tau_publicar
         ):
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        # Enunciado incompleto com sinal moderado → fora (folha tem vários assim)
+        if incomplete and result.fora_signal >= 0.40 and confianca < self.tau_publicar:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        # knn-fora forte + fora_signal moderado → fora (não só revisar)
+        if result.fora_signal >= 0.38 and knn_fora_early >= 0.22 and confianca < self.tau_publicar:
+            return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
+
+        if result.fora_signal >= 0.55 and ood_note:
             return Decision("fora", None, [], float(confianca), self._motivo_fora(result))
 
         if result.fora_signal >= 0.70 and confianca < self.tau_publicar:
@@ -108,19 +121,30 @@ class DecisionPolicy:
         agree = float(cf.get("agree_signals", 0.0))
         knn_fora = float(cf.get("knn_fora", 0.0))
         score_gap = float(cf.get("score_gap", 0.0))
-        # knn-fora bloqueia publicar. Override só quando vizinhos votam fora com força
-        # (falso alarme) e lei+margem são claros — evita publicar gold-fora com kf~0.12.
+        incomplete = any("incompleto" in n for n in result.notes)
+        # Override knn-fora:
+        #  (a) vizinhos votam fora com força (kf≥0.25) + lei/margem claros
+        #  (b) kf leve (0.12–0.22) + lei específica + margem + enunciado completo
+        # Override agressivo (kf≥0.25) exige margem alta — evita publicar gold-fora
+        # com vizinhos fora + lei genérica (ex. inquérito em item fora da taxonomia).
         law_overrides_fora = (
             law >= 0.7
-            and margin >= 0.20
-            and result.fora_signal < 0.35
-            and knn_fora >= 0.25
+            and result.fora_signal < 0.30
+            and not incomplete
+            and (
+                (knn_fora >= 0.25 and margin >= 0.35 and knn >= 0.20)
+                or (
+                    0.12 <= knn_fora < 0.22
+                    and margin >= 0.25
+                    and (knn >= 0.15 or score_gap >= 0.12)
+                )
+            )
         )
         knn_fora_block = knn_fora >= 0.12 and not law_overrides_fora
         strong = result.fora_signal < 0.25 and not knn_fora_block and (
-            (margin >= 0.22 and law >= 0.7 and knn >= 0.20)
+            (margin >= 0.20 and law >= 0.7 and knn >= 0.18)
             or (margin >= 0.16 and knn >= 0.45)
-            or (margin >= 0.20 and score_gap >= 0.12 and agree >= 0.35)
+            or (margin >= 0.18 and score_gap >= 0.10 and agree >= 0.30)
         )
         near_tau = confianca >= (self.tau_publicar - 0.12)
         pass_tau = confianca >= self.tau_publicar

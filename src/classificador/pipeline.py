@@ -183,15 +183,22 @@ def apply_reranker(tree: ThemeTree, result: ScoreResult, reranker: CandidateRera
 
     hybrid_best = result.best.tema_id if result.best else None
     rr_best_tid = cands[int(order[0])].tema_id
+    law_promoted = any(n.startswith("lei_promovida") for n in result.notes)
+    hybrid_law = float(result.best.components.get("law", 0.0)) if result.best else 0.0
     # Só promove o vencedor do blend se concorda com híbrido / mesmo ramo / lei no cand
     promote = True
     if hybrid_best is not None and rr_best_tid != hybrid_best:
-        same = tree.same_branch(rr_best_tid, hybrid_best) or tree.are_siblings(rr_best_tid, hybrid_best)
-        rr_law = float(cands[int(order[0])].components.get("law", 0.0))
-        # Gap pequeno no blend → troca ok; gap grande sem apoio → mantém híbrido
-        gap = float(blended[int(order[0])] - blended[int(order[1])]) if len(order) > 1 else 1.0
-        if not same and rr_law < 0.7 and gap < 0.08:
+        # Nunca derrubar promoção de lei específica/forte
+        if law_promoted and hybrid_law >= 0.9:
             promote = False
+        else:
+            same = tree.same_branch(rr_best_tid, hybrid_best) or tree.are_siblings(
+                rr_best_tid, hybrid_best
+            )
+            rr_law = float(cands[int(order[0])].components.get("law", 0.0))
+            gap = float(blended[int(order[0])] - blended[int(order[1])]) if len(order) > 1 else 1.0
+            if not same and rr_law < 0.7 and gap < 0.08:
+                promote = False
 
     if not promote:
         # Mantém ordenação híbrida; anexa sinal de rerank como feature
@@ -669,6 +676,45 @@ def write_publicacao(df: pd.DataFrame, path: Path) -> None:
     out.to_csv(path, index=False)
 
 
+def score_shift_sanity(pub: pd.DataFrame) -> dict:
+    """Compara distribuição de confiança/decisão: banco (Q0001–Q0359) vs recentes (Q0360–Q0659)."""
+    if pub is None or len(pub) == 0 or "id" not in pub.columns:
+        return {}
+
+    def _band(qid: str) -> str:
+        try:
+            n = int(str(qid).lstrip("Qq"))
+        except ValueError:
+            return "other"
+        return "banco" if n <= 359 else "recentes"
+
+    df = pub.copy()
+    df["band"] = df["id"].map(_band)
+    out: dict = {}
+    for band, g in df.groupby("band"):
+        conf = pd.to_numeric(g.get("confianca"), errors="coerce")
+        counts = g["decisao"].value_counts().to_dict() if "decisao" in g.columns else {}
+        out[str(band)] = {
+            "n": int(len(g)),
+            "conf_mean": float(conf.mean()) if len(conf) else None,
+            "conf_p50": float(conf.median()) if len(conf) else None,
+            "conf_p75": float(conf.quantile(0.75)) if len(conf) else None,
+            "publicar": int(counts.get("publicar", 0)),
+            "revisar": int(counts.get("revisar", 0)),
+            "fora": int(counts.get("fora", 0)),
+            "pub_rate": float(counts.get("publicar", 0) / len(g)) if len(g) else 0.0,
+        }
+    if "banco" in out and "recentes" in out:
+        b, r = out["banco"], out["recentes"]
+        out["delta_conf_mean"] = (
+            None
+            if b["conf_mean"] is None or r["conf_mean"] is None
+            else float(r["conf_mean"] - b["conf_mean"])
+        )
+        out["delta_pub_rate"] = float(r["pub_rate"] - b["pub_rate"])
+    return out
+
+
 def write_previsao(metrics: dict, path: Path, *, n_eval: int = 559) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -690,6 +736,8 @@ def write_previsao(metrics: dict, path: Path, *, n_eval: int = 559) -> None:
     tau = metrics.get("tau", "n/a")
     hold_n = metrics.get("holdout_n", "n/a")
     fora_rec = metrics.get("fora_recall_holdout")
+    fora_full = metrics.get("fora_recall_folha")
+    shift = metrics.get("score_shift") or {}
     lines = [
         f"precisao_prevista: {prec:.2f}   # fração das publicadas que estará certa",
         f"precisao_intervalo: {p_lo:.2f}-{p_hi:.2f}",
@@ -705,12 +753,26 @@ def write_previsao(metrics: dict, path: Path, *, n_eval: int = 559) -> None:
         "- Features (TF-IDF, emb, proto/kNN, lei, assunto, margem) → score composto;",
         f"- tau_publicar={tau} maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95);",
         "  piso de tau≈0.74 para não baixar o limiar só para inflar cobertura.",
-        "- Calibração: isotônica no score composto (ênfase em margem top1–top2).",
+        "- Calibração: isotônica no score composto + LR auxiliar (margem/lei).",
         "- Predict offline: artifacts/ (laws, lexicon_seeds, model.joblib, embeddings); sem LLM/API.",
         f"- Embeddings: {metrics.get('embeddings_loaded', False)}; sinal fit-set: {metrics.get('oof_top_signal_accuracy', 'n/a')}.",
-        f"- Recall fora (hold-out): {fora_rec if fora_rec is not None else 'n/a'}.",
+        f"- Recall fora (hold-out): {fora_rec if fora_rec is not None else 'n/a'}; folha: {fora_full if fora_full is not None else 'n/a'}.",
         "- Banca avalia 559 fora da folha; folha só em Q0001–Q0359 (possível shift nas recentes).",
     ]
+    if shift.get("banco") and shift.get("recentes"):
+        b, r = shift["banco"], shift["recentes"]
+        lines.extend(
+            [
+                "- Sanity shift (confiança/decisão, sem rótulo nas recentes):",
+                f"  banco Q0001–Q0359: n={b['n']} pub_rate={b['pub_rate']:.2f} "
+                f"conf_mean={b['conf_mean']:.3f} p50={b['conf_p50']:.3f} "
+                f"(pub={b['publicar']} rev={b['revisar']} fora={b['fora']})",
+                f"  recentes Q0360–Q0659: n={r['n']} pub_rate={r['pub_rate']:.2f} "
+                f"conf_mean={r['conf_mean']:.3f} p50={r['conf_p50']:.3f} "
+                f"(pub={r['publicar']} rev={r['revisar']} fora={r['fora']})",
+                f"  delta conf_mean={shift.get('delta_conf_mean')} delta pub_rate={shift.get('delta_pub_rate')}.",
+            ]
+        )
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

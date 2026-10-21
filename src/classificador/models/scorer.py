@@ -250,22 +250,39 @@ class HybridScorer:
                     others = [c for c in candidates if c.tema_id != best.tema_id]
                     second = others[0] if others else None
 
-        # Assunto quase-exato só se o tema já é competitivo no score combinado
+        # Assunto quase-exato: só reforça candidato já competitivo; não vence lei específica
         if assunto and str(assunto).strip():
+            specific_law = {
+                h.tema_id
+                for h in law_hits
+                if h.tema_id is not None and getattr(h, "specific", False)
+            }
             for tid, s in self.lexical.assunto_fuzzy(assunto, top_k=3):
-                if s >= 0.95 and tid in self._pos and eligible[self._pos[tid]]:
+                if s >= 0.96 and tid in self._pos and eligible[self._pos[tid]]:
                     if law_forced and tid not in law_forced and not any(
                         self.tree.same_branch(tid, lf) for lf in law_forced
                     ):
                         continue
-                    if float(combined[self._pos[tid]]) < 0.40:
+                    if specific_law and tid not in specific_law and not any(
+                        self.tree.same_branch(tid, lf) for lf in specific_law
+                    ):
                         continue
-                    best = self._candidate_from_pos(self._pos[tid], combined, comps, bonus=0.08 * s)
+                    if float(combined[self._pos[tid]]) < 0.48:
+                        continue
+                    # Não promover assunto genérico (“Ação Penal”) sobre candidatos com margem
+                    if best and float(combined[self._pos[tid]]) + 0.05 < best.score:
+                        continue
+                    best = self._candidate_from_pos(self._pos[tid], combined, comps, bonus=0.06 * s)
                     notes.append("assunto_exact")
                     break
 
         if best and second and self.tree.are_siblings(best.tema_id, second.tema_id):
-            if abs(best.score - second.score) <= self.sibling_margin:
+            # Lei específica no best → não tratar como empate (subtema desambiguado)
+            law_on_best = float(best.components.get("law", 0.0))
+            law_on_second = float(second.components.get("law", 0.0))
+            if law_on_best >= 0.9 and law_on_best > law_on_second + 0.2:
+                sibling_tie = False
+            elif abs(best.score - second.score) <= self.sibling_margin:
                 sibling_tie = True
                 notes.append(f"empate entre irmãos {best.tema_id} e {second.tema_id}")
 
@@ -304,8 +321,16 @@ class HybridScorer:
             fora_signal += 0.22
             notes.append("enunciado curto/genérico")
         # Stems incompletos / "complete a frase" (comum em gold-fora da folha)
-        if re.search(r"complete\s+a\s+frase|preencha\s+a\s+lacuna|_{3,}", text, flags=re.I):
-            fora_signal += 0.35
+        incomplete = bool(
+            re.search(
+                r"complete\s+a\s+frase|preencha\s+a\s+lacuna|complete\s+o\s+estudo|"
+                r"explique\s+os\s+prazos|responda\s+conforme\s+o\s+contexto|_{3,}",
+                text,
+                flags=re.I,
+            )
+        )
+        if incomplete:
+            fora_signal += 0.42
             notes.append("enunciado incompleto")
 
         if best is None:
@@ -320,9 +345,12 @@ class HybridScorer:
             if float(assunto_boost.max() if len(assunto_boost) else 0) < 0.70 and max_tfidf < 0.07 and not law_forced:
                 fora_signal += 0.10
 
-        # Lei forte só reduz fora se lexical confirma
-        if law_forced and max_tfidf >= 0.08:
+        # Lei forte só reduz fora se lexical confirma e enunciado não é incompleto
+        if law_forced and max_tfidf >= 0.08 and not incomplete:
             fora_signal *= 0.55
+        elif law_forced and incomplete:
+            # Incomplete + lei no distractor/stem: não abafar o sinal de fora
+            fora_signal *= 0.90
 
         if law_hit_name and "lei_promovida" not in ";".join(notes):
             notes.append(f"lei:{law_hit_name}")
@@ -332,6 +360,17 @@ class HybridScorer:
             margin = max(0.0, best.score - second.score)
         elif best:
             margin = max(0.0, best.score * 0.15)
+
+        # Baixa margem + lexical fraco sem lei → mais incerteza OOD
+        if (
+            best
+            and margin < 0.04
+            and max_tfidf < 0.12
+            and best.components.get("law", 0) < 0.5
+            and knn_fora >= 0.15
+        ):
+            fora_signal += 0.15
+            fora_signal = min(1.0, fora_signal)
 
         agree_signals = 0.0
         if best:

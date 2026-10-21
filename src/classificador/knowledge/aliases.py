@@ -59,6 +59,9 @@ OOD_ASSUNTO_PATTERNS = [
     r"penal\s+militar",
     r"justi[cç]a\s+militar",
     r"c[oó]digo\s+penal\s+militar",
+    # Folha marca como fora: cartel/economia popular genérico, crimes de responsabilidade
+    r"g[aá]s\s+liquefeito|ajuste\s+artificialmente\s+pre[cç]o",
+    r"crimes?\s+de\s+responsabilidade\s+dos\s+funcion[aá]rios\s+p[uú]blicos",
 ]
 
 

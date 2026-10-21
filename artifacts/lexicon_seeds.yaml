@@ -69,12 +69,18 @@ seeds:
     - conexão e continência
     - reunião de processos
     - juízo comum
+    - crimes de menor potencial ofensivo conexão
   # Provas
   5550:
     - prova testemunhal
     - testemunha fedatária
     - testemunha de ouvir dizer
     - espécies de testemunhas
+  5544:
+    - cadeia de custódia
+    - pacote anticrime
+    - lei 13964
+    - reconhecimento de vestígios
   5543:
     - provas em espécies
     - meios de prova
@@ -87,6 +93,11 @@ seeds:
     - arquivamento
     - denúncia anônima
     - investigação preliminar
+  4706:
+    - antiterrorismo
+    - lei 13260
+    - atos de terrorismo
+    - terrorismo
   5560:
     - recursos em espécies
     - recurso em sentido estrito
