@@ -1,0 +1,660 @@
+id,decisao,tema_central_id,extras_ids,confianca,motivo
+Q0001,revisar,5524,5527,0.6959,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0002,revisar,4387,,0.4908,assunto_exact
+Q0003,revisar,5560,5561,0.6232,confiança 0.62 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0004,revisar,5484,5480,0.6003,confiança 0.60 abaixo do limiar 0.75; assunto_exact
+Q0005,revisar,5199,,0.6715,confiança 0.67 abaixo do limiar 0.75; lei:lep
+Q0006,revisar,5160,,0.4017,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0007,revisar,5064,,0.3917,assunto_exact
+Q0008,revisar,6719,,0.63,assunto_exact
+Q0009,revisar,5070,5069,0.3292,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0010,revisar,5070,6717,0.2692,confiança 0.27 abaixo do limiar 0.75; assunto_exact
+Q0011,revisar,4702,4700,0.4631,confiança 0.46 abaixo do limiar 0.75; empate entre irmãos 4702 e 4701
+Q0012,revisar,5561,5560,0.6954,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0013,revisar,5503,5477,0.6773,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0014,publicar,5477,,0.831,
+Q0015,publicar,5499,5498,0.7555,
+Q0016,fora,,,0.5663,disciplina_origem fora do recorte
+Q0017,revisar,5535,5530,0.5401,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0018,revisar,5540,,0.6513,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0019,publicar,5475,5498,0.7653,
+Q0020,revisar,5492,5571,0.3913,confiança 0.39 abaixo do limiar 0.75; assunto_exact; lei:jecrim
+Q0021,revisar,5503,,0.6479,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0022,revisar,5081,5095,0.6003,confiança 0.60 abaixo do limiar 0.75; assunto_exact
+Q0023,revisar,5524,5528,0.6846,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0024,revisar,4388,4370,0.5034,confiança 0.50 abaixo do limiar 0.75
+Q0025,revisar,5081,5093,0.5716,confiança 0.57 abaixo do limiar 0.75; assunto_exact
+Q0026,revisar,5472,,0.2603,lei:maria_da_penha
+Q0027,revisar,5492,5527,0.3776,confiança 0.38 abaixo do limiar 0.75
+Q0028,revisar,5487,5492,0.3589,confiança 0.36 abaixo do limiar 0.75
+Q0029,revisar,4684,,0.6112,confiança 0.61 abaixo do limiar 0.75; empate entre irmãos 4684 e 4701
+Q0030,revisar,5130,5128,0.5356,confiança 0.54 abaixo do limiar 0.75; lei:habeas_corpus
+Q0031,revisar,4385,,0.54,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0032,revisar,5501,,0.3222,assunto_exact
+Q0033,revisar,5519,5530,0.6608,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0034,publicar,5477,5498,0.8363,
+Q0035,revisar,4706,,0.5437,confiança 0.54 abaixo do limiar 0.75; lei:inquerito
+Q0036,publicar,4704,5498,0.8896,
+Q0037,revisar,5132,5088,0.7039,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0038,revisar,5498,5499,0.5561,confiança 0.56 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0039,revisar,4687,,0.5785,confiança 0.58 abaixo do limiar 0.75
+Q0040,publicar,5524,5527,0.8063,
+Q0041,revisar,5184,,0.5206,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0042,revisar,5192,5225,0.4526,confiança 0.45 abaixo do limiar 0.75; assunto_exact
+Q0043,revisar,5204,5202,0.702,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0044,revisar,5548,5488,0.2816,confiança 0.28 abaixo do limiar 0.75; assunto_exact
+Q0045,revisar,5091,5087,0.3435,confiança 0.34 abaixo do limiar 0.75; assunto_exact
+Q0046,revisar,5582,,0.4061,assunto_exact
+Q0047,revisar,5087,5164,0.4213,confiança 0.42 abaixo do limiar 0.75
+Q0048,revisar,5199,5203,0.2678,confiança 0.27 abaixo do limiar 0.75; assunto_exact
+Q0049,revisar,5152,,0.6387,confiança 0.64 abaixo do limiar 0.75; assunto_exact
+Q0050,revisar,5203,5202,0.3638,confiança 0.36 abaixo do limiar 0.75; lei:drogas
+Q0051,revisar,5070,5066,0.2454,confiança 0.25 abaixo do limiar 0.75; assunto_exact
+Q0052,publicar,4703,,0.8052,
+Q0053,revisar,5540,5569,0.5754,confiança 0.58 abaixo do limiar 0.75; lei:jecrim
+Q0054,revisar,5174,5142,0.4085,confiança 0.41 abaixo do limiar 0.75
+Q0055,revisar,5492,5487,0.4183,confiança 0.42 abaixo do limiar 0.75
+Q0056,revisar,5069,,0.4306,assunto_exact
+Q0057,revisar,5175,5176,0.4658,confiança 0.47 abaixo do limiar 0.75; assunto_exact
+Q0058,revisar,4378,4384,0.5213,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0059,revisar,4384,,0.2684,confiança 0.27 abaixo do limiar 0.75; assunto_exact
+Q0060,revisar,5081,5093,0.4323,confiança 0.43 abaixo do limiar 0.75; empate entre irmãos 5093 e 5092
+Q0061,publicar,4703,,0.8333,
+Q0062,revisar,4703,4701,0.3487,confiança 0.35 abaixo do limiar 0.75
+Q0063,revisar,5499,,0.3521,assunto_exact
+Q0064,revisar,5203,5152,0.3713,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0065,revisar,5161,5192,0.5835,confiança 0.58 abaixo do limiar 0.75
+Q0066,revisar,4371,4372,0.3488,confiança 0.35 abaixo do limiar 0.75; assunto_exact
+Q0067,revisar,5091,,0.6902,confiança 0.69 abaixo do limiar 0.75; assunto_exact
+Q0068,revisar,5117,5088,0.2434,confiança 0.24 abaixo do limiar 0.75
+Q0069,revisar,5173,,0.5821,confiança 0.58 abaixo do limiar 0.75
+Q0070,revisar,5203,,0.39,lei:drogas
+Q0071,revisar,5228,5203,0.2672,confiança 0.27 abaixo do limiar 0.75; assunto_exact
+Q0072,revisar,5499,5501,0.4025,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0073,revisar,5084,5101,0.6604,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0074,revisar,4703,,0.3203,empate entre irmãos 4703 e 4701
+Q0075,revisar,5191,5207,0.3633,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0076,revisar,4381,,0.5248,empate entre irmãos 4381 e 4382
+Q0077,revisar,5183,5132,0.6346,confiança 0.63 abaixo do limiar 0.75; assunto_exact; lei:crimes_eleitorais
+Q0078,revisar,4691,,0.3377,empate entre irmãos 4701 e 4703
+Q0079,revisar,5580,5581,0.4265,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0080,revisar,4370,4369,0.6468,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0081,revisar,4372,4381,0.4642,confiança 0.46 abaixo do limiar 0.75; assunto_exact
+Q0082,revisar,5091,5131,0.413,confiança 0.41 abaixo do limiar 0.75
+Q0083,revisar,5150,5070,0.5173,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0084,revisar,5582,5580,0.2731,confiança 0.27 abaixo do limiar 0.75; assunto_exact; lei:maria_da_penha
+Q0085,revisar,5070,5069,0.2976,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0086,revisar,5092,,0.696,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0087,revisar,5168,6722,0.5116,confiança 0.51 abaixo do limiar 0.75; empate entre irmãos 5199 e 5185; lei:lep
+Q0088,revisar,4390,4389,0.3978,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0089,revisar,5228,5203,0.2879,confiança 0.29 abaixo do limiar 0.75; assunto_exact
+Q0090,revisar,5524,5527,0.6214,confiança 0.62 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0091,revisar,5199,5208,0.3326,confiança 0.33 abaixo do limiar 0.75; assunto_exact; lei:lep
+Q0092,revisar,5510,5513,0.3232,confiança 0.32 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0093,revisar,5142,5070,0.4871,confiança 0.49 abaixo do limiar 0.75; assunto_exact
+Q0094,revisar,4385,4388,0.2767,confiança 0.28 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0095,revisar,5070,5152,0.2365,confiança 0.24 abaixo do limiar 0.75; assunto_exact
+Q0096,revisar,5483,5527,0.5672,confiança 0.57 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0097,revisar,5067,6728,0.3309,confiança 0.33 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0098,revisar,5548,5492,0.5359,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0099,revisar,5100,,0.6015,confiança 0.60 abaixo do limiar 0.75
+Q0100,revisar,5102,5103,0.37,confiança 0.37 abaixo do limiar 0.75
+Q0101,revisar,5492,5482,0.3867,confiança 0.39 abaixo do limiar 0.75; lei:maria_da_penha
+Q0102,revisar,5575,,0.5462,assunto_exact
+Q0103,revisar,5478,,0.7218,confiança 0.72 abaixo do limiar 0.75; assunto_exact
+Q0104,revisar,5498,5499,0.6719,confiança 0.67 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0105,revisar,4385,4372,0.3566,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0106,revisar,5165,,0.7038,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0107,revisar,5192,5119,0.517,confiança 0.52 abaixo do limiar 0.75
+Q0108,revisar,5561,5560,0.7045,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0109,publicar,4708,,0.8355,
+Q0110,revisar,5484,5480,0.6296,confiança 0.63 abaixo do limiar 0.75; assunto_exact
+Q0111,revisar,4384,4381,0.2795,confiança 0.28 abaixo do limiar 0.75; assunto_exact
+Q0112,revisar,5492,,0.4761,confiança 0.48 abaixo do limiar 0.75; assunto_exact
+Q0113,revisar,5185,5187,0.5517,confiança 0.55 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0114,revisar,5499,5501,0.3492,confiança 0.35 abaixo do limiar 0.75; assunto_exact; lei:maria_da_penha
+Q0115,revisar,4388,,0.4307,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0116,publicar,4708,,0.8375,
+Q0117,revisar,4384,,0.3244,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0118,revisar,5477,5519,0.5865,confiança 0.59 abaixo do limiar 0.75; assunto_exact; lei:habeas_corpus
+Q0119,revisar,5506,5505,0.3281,confiança 0.33 abaixo do limiar 0.75
+Q0120,revisar,5582,5595,0.3869,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0121,revisar,5498,5499,0.52,confiança 0.52 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0122,revisar,4703,4696,0.3161,confiança 0.32 abaixo do limiar 0.75
+Q0123,revisar,4370,,0.2844,assunto_exact
+Q0124,revisar,4384,,0.5189,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0125,publicar,4708,,0.8224,
+Q0126,revisar,5064,5065,0.3125,confiança 0.31 abaixo do limiar 0.75; assunto_exact
+Q0127,revisar,5492,5527,0.4078,confiança 0.41 abaixo do limiar 0.75; empate entre irmãos 5560 e 5498; lei:drogas
+Q0128,revisar,5492,5469,0.4334,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0129,revisar,5535,5527,0.5551,confiança 0.56 abaixo do limiar 0.75
+Q0130,revisar,5205,5203,0.6369,confiança 0.64 abaixo do limiar 0.75; assunto_exact
+Q0131,revisar,5074,5203,0.3623,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0132,revisar,5492,5487,0.4583,confiança 0.46 abaixo do limiar 0.75
+Q0133,revisar,5524,5526,0.7118,confiança 0.71 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0134,revisar,5088,5087,0.2972,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0135,revisar,5158,5219,0.3392,confiança 0.34 abaixo do limiar 0.75; assunto_exact
+Q0136,revisar,5492,5527,0.3574,confiança 0.36 abaixo do limiar 0.75; assunto_exact; lei:maria_da_penha
+Q0137,publicar,5498,5499,0.8269,
+Q0138,revisar,5205,5203,0.7075,confiança 0.71 abaixo do limiar 0.75; assunto_exact
+Q0139,revisar,5211,5212,0.4781,confiança 0.48 abaixo do limiar 0.75; assunto_exact
+Q0140,revisar,5070,,0.4286,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0141,revisar,4385,4388,0.3163,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0142,revisar,5492,5527,0.3842,confiança 0.38 abaixo do limiar 0.75; disciplina_origem fora do recorte
+Q0143,revisar,5506,,0.4358,empate entre irmãos 5506 e 5508
+Q0144,publicar,5524,5477,0.8349,
+Q0145,revisar,4702,,0.5459,confiança 0.55 abaixo do limiar 0.75; empate entre irmãos 4708 e 4703
+Q0146,revisar,5492,5527,0.4346,confiança 0.43 abaixo do limiar 0.75; assunto_exact; lei:drogas
+Q0147,publicar,5502,5498,0.7883,
+Q0148,revisar,5203,,0.5788,assunto_exact
+Q0149,revisar,5498,5499,0.7037,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0150,revisar,5203,,0.3339,lei:drogas
+Q0151,revisar,5522,5519,0.7034,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0152,revisar,5472,5470,0.3813,confiança 0.38 abaixo do limiar 0.75
+Q0153,revisar,5178,,0.2815,confiança 0.28 abaixo do limiar 0.75; assunto_exact
+Q0154,revisar,5134,5135,0.4952,confiança 0.50 abaixo do limiar 0.75
+Q0155,revisar,5184,5203,0.2344,confiança 0.23 abaixo do limiar 0.75; assunto_exact
+Q0156,revisar,5207,5198,0.6468,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0157,revisar,5498,5499,0.6416,confiança 0.64 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0158,revisar,4703,,0.3099,empate entre irmãos 4703 e 4706
+Q0159,revisar,5070,5177,0.2431,confiança 0.24 abaixo do limiar 0.75; assunto_exact
+Q0160,revisar,5203,,0.7014,confiança 0.70 abaixo do limiar 0.75; assunto_exact
+Q0161,revisar,5518,5499,0.6539,confiança 0.65 abaixo do limiar 0.75; assunto_exact; lei:drogas
+Q0162,revisar,4381,4370,0.4472,confiança 0.45 abaixo do limiar 0.75
+Q0163,publicar,4708,,0.821,
+Q0164,revisar,4703,,0.4548,confiança 0.45 abaixo do limiar 0.75; lei:lep
+Q0165,revisar,5492,5466,0.4321,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0166,revisar,4703,,0.3134,lei:lep
+Q0167,publicar,5524,5527,0.8196,
+Q0168,revisar,5087,5152,0.3967,confiança 0.40 abaixo do limiar 0.75
+Q0169,revisar,5492,,0.5907,confiança 0.59 abaixo do limiar 0.75; assunto_exact
+Q0170,publicar,5185,5188,0.8194,
+Q0171,revisar,5502,5492,0.5923,confiança 0.59 abaixo do limiar 0.75; assunto_exact
+Q0172,revisar,5527,5466,0.4208,confiança 0.42 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0173,publicar,4703,,0.8141,
+Q0174,revisar,5070,5066,0.2993,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0175,revisar,5093,5092,0.444,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0176,revisar,5081,,0.6457,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0177,revisar,5547,5548,0.5972,confiança 0.60 abaixo do limiar 0.75
+Q0178,revisar,5085,5082,0.5531,confiança 0.55 abaixo do limiar 0.75
+Q0179,revisar,4368,,0.5066,confiança 0.51 abaixo do limiar 0.75; assunto_exact
+Q0180,publicar,5498,5499,0.8187,
+Q0181,revisar,4703,,0.3366,empate entre irmãos 4703 e 4706
+Q0182,revisar,5139,5070,0.5583,confiança 0.56 abaixo do limiar 0.75; assunto_exact
+Q0183,publicar,5560,5561,0.7908,
+Q0184,publicar,4708,,0.8051,
+Q0185,revisar,5202,,0.3614,empate entre irmãos 5185 e 5199
+Q0186,revisar,5202,5204,0.4761,confiança 0.48 abaixo do limiar 0.75
+Q0187,revisar,5203,5100,0.3885,confiança 0.39 abaixo do limiar 0.75
+Q0188,revisar,5217,5233,0.6071,confiança 0.61 abaixo do limiar 0.75; assunto_exact
+Q0189,revisar,5472,,0.358,empate entre irmãos 5472 e 5470
+Q0190,revisar,5540,5542,0.4592,confiança 0.46 abaixo do limiar 0.75; empate entre irmãos 5540 e 5542; lei:jecrim
+Q0191,publicar,5561,5560,0.7471,
+Q0192,revisar,5091,5087,0.3185,confiança 0.32 abaixo do limiar 0.75; assunto_exact; lei:lep
+Q0193,revisar,5502,5557,0.3565,confiança 0.36 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0194,revisar,5087,,0.6793,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0195,revisar,4372,4371,0.3927,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0196,revisar,4385,4388,0.3295,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0197,revisar,5499,,0.7532,assunto_exact
+Q0198,revisar,5073,5132,0.3026,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0199,revisar,5219,5218,0.4234,confiança 0.42 abaixo do limiar 0.75; assunto_exact
+Q0200,revisar,5595,5580,0.4267,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0201,revisar,5102,,0.6553,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0202,revisar,5224,,0.5963,confiança 0.60 abaixo do limiar 0.75
+Q0203,revisar,4702,,0.7319,confiança 0.73 abaixo do limiar 0.75; empate entre irmãos 4701 e 4702
+Q0204,revisar,5508,,0.6717,empate entre irmãos 5508 e 5506
+Q0205,revisar,5574,5527,0.567,confiança 0.57 abaixo do limiar 0.75; assunto_exact
+Q0206,publicar,5560,5561,0.8051,
+Q0207,publicar,5185,5187,0.7961,
+Q0208,revisar,5072,,0.638,confiança 0.64 abaixo do limiar 0.75; assunto_exact
+Q0209,revisar,5499,,0.4089,assunto_exact
+Q0210,revisar,5070,,0.3196,assunto_exact
+Q0211,revisar,5492,5487,0.3915,confiança 0.39 abaixo do limiar 0.75
+Q0212,revisar,5487,5488,0.5027,confiança 0.50 abaixo do limiar 0.75; lei:prescricao
+Q0213,revisar,5202,,0.3292,lei:drogas
+Q0214,revisar,5494,5493,0.437,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0215,revisar,5201,5199,0.3042,confiança 0.30 abaixo do limiar 0.75
+Q0216,revisar,5541,5466,0.5542,confiança 0.55 abaixo do limiar 0.75; assunto_exact; lei:jecrim
+Q0217,revisar,4384,4376,0.2078,confiança 0.21 abaixo do limiar 0.75; assunto_exact
+Q0218,fora,,,0.6604,disciplina_origem fora do recorte
+Q0219,revisar,5132,5203,0.3285,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0220,revisar,5501,,0.7019,assunto_exact
+Q0221,revisar,5201,5205,0.4904,confiança 0.49 abaixo do limiar 0.75
+Q0222,revisar,5172,,0.5832,assunto_exact
+Q0223,revisar,5084,5127,0.6667,confiança 0.67 abaixo do limiar 0.75; assunto_exact
+Q0224,revisar,5207,5070,0.6557,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0225,revisar,5492,5527,0.3746,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0226,revisar,5544,5527,0.5377,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0227,revisar,5103,5102,0.4326,confiança 0.43 abaixo do limiar 0.75; empate entre irmãos 5102 e 5185
+Q0228,revisar,5477,6734,0.5791,confiança 0.58 abaixo do limiar 0.75; assunto_exact; lei:habeas_corpus
+Q0229,publicar,5498,5499,0.7856,
+Q0230,revisar,5132,5211,0.4405,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0231,revisar,5224,,0.4591,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:drogas
+Q0232,revisar,5080,,0.6434,empate entre irmãos 5080 e 5082
+Q0233,revisar,5178,,0.518,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0234,revisar,4381,,0.6614,empate entre irmãos 4381 e 4382
+Q0235,revisar,5561,,0.5273,confiança 0.53 abaixo do limiar 0.75; assunto_exact
+Q0236,revisar,5499,5498,0.6294,confiança 0.63 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0237,revisar,5178,,0.5778,confiança 0.58 abaixo do limiar 0.75; assunto_exact
+Q0238,revisar,5492,5466,0.4083,confiança 0.41 abaixo do limiar 0.75; assunto_exact
+Q0239,revisar,5198,5192,0.3851,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0240,revisar,5498,,0.6841,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0241,revisar,5218,5220,0.3325,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0242,revisar,5477,5498,0.601,confiança 0.60 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0243,revisar,5178,,0.5593,confiança 0.56 abaixo do limiar 0.75; assunto_exact
+Q0244,revisar,5081,5093,0.6255,confiança 0.63 abaixo do limiar 0.75; assunto_exact
+Q0245,revisar,5185,5189,0.6832,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0246,revisar,5527,5526,0.4591,confiança 0.46 abaixo do limiar 0.75; assunto_exact
+Q0247,revisar,5502,,0.7414,confiança 0.74 abaixo do limiar 0.75; lei:maria_da_penha
+Q0248,revisar,5088,5087,0.4559,confiança 0.46 abaixo do limiar 0.75; assunto_exact
+Q0249,revisar,5492,,0.676,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0250,revisar,5202,5199,0.5398,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0251,revisar,5198,,0.4324,assunto_exact
+Q0252,revisar,6734,,0.5398,confiança 0.54 abaixo do limiar 0.75; assunto_exact; lei:lep
+Q0253,revisar,4371,,0.6037,confiança 0.60 abaixo do limiar 0.75; assunto_exact
+Q0254,publicar,5498,5499,0.8007,
+Q0255,revisar,5217,5212,0.3805,confiança 0.38 abaixo do limiar 0.75; assunto_exact
+Q0256,revisar,5192,,0.6232,confiança 0.62 abaixo do limiar 0.75; assunto_exact
+Q0257,revisar,5227,5224,0.3849,confiança 0.38 abaixo do limiar 0.75; assunto_exact
+Q0258,revisar,5524,5526,0.6833,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0259,revisar,5228,5164,0.3394,confiança 0.34 abaixo do limiar 0.75; assunto_exact
+Q0260,revisar,4368,4376,0.2601,confiança 0.26 abaixo do limiar 0.75; assunto_exact
+Q0261,revisar,5064,,0.2997,assunto_exact
+Q0262,publicar,4703,,0.8375,
+Q0263,revisar,5492,,0.6374,confiança 0.64 abaixo do limiar 0.75; assunto_exact
+Q0264,revisar,5110,,0.5887,empate entre irmãos 5110 e 5103
+Q0265,revisar,5185,5198,0.5378,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0266,revisar,5524,5526,0.6776,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0267,revisar,5518,5492,0.5752,confiança 0.58 abaixo do limiar 0.75; lei:drogas
+Q0268,revisar,5228,5122,0.3223,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0269,revisar,5173,5171,0.3933,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0270,revisar,5093,5092,0.4015,confiança 0.40 abaixo do limiar 0.75; empate entre irmãos 5092 e 5093
+Q0271,revisar,5527,5565,0.3858,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0272,revisar,5168,5202,0.4614,confiança 0.46 abaixo do limiar 0.75; lei:lep
+Q0273,revisar,5096,,0.6602,confiança 0.66 abaixo do limiar 0.75
+Q0274,revisar,5158,5203,0.3706,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0275,revisar,5487,5492,0.3976,confiança 0.40 abaixo do limiar 0.75; lei:jecrim
+Q0276,revisar,5545,5554,0.6776,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0277,revisar,4696,,0.4445,confiança 0.44 abaixo do limiar 0.75; disciplina_origem fora do recorte
+Q0278,revisar,5542,5530,0.613,confiança 0.61 abaixo do limiar 0.75; assunto_exact
+Q0279,publicar,5185,5188,0.8455,
+Q0280,revisar,5492,5487,0.408,confiança 0.41 abaixo do limiar 0.75
+Q0281,revisar,5492,5582,0.4441,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0282,revisar,5472,5492,0.3232,confiança 0.32 abaixo do limiar 0.75; lei:maria_da_penha
+Q0283,revisar,5492,5527,0.4143,confiança 0.41 abaixo do limiar 0.75; assunto_exact
+Q0284,revisar,5214,5070,0.4943,confiança 0.49 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0285,revisar,5171,,0.5615,empate entre irmãos 5171 e 5172
+Q0286,revisar,5069,,0.3892,assunto_exact
+Q0287,revisar,5230,5214,0.7068,confiança 0.71 abaixo do limiar 0.75; assunto_exact
+Q0288,revisar,5068,,0.3923,assunto_exact
+Q0289,publicar,4704,,0.8776,
+Q0290,revisar,5470,,0.3766,lei:jecrim
+Q0291,publicar,4708,,0.8341,
+Q0292,revisar,4375,4374,0.4847,confiança 0.48 abaixo do limiar 0.75; assunto_exact
+Q0293,publicar,5189,5185,0.881,
+Q0294,revisar,5217,,0.528,assunto_exact
+Q0295,revisar,5487,5488,0.3233,confiança 0.32 abaixo do limiar 0.75
+Q0296,revisar,5466,5492,0.3064,confiança 0.31 abaixo do limiar 0.75; assunto_exact
+Q0297,revisar,4689,,0.585,confiança 0.59 abaixo do limiar 0.75; empate entre irmãos 4689 e 4701
+Q0298,revisar,4694,,0.472,empate entre irmãos 4701 e 4703
+Q0299,revisar,4370,4384,0.61,confiança 0.61 abaixo do limiar 0.75; assunto_exact
+Q0300,revisar,5084,,0.5082,confiança 0.51 abaixo do limiar 0.75
+Q0301,revisar,5197,,0.6187,confiança 0.62 abaixo do limiar 0.75
+Q0302,revisar,5214,5224,0.6626,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0303,revisar,5201,,0.5926,assunto_exact
+Q0304,publicar,4701,,0.8643,
+Q0305,revisar,5470,,0.4104,empate entre irmãos 5470 e 5472
+Q0306,revisar,5088,5144,0.3497,confiança 0.35 abaixo do limiar 0.75
+Q0307,revisar,4701,,0.3116,empate entre irmãos 4703 e 4701
+Q0308,publicar,5501,5498,0.7483,
+Q0309,fora,,,0.4441,disciplina_origem fora do recorte
+Q0310,revisar,5508,5506,0.7002,confiança 0.70 abaixo do limiar 0.75
+Q0311,revisar,5488,,0.6333,confiança 0.63 abaixo do limiar 0.75; lei:prescricao
+Q0312,revisar,4384,,0.2498,confiança 0.25 abaixo do limiar 0.75; assunto_exact
+Q0313,revisar,5209,5164,0.5591,confiança 0.56 abaixo do limiar 0.75; assunto_exact
+Q0314,publicar,5477,,0.8471,
+Q0315,revisar,5185,5070,0.5076,confiança 0.51 abaixo do limiar 0.75; assunto_exact
+Q0316,revisar,5224,,0.6369,confiança 0.64 abaixo do limiar 0.75; assunto_exact
+Q0317,revisar,5070,5198,0.307,confiança 0.31 abaixo do limiar 0.75; assunto_exact
+Q0318,revisar,5178,,0.5245,confiança 0.52 abaixo do limiar 0.75
+Q0319,revisar,5073,5132,0.4682,confiança 0.47 abaixo do limiar 0.75; assunto_exact
+Q0320,revisar,5499,5500,0.3567,confiança 0.36 abaixo do limiar 0.75; assunto_exact; lei:drogas
+Q0321,revisar,5132,5071,0.4453,confiança 0.45 abaixo do limiar 0.75; assunto_exact; lei:drogas
+Q0322,revisar,5561,5560,0.7317,confiança 0.73 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0323,revisar,5595,5535,0.466,confiança 0.47 abaixo do limiar 0.75; assunto_exact
+Q0324,revisar,4703,,0.6822,confiança 0.68 abaixo do limiar 0.75
+Q0325,revisar,5470,,0.3154,lei:jecrim
+Q0326,publicar,4708,,0.8451,
+Q0327,revisar,5203,5202,0.4958,confiança 0.50 abaixo do limiar 0.75; lei:lep
+Q0328,revisar,4382,4375,0.6056,confiança 0.61 abaixo do limiar 0.75; empate entre irmãos 4374 e 4385
+Q0329,revisar,5492,5466,0.4263,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0330,revisar,5501,,0.7001,assunto_exact
+Q0331,publicar,5477,,0.8618,
+Q0332,revisar,5541,5492,0.6306,confiança 0.63 abaixo do limiar 0.75; assunto_exact; lei:habeas_corpus
+Q0333,revisar,5178,,0.4822,confiança 0.48 abaixo do limiar 0.75; assunto_exact
+Q0334,revisar,4381,4385,0.4584,confiança 0.46 abaixo do limiar 0.75
+Q0335,revisar,5198,5174,0.5522,confiança 0.55 abaixo do limiar 0.75
+Q0336,revisar,5159,,0.4344,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0337,revisar,4684,,0.6603,confiança 0.66 abaixo do limiar 0.75
+Q0338,revisar,5590,5582,0.5199,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0339,revisar,5578,5492,0.6627,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0340,revisar,5076,,0.396,assunto_exact
+Q0341,revisar,5070,5068,0.4154,confiança 0.42 abaixo do limiar 0.75; assunto_exact
+Q0342,revisar,5545,5499,0.6575,confiança 0.66 abaixo do limiar 0.75; assunto_exact
+Q0343,revisar,5472,,0.3249,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0344,revisar,5064,6717,0.3617,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0345,revisar,5103,,0.6198,confiança 0.62 abaixo do limiar 0.75
+Q0346,revisar,5524,5527,0.5948,confiança 0.59 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0347,revisar,5207,5208,0.4983,confiança 0.50 abaixo do limiar 0.75; lei:lep
+Q0348,publicar,5185,5188,0.7812,
+Q0349,revisar,5070,5069,0.3816,confiança 0.38 abaixo do limiar 0.75; assunto_exact
+Q0350,revisar,5203,5202,0.4178,confiança 0.42 abaixo do limiar 0.75; empate entre irmãos 5087 e 5211
+Q0351,revisar,5080,5081,0.536,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0352,revisar,5472,,0.2947,empate entre irmãos 5472 e 5470
+Q0353,revisar,5469,,0.6138,assunto_exact
+Q0354,revisar,5220,5218,0.3315,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0355,revisar,5070,5069,0.2765,confiança 0.28 abaixo do limiar 0.75; assunto_exact; lei:jecrim
+Q0356,revisar,5066,5070,0.5395,confiança 0.54 abaixo do limiar 0.75
+Q0357,revisar,5141,5178,0.5548,confiança 0.55 abaixo do limiar 0.75; assunto_exact
+Q0358,revisar,5127,5133,0.5599,confiança 0.56 abaixo do limiar 0.75
+Q0359,revisar,5530,5537,0.486,confiança 0.49 abaixo do limiar 0.75; assunto_exact; lei:jecrim
+Q0360,revisar,4378,4388,0.427,confiança 0.43 abaixo do limiar 0.75; empate entre irmãos 4384 e 4385
+Q0361,revisar,5152,5213,0.4331,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0362,revisar,5557,5502,0.6446,confiança 0.64 abaixo do limiar 0.75
+Q0363,revisar,5088,5087,0.4755,confiança 0.48 abaixo do limiar 0.75; assunto_exact
+Q0364,revisar,5222,5202,0.5607,confiança 0.56 abaixo do limiar 0.75
+Q0365,revisar,5203,,0.3904,assunto_exact
+Q0366,revisar,5203,5202,0.3049,confiança 0.30 abaixo do limiar 0.75
+Q0367,revisar,5530,5536,0.3659,confiança 0.37 abaixo do limiar 0.75
+Q0368,revisar,5498,5500,0.7013,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0369,revisar,6723,,0.5888,confiança 0.59 abaixo do limiar 0.75; assunto_exact
+Q0370,revisar,5523,,0.4804,confiança 0.48 abaixo do limiar 0.75
+Q0371,revisar,5492,5473,0.3262,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0372,publicar,5555,,0.7871,
+Q0373,revisar,5182,5181,0.4834,confiança 0.48 abaixo do limiar 0.75
+Q0374,revisar,5147,,0.5669,confiança 0.57 abaixo do limiar 0.75
+Q0375,revisar,5224,5214,0.3463,confiança 0.35 abaixo do limiar 0.75
+Q0376,revisar,5222,5217,0.4108,confiança 0.41 abaixo do limiar 0.75
+Q0377,revisar,5477,,0.7106,confiança 0.71 abaixo do limiar 0.75; assunto_exact; lei:habeas_corpus
+Q0378,revisar,5080,5206,0.609,confiança 0.61 abaixo do limiar 0.75
+Q0379,revisar,5492,5527,0.3752,confiança 0.38 abaixo do limiar 0.75; lei:maria_da_penha
+Q0380,revisar,5537,5494,0.3956,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0381,revisar,5502,,0.5405,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0382,revisar,5192,5203,0.5068,confiança 0.51 abaixo do limiar 0.75
+Q0383,revisar,6723,,0.4037,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0384,publicar,5561,5477,0.8541,
+Q0385,revisar,5557,,0.6908,confiança 0.69 abaixo do limiar 0.75
+Q0386,revisar,4388,4378,0.3858,confiança 0.39 abaixo do limiar 0.75; empate entre irmãos 4384 e 4385
+Q0387,revisar,5591,,0.4207,empate entre irmãos 5591 e 5592
+Q0388,revisar,5527,5540,0.402,confiança 0.40 abaixo do limiar 0.75
+Q0389,revisar,5226,5203,0.575,confiança 0.57 abaixo do limiar 0.75
+Q0390,revisar,4376,4375,0.3329,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0391,revisar,5502,5466,0.47,confiança 0.47 abaixo do limiar 0.75; assunto_exact
+Q0392,revisar,5208,,0.4634,confiança 0.46 abaixo do limiar 0.75; assunto_exact; lei:lep
+Q0393,fora,,,0.2932,assunto_exact; disciplina_origem fora do recorte
+Q0394,revisar,5540,5524,0.5948,confiança 0.59 abaixo do limiar 0.75; assunto_exact
+Q0395,revisar,5477,5542,0.6079,confiança 0.61 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0396,revisar,5095,,0.3261,confiança 0.33 abaixo do limiar 0.75; assunto_exact
+Q0397,revisar,5171,5203,0.5177,confiança 0.52 abaixo do limiar 0.75
+Q0398,revisar,5178,,0.5389,confiança 0.54 abaixo do limiar 0.75; assunto_exact
+Q0399,revisar,5095,5087,0.4273,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0400,revisar,5217,5212,0.3742,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0401,publicar,5185,5189,0.811,
+Q0402,revisar,5085,6716,0.619,confiança 0.62 abaixo do limiar 0.75
+Q0403,revisar,5182,,0.2905,empate entre irmãos 5182 e 5181
+Q0404,revisar,5119,5116,0.3889,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0405,publicar,5524,5527,0.8092,
+Q0406,revisar,5095,5141,0.4609,confiança 0.46 abaixo do limiar 0.75; assunto_exact
+Q0407,revisar,5578,,0.6811,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0408,revisar,5495,,0.5197,confiança 0.52 abaixo do limiar 0.75
+Q0409,revisar,5215,,0.7537,empate entre irmãos 5215 e 5217
+Q0410,revisar,5213,5217,0.5269,confiança 0.53 abaixo do limiar 0.75; assunto_exact
+Q0411,revisar,5094,5219,0.3872,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0412,revisar,5095,,0.3992,assunto_exact
+Q0413,revisar,5100,5087,0.32,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0414,revisar,5202,5198,0.3689,confiança 0.37 abaixo do limiar 0.75
+Q0415,revisar,5203,5205,0.3978,confiança 0.40 abaixo do limiar 0.75
+Q0416,revisar,5203,,0.4218,disciplina_origem fora do recorte
+Q0417,revisar,4376,4388,0.2621,confiança 0.26 abaixo do limiar 0.75; assunto_exact
+Q0418,revisar,5492,5479,0.3778,confiança 0.38 abaixo do limiar 0.75; lei:lep
+Q0419,revisar,4388,4381,0.3141,confiança 0.31 abaixo do limiar 0.75
+Q0420,revisar,5492,5527,0.3792,confiança 0.38 abaixo do limiar 0.75; lei:maria_da_penha
+Q0421,revisar,5501,5527,0.4063,confiança 0.41 abaixo do limiar 0.75; empate entre irmãos 5560 e 5524
+Q0422,revisar,5121,5120,0.5635,confiança 0.56 abaixo do limiar 0.75; empate entre irmãos 5182 e 5181
+Q0423,publicar,5185,5187,0.8201,
+Q0424,revisar,5065,,0.4796,empate entre irmãos 5087 e 5185
+Q0425,revisar,5577,5575,0.6808,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0426,revisar,5178,5192,0.6604,confiança 0.66 abaixo do limiar 0.75
+Q0427,revisar,5527,5492,0.3548,confiança 0.35 abaixo do limiar 0.75
+Q0428,revisar,5469,,0.5007,assunto_exact
+Q0429,revisar,5132,5150,0.318,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0430,publicar,5498,5499,0.804,
+Q0431,revisar,5531,5549,0.6446,confiança 0.64 abaixo do limiar 0.75
+Q0432,revisar,5472,,0.437,lei:prescricao
+Q0433,revisar,5071,5217,0.483,confiança 0.48 abaixo do limiar 0.75
+Q0434,revisar,5498,5499,0.7,confiança 0.70 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0435,revisar,4376,4378,0.294,confiança 0.29 abaixo do limiar 0.75; assunto_exact
+Q0436,revisar,5492,,0.3144,confiança 0.31 abaixo do limiar 0.75; empate entre irmãos 5560 e 6734; lei:maria_da_penha
+Q0437,revisar,5181,,0.4366,empate entre irmãos 5181 e 5182
+Q0438,revisar,5087,5183,0.4019,confiança 0.40 abaixo do limiar 0.75
+Q0439,revisar,5089,5087,0.3855,confiança 0.39 abaixo do limiar 0.75; assunto_exact
+Q0440,revisar,5500,,0.8395,assunto_exact
+Q0441,publicar,5477,,0.8095,
+Q0442,revisar,5064,,0.6793,assunto_exact
+Q0443,revisar,5216,5233,0.6656,confiança 0.67 abaixo do limiar 0.75
+Q0444,revisar,5545,,0.6004,confiança 0.60 abaixo do limiar 0.75
+Q0445,revisar,5492,5479,0.3844,confiança 0.38 abaixo do limiar 0.75; empate entre irmãos 5560 e 5480
+Q0446,publicar,5498,5499,0.7984,
+Q0447,revisar,5185,5189,0.6864,confiança 0.69 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0448,revisar,5577,5575,0.6105,confiança 0.61 abaixo do limiar 0.75; empate entre irmãos 5572 e 5560
+Q0449,revisar,5231,,0.5565,confiança 0.56 abaixo do limiar 0.75
+Q0450,revisar,5571,5570,0.427,confiança 0.43 abaixo do limiar 0.75
+Q0451,revisar,5498,5500,0.6923,confiança 0.69 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0452,revisar,5500,,0.8225,assunto_exact
+Q0453,revisar,5492,5479,0.3747,confiança 0.37 abaixo do limiar 0.75; empate entre irmãos 6734 e 5560; lei:maria_da_penha
+Q0454,revisar,5181,5182,0.6142,confiança 0.61 abaixo do limiar 0.75
+Q0455,revisar,5560,5561,0.5977,confiança 0.60 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0456,revisar,5203,5202,0.3975,confiança 0.40 abaixo do limiar 0.75
+Q0457,revisar,5477,,0.7095,confiança 0.71 abaixo do limiar 0.75; assunto_exact; lei:habeas_corpus
+Q0458,revisar,5073,5223,0.4249,confiança 0.42 abaixo do limiar 0.75
+Q0459,revisar,5070,5206,0.5617,confiança 0.56 abaixo do limiar 0.75
+Q0460,revisar,5145,5144,0.5603,confiança 0.56 abaixo do limiar 0.75
+Q0461,revisar,5562,5577,0.2573,confiança 0.26 abaixo do limiar 0.75; assunto_exact
+Q0462,revisar,5132,5076,0.3565,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0463,revisar,5087,5099,0.4609,confiança 0.46 abaixo do limiar 0.75
+Q0464,revisar,5147,5092,0.4095,confiança 0.41 abaixo do limiar 0.75
+Q0465,revisar,5535,5500,0.3733,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0466,revisar,5222,5225,0.4449,confiança 0.44 abaixo do limiar 0.75
+Q0467,publicar,5185,5188,0.8027,
+Q0468,revisar,5184,,0.3965,confiança 0.40 abaixo do limiar 0.75; assunto_exact
+Q0469,revisar,4375,,0.6442,assunto_exact
+Q0470,revisar,5201,5205,0.3799,confiança 0.38 abaixo do limiar 0.75; lei:lep
+Q0471,revisar,5089,5164,0.3802,confiança 0.38 abaixo do limiar 0.75; assunto_exact
+Q0472,revisar,5116,5088,0.4982,confiança 0.50 abaixo do limiar 0.75
+Q0473,revisar,5499,,0.874,lei:inquerito
+Q0474,revisar,4388,,0.3032,confiança 0.30 abaixo do limiar 0.75
+Q0475,revisar,5178,,0.4944,confiança 0.49 abaixo do limiar 0.75
+Q0476,revisar,5524,5526,0.6787,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0477,revisar,5475,5577,0.6174,confiança 0.62 abaixo do limiar 0.75
+Q0478,revisar,5481,,0.4266,assunto_exact
+Q0479,revisar,5203,5202,0.4679,confiança 0.47 abaixo do limiar 0.75
+Q0480,revisar,5203,5202,0.4692,confiança 0.47 abaixo do limiar 0.75; empate entre irmãos 5185 e 5199
+Q0481,revisar,5227,5217,0.3665,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0482,revisar,5508,,0.5584,assunto_exact
+Q0483,publicar,5178,,0.7938,
+Q0484,revisar,5203,5189,0.5089,confiança 0.51 abaixo do limiar 0.75; lei:prescricao
+Q0485,revisar,5181,,0.3731,empate entre irmãos 5181 e 5182
+Q0486,revisar,5564,5492,0.3649,confiança 0.36 abaixo do limiar 0.75; assunto_exact
+Q0487,revisar,5159,5087,0.3071,confiança 0.31 abaixo do limiar 0.75; knn_folha; assunto_exact
+Q0488,revisar,5090,,0.6834,confiança 0.68 abaixo do limiar 0.75
+Q0489,revisar,5185,5203,0.2982,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0490,revisar,5217,,0.5024,assunto_exact
+Q0491,revisar,5160,5162,0.3389,confiança 0.34 abaixo do limiar 0.75; assunto_exact
+Q0492,revisar,5159,5067,0.307,confiança 0.31 abaixo do limiar 0.75; knn_folha; assunto_exact
+Q0493,revisar,5502,5470,0.686,confiança 0.69 abaixo do limiar 0.75; lei:drogas
+Q0494,revisar,5499,,0.3669,assunto_exact
+Q0495,revisar,5498,,0.7875,lei:inquerito
+Q0496,revisar,5089,5217,0.3675,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0497,revisar,5561,5477,0.6938,confiança 0.69 abaixo do limiar 0.75; assunto_exact; lei:recursos
+Q0498,revisar,5492,5479,0.402,confiança 0.40 abaixo do limiar 0.75; lei:maria_da_penha
+Q0499,revisar,5225,5203,0.5255,confiança 0.53 abaixo do limiar 0.75
+Q0500,revisar,5080,,0.5357,empate entre irmãos 5080 e 5081
+Q0501,publicar,5499,5498,0.8336,
+Q0502,revisar,5099,,0.5555,confiança 0.56 abaixo do limiar 0.75; assunto_exact
+Q0503,revisar,4378,4388,0.6333,confiança 0.63 abaixo do limiar 0.75
+Q0504,revisar,5222,5225,0.3691,confiança 0.37 abaixo do limiar 0.75
+Q0505,revisar,5093,,0.6383,assunto_exact
+Q0506,revisar,5182,,0.5731,empate entre irmãos 5182 e 5181
+Q0507,revisar,5214,5217,0.6496,confiança 0.65 abaixo do limiar 0.75
+Q0508,revisar,5555,,0.6,confiança 0.60 abaixo do limiar 0.75
+Q0509,revisar,5500,,0.8117,assunto_exact
+Q0510,revisar,5591,,0.4617,empate entre irmãos 5591 e 5592
+Q0511,revisar,5550,5492,0.3051,confiança 0.31 abaixo do limiar 0.75
+Q0512,revisar,5492,5527,0.3785,confiança 0.38 abaixo do limiar 0.75
+Q0513,revisar,6717,5064,0.5316,confiança 0.53 abaixo do limiar 0.75; empate entre irmãos 6717 e 5185
+Q0514,revisar,5492,5527,0.4208,confiança 0.42 abaixo do limiar 0.75
+Q0515,revisar,5492,5501,0.3961,confiança 0.40 abaixo do limiar 0.75; empate entre irmãos 5560 e 5480; lei:maria_da_penha
+Q0516,revisar,6723,,0.5621,confiança 0.56 abaixo do limiar 0.75
+Q0517,revisar,5470,5549,0.5609,confiança 0.56 abaixo do limiar 0.75
+Q0518,revisar,5089,5096,0.3683,confiança 0.37 abaixo do limiar 0.75; assunto_exact; lei:jecrim
+Q0519,revisar,5499,,0.4049,assunto_exact
+Q0520,revisar,5100,5203,0.2806,confiança 0.28 abaixo do limiar 0.75; assunto_exact
+Q0521,revisar,4376,,0.3041,confiança 0.30 abaixo do limiar 0.75; assunto_exact
+Q0522,revisar,5527,5492,0.3745,confiança 0.37 abaixo do limiar 0.75
+Q0523,publicar,5502,,0.7506,
+Q0524,revisar,5185,5068,0.3722,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0525,revisar,5202,,0.5104,empate entre irmãos 5202 e 5203
+Q0526,revisar,4388,,0.3236,confiança 0.32 abaixo do limiar 0.75
+Q0527,fora,,,0.4857,assunto_exact; disciplina_origem fora do recorte; lei:lep
+Q0528,revisar,5182,,0.3495,empate entre irmãos 5182 e 5181
+Q0529,revisar,5089,5070,0.4206,confiança 0.42 abaixo do limiar 0.75
+Q0530,revisar,5592,,0.3418,lei:drogas
+Q0531,revisar,5498,5501,0.5297,confiança 0.53 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0532,revisar,5121,5120,0.6767,confiança 0.68 abaixo do limiar 0.75; assunto_exact
+Q0533,revisar,5135,5134,0.5559,confiança 0.56 abaixo do limiar 0.75
+Q0534,revisar,4378,4376,0.6205,confiança 0.62 abaixo do limiar 0.75; assunto_exact
+Q0535,revisar,5507,5488,0.3483,confiança 0.35 abaixo do limiar 0.75; lei:maria_da_penha
+Q0536,revisar,5544,,0.7005,confiança 0.70 abaixo do limiar 0.75
+Q0537,revisar,5484,,0.6491,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0538,revisar,5230,5208,0.5423,confiança 0.54 abaixo do limiar 0.75; lei:lep
+Q0539,revisar,5165,5203,0.3613,confiança 0.36 abaixo do limiar 0.75
+Q0540,revisar,5225,5073,0.5798,confiança 0.58 abaixo do limiar 0.75
+Q0541,revisar,5096,,0.4318,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0542,revisar,5519,,0.4974,confiança 0.50 abaixo do limiar 0.75; assunto_exact
+Q0543,revisar,5562,5513,0.258,confiança 0.26 abaixo do limiar 0.75; assunto_exact
+Q0544,revisar,5481,,0.3199,assunto_exact
+Q0545,revisar,4376,4388,0.6122,confiança 0.61 abaixo do limiar 0.75
+Q0546,revisar,5088,5087,0.405,confiança 0.41 abaixo do limiar 0.75; assunto_exact
+Q0547,revisar,5185,5187,0.6159,confiança 0.62 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0548,revisar,5567,5492,0.3821,confiança 0.38 abaixo do limiar 0.75
+Q0549,revisar,5168,,0.5318,confiança 0.53 abaixo do limiar 0.75; lei:lep
+Q0550,revisar,5164,,0.3759,confiança 0.38 abaixo do limiar 0.75; assunto_exact
+Q0551,revisar,5469,5466,0.4436,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0552,revisar,5510,5492,0.5365,confiança 0.54 abaixo do limiar 0.75
+Q0553,revisar,5535,5533,0.5584,confiança 0.56 abaixo do limiar 0.75
+Q0554,revisar,5132,,0.4268,confiança 0.43 abaixo do limiar 0.75
+Q0555,revisar,5208,,0.5446,confiança 0.54 abaixo do limiar 0.75; assunto_exact; lei:lep
+Q0556,revisar,4388,,0.3921,confiança 0.39 abaixo do limiar 0.75
+Q0557,revisar,5502,,0.8816,lei:inquerito
+Q0558,revisar,5492,5527,0.377,confiança 0.38 abaixo do limiar 0.75
+Q0559,revisar,5093,5092,0.4517,confiança 0.45 abaixo do limiar 0.75
+Q0560,revisar,5508,5513,0.4025,confiança 0.40 abaixo do limiar 0.75; lei:prescricao
+Q0561,revisar,5116,5117,0.5748,confiança 0.57 abaixo do limiar 0.75
+Q0562,revisar,5469,,0.5421,empate entre irmãos 5480 e 6734
+Q0563,revisar,4388,4378,0.3559,confiança 0.36 abaixo do limiar 0.75
+Q0564,revisar,4388,4385,0.2961,confiança 0.30 abaixo do limiar 0.75
+Q0565,revisar,5501,,0.5968,assunto_exact
+Q0566,revisar,5083,5096,0.6363,confiança 0.64 abaixo do limiar 0.75
+Q0567,revisar,5201,5202,0.2868,confiança 0.29 abaixo do limiar 0.75; lei:lep
+Q0568,revisar,5181,5225,0.6203,confiança 0.62 abaixo do limiar 0.75; assunto_exact
+Q0569,revisar,4388,4378,0.3173,confiança 0.32 abaixo do limiar 0.75
+Q0570,publicar,5477,5561,0.8031,
+Q0571,revisar,5484,,0.5822,empate entre irmãos 5484 e 5482
+Q0572,revisar,5203,5072,0.3983,confiança 0.40 abaixo do limiar 0.75
+Q0573,revisar,5159,5183,0.3102,confiança 0.31 abaixo do limiar 0.75; assunto_exact
+Q0574,revisar,5119,5203,0.2638,confiança 0.26 abaixo do limiar 0.75; assunto_exact
+Q0575,revisar,5492,5479,0.3834,confiança 0.38 abaixo do limiar 0.75
+Q0576,revisar,5088,5086,0.3669,confiança 0.37 abaixo do limiar 0.75; assunto_exact
+Q0577,revisar,5492,5550,0.3735,confiança 0.37 abaixo do limiar 0.75; lei:maria_da_penha
+Q0578,revisar,6723,,0.564,confiança 0.56 abaixo do limiar 0.75; assunto_exact
+Q0579,revisar,5547,5492,0.3537,confiança 0.35 abaixo do limiar 0.75; assunto_exact
+Q0580,revisar,5203,,0.3947,empate entre irmãos 5185 e 5199
+Q0581,revisar,5508,5492,0.5754,confiança 0.58 abaixo do limiar 0.75; assunto_exact
+Q0582,revisar,5103,5203,0.3603,confiança 0.36 abaixo do limiar 0.75
+Q0583,revisar,5185,5187,0.6667,confiança 0.67 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0584,revisar,5191,5069,0.3305,confiança 0.33 abaixo do limiar 0.75; assunto_exact; lei:juri
+Q0585,revisar,5178,5225,0.3483,confiança 0.35 abaixo do limiar 0.75
+Q0586,revisar,5519,5518,0.653,confiança 0.65 abaixo do limiar 0.75; assunto_exact
+Q0587,revisar,5186,5189,0.583,confiança 0.58 abaixo do limiar 0.75; assunto_exact
+Q0588,revisar,4388,4385,0.4133,confiança 0.41 abaixo do limiar 0.75
+Q0589,revisar,5519,5527,0.3372,confiança 0.34 abaixo do limiar 0.75; assunto_exact
+Q0590,revisar,5230,5232,0.457,confiança 0.46 abaixo do limiar 0.75; assunto_exact
+Q0591,publicar,5561,5560,0.8879,
+Q0592,revisar,5088,5086,0.4461,confiança 0.45 abaixo do limiar 0.75; assunto_exact
+Q0593,revisar,5158,,0.2945,confiança 0.29 abaixo do limiar 0.75; assunto_exact
+Q0594,revisar,5089,,0.3195,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0595,revisar,5498,5501,0.683,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0596,revisar,5181,,0.4329,empate entre irmãos 5181 e 5182
+Q0597,revisar,5492,5589,0.3922,confiança 0.39 abaixo do limiar 0.75
+Q0598,revisar,4369,4381,0.544,confiança 0.54 abaixo do limiar 0.75
+Q0599,revisar,5064,5198,0.307,confiança 0.31 abaixo do limiar 0.75; assunto_exact
+Q0600,publicar,5185,5188,0.8165,
+Q0601,revisar,5541,5540,0.6604,confiança 0.66 abaixo do limiar 0.75; lei:jecrim
+Q0602,revisar,5472,5492,0.353,confiança 0.35 abaixo do limiar 0.75
+Q0603,revisar,5096,5092,0.6869,confiança 0.69 abaixo do limiar 0.75
+Q0604,revisar,5088,5087,0.432,confiança 0.43 abaixo do limiar 0.75; assunto_exact
+Q0605,revisar,5535,5531,0.3612,confiança 0.36 abaixo do limiar 0.75; assunto_exact; lei:prescricao
+Q0606,revisar,5204,5101,0.6286,confiança 0.63 abaixo do limiar 0.75
+Q0607,revisar,4388,,0.3272,confiança 0.33 abaixo do limiar 0.75
+Q0608,revisar,5181,,0.5349,empate entre irmãos 5181 e 5182
+Q0609,revisar,5206,5070,0.6166,confiança 0.62 abaixo do limiar 0.75
+Q0610,revisar,5492,5508,0.4602,confiança 0.46 abaixo do limiar 0.75
+Q0611,revisar,5183,5116,0.4162,confiança 0.42 abaixo do limiar 0.75; empate entre irmãos 5185 e 5087
+Q0612,revisar,5064,5121,0.5772,confiança 0.58 abaixo do limiar 0.75
+Q0613,revisar,5198,5087,0.3853,confiança 0.39 abaixo do limiar 0.75
+Q0614,revisar,5113,5181,0.5385,confiança 0.54 abaixo do limiar 0.75
+Q0615,revisar,5498,5499,0.5346,confiança 0.53 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0616,revisar,5198,5202,0.5184,confiança 0.52 abaixo do limiar 0.75
+Q0617,revisar,5498,5492,0.2339,confiança 0.23 abaixo do limiar 0.75; assunto_exact
+Q0618,revisar,5224,,0.2724,confiança 0.27 abaixo do limiar 0.75
+Q0619,publicar,5560,5561,0.8252,
+Q0620,revisar,5147,,0.5437,confiança 0.54 abaixo do limiar 0.75
+Q0621,revisar,5192,5203,0.5399,confiança 0.54 abaixo do limiar 0.75
+Q0622,revisar,5182,5181,0.4891,confiança 0.49 abaixo do limiar 0.75
+Q0623,revisar,5544,5545,0.6172,confiança 0.62 abaixo do limiar 0.75
+Q0624,revisar,5492,5479,0.3966,confiança 0.40 abaixo do limiar 0.75; empate entre irmãos 6734 e 5560; lei:maria_da_penha
+Q0625,revisar,5081,5093,0.4491,confiança 0.45 abaixo do limiar 0.75; empate entre irmãos 5092 e 5093
+Q0626,revisar,5508,5506,0.3228,confiança 0.32 abaixo do limiar 0.75; assunto_exact
+Q0627,revisar,5126,5125,0.6102,confiança 0.61 abaixo do limiar 0.75
+Q0628,revisar,5502,5498,0.6825,confiança 0.68 abaixo do limiar 0.75; assunto_exact; lei:inquerito
+Q0629,revisar,4388,4381,0.4403,confiança 0.44 abaixo do limiar 0.75; empate entre irmãos 4384 e 4371
+Q0630,revisar,5084,,0.6867,confiança 0.69 abaixo do limiar 0.75
+Q0631,revisar,5088,5206,0.2883,confiança 0.29 abaixo do limiar 0.75; assunto_exact
+Q0632,revisar,5092,,0.2781,empate entre irmãos 5092 e 5093
+Q0633,revisar,5087,5166,0.4726,confiança 0.47 abaixo do limiar 0.75; knn_folha; assunto_exact
+Q0634,publicar,5498,5499,0.7992,
+Q0635,revisar,5203,5213,0.4671,confiança 0.47 abaixo do limiar 0.75; assunto_exact
+Q0636,revisar,5087,5168,0.3787,confiança 0.38 abaixo do limiar 0.75
+Q0637,revisar,5088,5099,0.4512,confiança 0.45 abaixo do limiar 0.75; assunto_exact
+Q0638,revisar,5089,,0.4158,knn_folha
+Q0639,revisar,5070,5203,0.4812,confiança 0.48 abaixo do limiar 0.75
+Q0640,revisar,5227,,0.5188,confiança 0.52 abaixo do limiar 0.75; assunto_exact
+Q0641,revisar,5089,,0.561,assunto_exact
+Q0642,revisar,5492,5527,0.3388,confiança 0.34 abaixo do limiar 0.75; lei:maria_da_penha
+Q0643,revisar,4388,4375,0.2949,confiança 0.29 abaixo do limiar 0.75
+Q0644,revisar,5087,5089,0.5069,confiança 0.51 abaixo do limiar 0.75; knn_folha
+Q0645,revisar,5226,,0.4667,confiança 0.47 abaixo do limiar 0.75
+Q0646,revisar,4388,4375,0.3118,confiança 0.31 abaixo do limiar 0.75
+Q0647,revisar,5488,5513,0.3241,confiança 0.32 abaixo do limiar 0.75; lei:prescricao
+Q0648,revisar,5555,,0.5885,confiança 0.59 abaixo do limiar 0.75
+Q0649,revisar,5207,,0.6642,empate entre irmãos 5208 e 5207
+Q0650,revisar,5209,,0.3074,assunto_exact
+Q0651,revisar,5540,5492,0.4737,confiança 0.47 abaixo do limiar 0.75; lei:maria_da_penha
+Q0652,revisar,5502,5538,0.5566,confiança 0.56 abaixo do limiar 0.75
+Q0653,revisar,5492,5519,0.3669,confiança 0.37 abaixo do limiar 0.75; lei:maria_da_penha
+Q0654,revisar,5203,5202,0.3823,confiança 0.38 abaixo do limiar 0.75
+Q0655,revisar,4385,4381,0.4651,confiança 0.47 abaixo do limiar 0.75
+Q0656,revisar,5508,5489,0.3875,confiança 0.39 abaixo do limiar 0.75; empate entre irmãos 6734 e 5560; lei:maria_da_penha
+Q0657,revisar,6716,,0.4362,confiança 0.44 abaixo do limiar 0.75; assunto_exact
+Q0658,revisar,4381,4375,0.5447,confiança 0.54 abaixo do limiar 0.75; empate entre irmãos 4374 e 4385
+Q0659,revisar,6723,5121,0.4811,confiança 0.48 abaixo do limiar 0.75; assunto_exact

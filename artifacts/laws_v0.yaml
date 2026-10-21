@@ -1,0 +1,90 @@
+# Dicionário de leis/termos → tema_id (v0, revisado manualmente a partir dos anexos).
+# Preferimos Legislação Especial quando há duplicata material (Maria, LEP, Drogas).
+version: 0
+rules:
+  - name: maria_da_penha
+    patterns:
+      - maria\s+da\s+penha
+      - 11[\./\s]?340
+      - lei\s+11[\./\s]?340
+      - viol[eê]ncia\s+dom[eé]stica
+      - medida\s+protetiva
+    tema_ids: [4704, 6724]
+    prefer: 4704
+  - name: lep
+    patterns:
+      - lei\s+de\s+execu[cç][aã]o\s+penal
+      - \bLEP\b
+      - lei\s+n?[ºo°\.]*\s*7[\./\s]?210
+      - progress[aã]o\s+de\s+regime
+      - livramento\s+condicional
+      - remi[cç][aã]o\s+de\s+pena
+    tema_ids: [4703, 6734]
+    prefer: 4703
+    processual_signals:
+      - agravo\s+em\s+execu
+      - ju[ií]zo\s+da\s+execu
+    processual_prefer: 6734
+  - name: drogas
+    patterns:
+      - lei\s+n?[ºo°\.]*\s*11[\./\s]?343
+      - 11[\./\s]?343/?06
+      - tr[aá]fico\s+de\s+drogas
+      - lei\s+de\s+drogas
+      - subst[aâ]ncia[s]?\s+entorpecente
+    tema_ids: [4708, 6728]
+    prefer: 4708
+  - name: jecrim
+    patterns:
+      - juizado\s+especial\s+criminal
+      - \bJECRIM\b
+      - lei\s+n?[ºo°\.]*\s*9[\./\s]?099
+      - transa[cç][aã]o\s+penal
+      - composi[cç][aã]o\s+civil
+      - suspens[aã]o\s+condicional\s+do\s+processo
+    tema_ids: [4701]
+    prefer: 4701
+  - name: juri
+    patterns:
+      - tribunal\s+do\s+j[uú]ri
+      - desaforamento
+      - impron[uú]ncia
+      - absolvi[cç][aã]o\s+sum[aá]ria
+      - plen[aá]rio\s+do\s+j[uú]ri
+    tema_ids: [5524]
+    prefer: 5524
+  - name: habeas_corpus
+    patterns:
+      - habeas\s+corpus
+      - constrangimento\s+ilegal
+    tema_ids: [5477]
+    prefer: 5477
+  - name: inquerito
+    patterns:
+      - inqu[eé]rito\s+policial
+      - arquivamento\s+do\s+inqu[eé]rito
+    tema_ids: [5498]
+    prefer: 5498
+  - name: prescricao
+    patterns:
+      - prescri[cç][aã]o\s+da\s+pretens
+      - pretens[aã]o\s+punitiva
+      - pretens[aã]o\s+execut[oó]ria
+      - prazo\s+prescri
+    tema_ids: [5185]
+    prefer: 5185
+  - name: recursos
+    patterns:
+      - recurso\s+em\s+sentido\s+estrito
+      - \bRESE\b
+      - apela[cç][aã]o\s+criminal
+      - caber[aá]\s+apela[cç][aã]o
+    tema_ids: [5560]
+    prefer: 5560
+  - name: crimes_eleitorais
+    patterns:
+      - crime\s+eleitoral
+      - crimes\s+eleitorais
+      - c[oó]digo\s+eleitoral
+    tema_ids: [4692]
+    prefer: 4692

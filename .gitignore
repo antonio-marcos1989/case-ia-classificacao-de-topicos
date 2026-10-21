@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+*.log
+.DS_Store
+
+# caches regeneráveis — embeddings MiniLM (~1–2MB) podem ser commitados;
+# descomente para ignorar localmente se preferir regenerar:
+# artifacts/*.npy
+
+# outputs locais intermediários (entrega também na raiz)
+outputs/

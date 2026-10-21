@@ -1,0 +1,13 @@
+precisao_prevista: 1.00   # fração das publicadas que estará certa
+precisao_intervalo: 0.95-1.00
+cobertura_prevista: 0.13  # fração das questões que você publicou
+cobertura_intervalo: 0.07-0.71
+
+Método:
+- Hold-out estratificado (~30%, n=30) da folha-verdade escolhe tau; o restante treina
+  léxico/kNN/reranker/calibrador (CV interno). Acerto tolerante à árvore; irmãos → revisar.
+- Features (TF-IDF, emb, lei, assunto, margem, kNN, rerank) → LogisticRegression = P(acerto).
+- tau_publicar=0.7471 maximiza cobertura no hold-out com precisão ≥ 0.97 (fallback 0.95).
+- Predict offline: artifacts/ (laws_v0.yaml, model.joblib, embeddings *.npy); sem LLM/API.
+- Embeddings: True; acurácia sinal (fit-set): 0.5.
+- Banca avalia 559 fora da folha; folha só em Q0001–Q0359 (possível shift nas recentes).

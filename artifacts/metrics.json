@@ -1,0 +1,68 @@
+{
+  "precision": 1.0,
+  "coverage": 0.13333333333333333,
+  "n_publicadas": 4,
+  "n_total": 30,
+  "n_hits": 4,
+  "tau": 0.7471,
+  "folds": [
+    {
+      "precision": 1.0,
+      "coverage": 0.7142857142857143,
+      "n_publicadas": 10,
+      "n_total": 14,
+      "n_hits": 10,
+      "fold": 0,
+      "tau": 0.3476
+    },
+    {
+      "precision": 1.0,
+      "coverage": 0.07142857142857142,
+      "n_publicadas": 1,
+      "n_total": 14,
+      "n_hits": 1,
+      "fold": 1,
+      "tau": 0.8947
+    },
+    {
+      "precision": 1.0,
+      "coverage": 0.2857142857142857,
+      "n_publicadas": 4,
+      "n_total": 14,
+      "n_hits": 4,
+      "fold": 2,
+      "tau": 0.5493
+    },
+    {
+      "precision": 1.0,
+      "coverage": 0.2857142857142857,
+      "n_publicadas": 4,
+      "n_total": 14,
+      "n_hits": 4,
+      "fold": 3,
+      "tau": 0.6246
+    },
+    {
+      "precision": 1.0,
+      "coverage": 0.2857142857142857,
+      "n_publicadas": 4,
+      "n_total": 14,
+      "n_hits": 4,
+      "fold": 4,
+      "tau": 0.582
+    }
+  ],
+  "oof_precision_at_tau": 1.0,
+  "oof_coverage_at_tau": 0.13333333333333333,
+  "holdout_n": 30,
+  "holdout_threshold": {
+    "tau": 0.7471,
+    "precision": 1.0,
+    "coverage": 0.13333333333333333,
+    "n_pub": 4,
+    "target": 0.97
+  },
+  "embeddings_loaded": true,
+  "oof_top_signal_accuracy": 0.5,
+  "train_protocol": "fit70_hold30_tau_on_holdout"
+}
