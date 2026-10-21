@@ -2,8 +2,9 @@
 
 Sistema **offline** de classificação de questões em uma árvore de temas (Penal, Processo Penal, Legislação Penal Especial, Criminologia). **Sem APIs pagas** e **sem LLM na decisão**.
 
+**Implementação:** Antonio Marcos ([antonio-marcos1989](https://github.com/antonio-marcos1989))  
 **Repo:** https://github.com/antonio-marcos1989/case-ia-classificacao-de-topicos  
-**Contato do case:** carla@viciodeumaestudante.com.br
+**Contato do case (banca):** carla@viciodeumaestudante.com.br
 
 ## Entregáveis
 
@@ -101,4 +102,5 @@ make eda           # estatísticas dos anexos
 
 ## Contato
 
-carla@viciodeumaestudante.com.br
+- **Case / banca:** carla@viciodeumaestudante.com.br  
+- **Autor da solução:** [antonio-marcos1989](https://github.com/antonio-marcos1989)

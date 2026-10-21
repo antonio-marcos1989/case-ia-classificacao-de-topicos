@@ -1,7 +1,8 @@
 # Relatório — Classificação de tópicos (Case IA / Vício)
 
+**Autor / implementação:** Antonio Marcos ([antonio-marcos1989](https://github.com/antonio-marcos1989))  
 **Repositório:** https://github.com/antonio-marcos1989/case-ia-classificacao-de-topicos  
-**Contato do case:** carla@viciodeumaestudante.com.br  
+**Contato do case (banca):** carla@viciodeumaestudante.com.br  
 **Escopo:** 659 questões × 377 temas (375 ativos); decisão `publicar` / `revisar` / `fora` com precisão ≥ 95% nas publicadas.
 
 ---

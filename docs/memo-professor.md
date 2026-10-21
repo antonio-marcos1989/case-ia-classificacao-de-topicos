@@ -1,8 +1,9 @@
 # Memo ao professor — árvore, fila `revisar` e o que não publicar
 
-**De:** sistema de classificação de tópicos (case Vício)  
+**De:** Antonio Marcos ([antonio-marcos1989](https://github.com/antonio-marcos1989)) — repositório `case-ia-classificacao-de-topicos`  
 **Para:** professor / especialista de conteúdo  
-**Assunto:** onde a taxonomia atrapalha a máquina — e como usar a fila `revisar` no treino
+**Assunto:** onde a taxonomia atrapalha o classificador — e como usar a fila `revisar` no treino  
+**Contato do case (banca):** carla@viciodeumaestudante.com.br
 
 ---
 
